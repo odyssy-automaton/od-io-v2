@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'work'
+  - name: 'work-item'
     label: 'Work'
     folder: 'src/pages/work-items'
     create: true

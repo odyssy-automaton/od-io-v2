@@ -9,14 +9,14 @@ $ yarn
 To test the CMS locally, you'll need run a production build of the site:
 
 ```
-$ npm run build
-$ npm run serve
+$ yarn build
+$ yarn serve
 ```
 
 To run a development server:
 
 ```
-$ npm run develop
+$ yarn develop
 ```
 
 #### Purgecss
