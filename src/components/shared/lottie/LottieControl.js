@@ -1,8 +1,7 @@
-import React from "react";
-import Lottie from "react-lottie";
+import React from 'react';
+import Lottie from 'react-lottie';
 
 class LottieControl extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -12,14 +11,16 @@ class LottieControl extends React.Component {
         autoplay: true,
         animationData: this.props.animationData,
         rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
-        }
+          preserveAspectRatio: 'xMidYMid slice',
+        },
       },
-      eventListeners: [{
-        eventName: 'complete',
-        callback: () => this.swapAnimation()
-      }]
-    }
+      eventListeners: [
+        {
+          eventName: 'complete',
+          callback: () => this.swapAnimation(),
+        },
+      ],
+    };
   }
 
   swapAnimation = () => {
@@ -30,23 +31,23 @@ class LottieControl extends React.Component {
           autoplay: true,
           animationData: this.props.swapAnimationData,
           rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-          }
-        }
-      })
+            preserveAspectRatio: 'xMidYMid slice',
+          },
+        },
+      });
     }
-  }
+  };
 
   render() {
-
     return (
       <div className="LottieControl">
-        <Lottie options={this.state.defaultOptions} eventListeners={this.state.eventListeners} />
+        <Lottie
+          options={this.state.defaultOptions}
+          eventListeners={this.state.eventListeners}
+        />
       </div>
-    )
-
+    );
   }
-
 }
 
 export default LottieControl;
