@@ -9,7 +9,7 @@
   align-items: center;
   overflow: hidden;
   &__Contents {
-    p {color: $od-medium-purple; margin: 0; }
+    p {color: $od-medium-purple; margin: 0; text-transform: uppercase; text-align: center; line-height: 1.25em;}
   }
   .LottieControl {
     position: absolute;
