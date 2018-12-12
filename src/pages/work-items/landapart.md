@@ -1,8 +1,8 @@
 ---
 templateKey: work-item
-title: Our first work item has been edited
+title: LandApart
 date: 2018-12-11T16:56:56.310Z
-description: This is the description.
+description: LandApart is the next evolution in social networking & community management.
 tags:
   - ux
   - ui

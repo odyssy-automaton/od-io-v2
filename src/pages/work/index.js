@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/layout/Layout';
+import '../../styles/Work.scss'
+import workPlaceholder from '../../img/Native__Home--iphone.png'
 
 export default class WorkPage extends Component {
   render() {
@@ -15,30 +17,37 @@ export default class WorkPage extends Component {
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
         </section>
+        <section className="Filter">
+          <div className="Filter__Contents">
+            <p>Filter <span>All</span></p>
+          </div>
+        </section>
         <section className="Page">
-            {posts.map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #333', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
+          <div className="Page__Contents">
+            <div className="Work">
+              {posts.map(({ node: post }) => (
+                <div
+                  className="Work__Item"
+                  key={post.id}
+                >
+                  <img src={workPlaceholder} alt="featured image"/>
+                  <p>
+                    <Link className="" to={post.fields.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </p>
+                  <p>
+                    {post.excerpt}
+                  </p>
+                  <p>
+                    <Link to={post.fields.slug}>
+                      Keep Reading →
+                    </Link>
+                  </p>
+                </div>
+              ))}
               </div>
-            ))}
+            </div>
         </section>
       </Layout>
     );
