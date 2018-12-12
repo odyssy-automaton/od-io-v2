@@ -34,7 +34,6 @@
     z-index: -1;
     transition: all .1s linear;
     &--Contents {
-      pointer-events: none;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
