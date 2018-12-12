@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
+import '../styles/index.scss';
 import LottieControl from '../components/shared/lottie/LottieControl';
-
+import OdyssyLogoTypeStandard from '../img/odyssy__logo--type--standard.svg';
 import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 
@@ -12,6 +13,12 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="Hero">
+          <div className="Hero__Contents">
+            <img alt="Odyssy Logo Type" src={OdyssyLogoTypeStandard} />
+            <p>Decentralized<br />
+            Autonomous<br />
+            Organism</p>
+          </div>
           <LottieControl
             animationData={heroAnimation}
             loop={false}
@@ -19,11 +26,14 @@ export default class IndexPage extends React.Component {
             swapLoop={true}
           />
         </section>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Home</h1>
-            </div>
+        <section className="Block">
+          <div className="Block__Contents">
+            <p className="Huge">We design & build at the forefront of human experience innovation.</p>
+          </div>
+        </section>
+        <section className="Block">
+          <div className="Block__Contents">
+            <p className="Huge"><span className="Weight--500">Odyssy</span> is a decentralized collective delivering full stack Design & Development to the blockchain and beyond.</p>
           </div>
         </section>
       </Layout>

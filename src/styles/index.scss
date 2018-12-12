@@ -1,5 +1,19 @@
 @import 'variables';
 
 .Hero {
-  background-color: $od-cream;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &__Contents {
+    p {color: $od-medium-purple; margin: 0; }
+  }
+  .LottieControl {
+    position: absolute;
+    height: 105%;
+    width: 105%;
+  }
 }

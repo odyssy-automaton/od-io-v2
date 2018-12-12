@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  width: 100%;
+  border-bottom: 2px solid $od-cream-dark;
+  &__Brand {
+    height: 60px; width: auto;
+    &--Logo {
+      img { height: 100%; }
+    }
+  }
+  &__Menu {
+    margin-left: auto;
+    &--Item:not(first-child) {
+      margin-left: 25px;
+    }
+  }
+}
