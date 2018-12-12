@@ -30,7 +30,9 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="Block">
           <div className="Block__Contents">
+            <Fade up>
             <p className="Huge">We design & build at the forefront of human experience innovation.</p>
+            </Fade>
           </div>
         </section>
         <section className="Block">

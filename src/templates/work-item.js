@@ -17,32 +17,37 @@ export const WorkTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <div>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <section className="PageHeader">
+        <div className="PageHeader__Contents">
+          <p>Proof of Work / {title}</p>
+          <h1>{description}</h1>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="Block">
+        <div className="Block__Contents">
+          Long Description
+        </div>
+      </section>
+      <section className="Page">
+        <div className="Page__Contents">
+          <PostContent content={content} />
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </section>
+    </div>
   );
 };
 
