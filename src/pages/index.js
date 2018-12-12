@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import '../styles/index.scss';
 import LottieControl from '../components/shared/lottie/LottieControl';
@@ -34,6 +35,7 @@ export default class IndexPage extends React.Component {
         <section className="Block">
           <div className="Block__Contents">
             <p className="Huge"><span className="Weight--500">Odyssy</span> is a decentralized collective delivering full stack Design & Development to the blockchain and beyond.</p>
+            <Link to="/services">View our capabilities</Link>
           </div>
         </section>
       </Layout>
