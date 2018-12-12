@@ -35,13 +35,13 @@ const Navbar = class extends React.Component {
           </Link>
         </div>
         <div className="Navbar__Desktop">
-          <Link className="Navbar__Desktop--Item" to="/work">
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/work">
             Work
           </Link>
-          <Link className="Navbar__Desktop--Item" to="/services">
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/services">
             Services
           </Link>
-          <Link className="Navbar__Desktop--Item" to="/network">
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/network">
             Network
           </Link>
         </div>
