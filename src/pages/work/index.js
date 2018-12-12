@@ -10,11 +10,12 @@ export default class WorkPage extends Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Our Work</h1>
-            </div>
+        <section className="PageHeader">
+          <div className="PageHeader__Contents">
+            <h1>Ideation. Design. Development. Product. Iteration.</h1>
+          </div>
+        </section>
+        <section className="Page">
             {posts.map(({ node: post }) => (
               <div
                 className="content"
@@ -38,7 +39,6 @@ export default class WorkPage extends Component {
                 </p>
               </div>
             ))}
-          </div>
         </section>
       </Layout>
     );

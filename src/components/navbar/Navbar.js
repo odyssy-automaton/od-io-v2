@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import './Navbar.scss';
+import OdyssyLogoStandard from '../../img/odyssy__logo--standard.svg';
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -28,36 +30,25 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="Navbar"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              Odyssy
-            </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-start has-text-centered" />
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/work">
-                Work
-              </Link>
-              <Link className="navbar-item" to="/services">
-                Services
-              </Link>
-              <Link className="navbar-item" to="/network">
-                Network
-              </Link>
-            </div>
-          </div>
+        <div className="Navbar__Brand">
+          <Link to="/" className="Navbar__Brand--Logo" title="Logo">
+            <img alt="Odyssy Logo" src={OdyssyLogoStandard} />
+          </Link>
+        </div>
+        <div className="Navbar__Menu">
+          <Link className="Navbar__Menu--Item" to="/work">
+            Work
+          </Link>
+          <Link className="Navbar__Menu--Item" to="/services">
+            Services
+          </Link>
+          <Link className="Navbar__Menu--Item" to="/network">
+            Network
+          </Link>
         </div>
       </nav>
     );
