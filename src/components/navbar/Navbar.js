@@ -18,7 +18,7 @@ const Navbar = class extends React.Component {
   render() {
 
     const mobileNavClass = this.state.navOpen ?
-      'Navbar__Mobile Navbar__Mobile--collapsed' : 'Navbar__Mobile';
+      'Navbar__Mobile Navbar__Mobile--Open' : 'Navbar__Mobile';
 
     const hamburgerClass = this.state.navOpen ?
       'navbar__hamburger hamburger hamburger--spin is-active' : 'navbar__hamburger hamburger hamburger--spin';
