@@ -26,11 +26,7 @@ export default class WorkPage extends Component {
           <div className="Page__Contents">
             <div className="Work">
               {posts.map(({ node: post }) => (
-                <div
-                  className="Work__Item"
-                  key={post.id}
-                >
-                  <Link className="" to={post.fields.slug}>
+                <Link className="Work__Item" key={post.id} to={post.fields.slug}>
                   <img src={workPlaceholder} alt="featured image"/>
                   <p>
                     {post.frontmatter.title}
@@ -41,8 +37,7 @@ export default class WorkPage extends Component {
                   <p>
                     Keep Reading →
                   </p>
-                  </Link>
-                </div>
+                </Link>
               ))}
               </div>
             </div>
