@@ -30,20 +30,18 @@ export default class WorkPage extends Component {
                   className="Work__Item"
                   key={post.id}
                 >
+                  <Link className="" to={post.fields.slug}>
                   <img src={workPlaceholder} alt="featured image"/>
                   <p>
-                    <Link className="" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
+                    {post.frontmatter.title}
                   </p>
                   <p>
                     {post.excerpt}
                   </p>
                   <p>
-                    <Link to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
+                    Keep Reading →
                   </p>
+                  </Link>
                 </div>
               ))}
               </div>
