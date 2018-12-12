@@ -21,7 +21,7 @@ export const WorkTemplate = ({
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
-          <p>Proof of Work / {title}</p>
+          <p><Link to="/work">Proof of Work</Link> / {title}</p>
           <h1>{description}</h1>
         </div>
       </section>
