@@ -1,7 +1,6 @@
 ---
-templateKey: work-item
 title: This is the work section title
-workItem: 2018-12-11-our-first-work-item
+relatedWorkItem: 'Hello Desc '
 ---
 ## Poopin
 
