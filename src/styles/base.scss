@@ -64,7 +64,6 @@ p.Huge {
   align-items: center;
   justify-content: flex-start;
   min-height: 75vh;
-  &:nth-child(even) { background-color: $od-cream-dark; }
   &__Contents {
     max-width: 1140px;
     margin: 0 auto;
@@ -73,9 +72,16 @@ p.Huge {
 }
 
 .Page {
+  width: 100%;
   &__Contents {
     max-width: 1100px;
     padding: 50px;
     margin: 0 auto;
   }
+}
+
+// Background Colors
+.Background--Primary {
+  background-color: $od-primary;
+  color: white;
 }
