@@ -49,7 +49,7 @@ p.Huge {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  &:nth-child(even) { background-color: $od-cream-dark; }
+  &:nth-of-type(even) { background-color: $od-cream-dark; }
   &__Contents {
     max-width: 1140px;
     margin: 0 auto;

@@ -13,15 +13,23 @@ const OdBackground = class extends React.Component {
         <Fade down>
         <img className="OdBackground--Top" src={OdBackgroundTop} alt="background graphic"/>
         </Fade>
+
+        <div className="OdBackground--Right">
         <Fade right>
-        <img className="OdBackground--Right" src={OdBackgroundRight} alt="background graphic" />
+        <img src={OdBackgroundRight} alt="background graphic" />
         </Fade>
+        </div>
+
         <Fade up>
         <img className="OdBackground--Bottom" src={OdBackgroundBottom} alt="background graphic" />
         </Fade>
+
+        <div className="OdBackground--Left">
         <Fade left>
-        <img className="OdBackground--Left" src={OdBackgroundLeft} alt="background graphic" />
+        <img src={OdBackgroundLeft} alt="background graphic" />
         </Fade>
+        </div>
+
       </div>
 
 
