@@ -21,6 +21,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              title
             }
           }
         }
@@ -31,12 +32,11 @@ exports.createPages = ({ actions, graphql }) => {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
-    const posts = result.data.allMarkdownRemark.edges;
+    const workItems = result.data.allMarkdownRemark.edges;
 
-    posts.forEach((edge) => {
+    workItems.forEach((edge) => {
       const id = edge.node.id;
 
-  
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -45,7 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          slug: edge.node.fields.slug,
+          title: edge.node.frontmatter.title,
           id,
         },
       });
@@ -53,8 +53,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Tag pages:
     let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
+    // Iterate through each workItem, putting all found tags into `tags`
+    workItems.forEach((edge) => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }

@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: 'work-item'
     label: 'Work'
-    folder: 'src/pages/work-items'
+    folder: 'src/content/work-items'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -26,39 +26,66 @@ collections:
       - {
           label: 'Services List 1 Title',
           name: 'servicesList1Title',
-          widget: 'text',
+          widget: 'string',
+          required: false,
         }
-      - { label: 'services List 1', name: 'servicesList1', widget: 'list' }
+      - {
+          label: 'services List 1',
+          name: 'servicesList1',
+          widget: 'list',
+          required: false,
+        }
       - {
           label: 'Services List 2 Title',
           name: 'servicesList2Title',
-          widget: 'text',
+          widget: 'string',
+          required: false,
         }
-      - { label: 'Services List 2', name: 'servicesList2', widget: 'list' }
+      - {
+          label: 'Services List 2',
+          name: 'servicesList2',
+          widget: 'list',
+          required: false,
+        }
       - {
           label: 'Services List 3 Title',
           name: 'servicesList3Title',
-          widget: 'text',
+          widget: 'string',
+          required: false,
         }
-      - { label: 'Services List 3', name: 'servicesList3', widget: 'list' }
+      - {
+          label: 'Services List 3',
+          name: 'servicesList3',
+          widget: 'list',
+          required: false,
+        }
+      - {
+          lable: 'Link Text',
+          name: 'linkText',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          lable: 'Link URL',
+          name: 'linkUrl',
+          widget: 'string',
+          required: false,
+        }
       - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { lable: 'Link Text', name: 'linkText', widget: 'text' }
-      - { lable: 'Link URL', name: 'linkUrl', widget: 'text' }
   - name: 'work-section'
     label: 'Work Section'
-    folder: 'src/pages/work-sections'
+    folder: 'src/content/work-sections'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Related Work Item', name: 'workItem', widget: 'string' }
       - {
           label: 'Work Relation',
           name: 'relatedWorkItem',
           widget: 'relation',
-          collection: 'work-items',
+          collection: 'work-item',
           searchFields: ['title'],
           valueField: 'title',
-          displayFields: ['title', 'slug'],
+          displayFields: ['title', 'shortDescription'],
         }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
