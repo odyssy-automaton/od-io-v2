@@ -1,7 +1,7 @@
 ---
 title: native section
 relatedWorkItem: Native
-className: NativeTwo
+className: Native
 ---
 
 testing
