@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 28">
+  <defs>
+    <style>
+      .a {
+        fill: #5e3f97;
+      }
+
+      .b {
+        fill: #c1b49a;
+      }
+    </style>
+  </defs>
+  <title>odyssy__background--lines</title>
+  <g>
+    <rect class="a" x="520.64" y="10" width="18" height="18"/>
+    <rect class="b" x="655.24" y="10" width="4" height="18"/>
+    <rect class="b" x="627.11" y="10" width="4" height="18"/>
+    <rect class="b" x="617.73" y="10" width="4" height="18"/>
+    <rect class="b" x="636.48" y="10" width="4" height="18"/>
+    <rect class="b" x="645.86" y="10" width="4" height="18"/>
+  </g>
+</svg>

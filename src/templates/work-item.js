@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
+import OdBackground from '../components/shared/od-background/OdBackground';
 import Content, { HTMLContent } from '../components/shared/Content';
 
 export const WorkItemTemplate = ({
@@ -27,10 +28,10 @@ export const WorkItemTemplate = ({
           </p>
           <h1>{description}</h1>
         </div>
+        <OdBackground />
       </section>
       <section className="Block">
-        <div className="Block__Contents">Long Description</div>
-        <p>{description}</p>
+        <div className="Block__Contents"><p>{description}</p></div>
       </section>
       <section className="Page">
         <div className="Page__Contents">

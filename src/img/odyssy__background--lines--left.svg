@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 540">
+  <defs>
+    <style>
+      .a {
+        fill: #5e3f97;
+      }
+
+      .b {
+        fill: #f5e759;
+      }
+
+      .c {
+        fill: #ed2b5d;
+      }
+
+      .d {
+        fill: #8b83be;
+      }
+    </style>
+  </defs>
+  <title>odyssy__background--lines</title>
+  <g>
+    <rect class="a" y="237.85" width="18" height="18"/>
+    <rect class="b" y="335.73" width="18" height="4"/>
+    <rect class="b" y="458.82" width="18" height="18"/>
+    <polygon class="a" points="18 380.31 0 380.31 0 381.81 0 382.81 0 384.31 18 384.31 18 380.31"/>
+    <polygon class="c" points="18 100.69 0 100.69 0 102.19 0 103.19 0 104.69 18 104.69 18 100.69"/>
+    <rect class="d" y="405.3" width="18" height="18"/>
+    <polygon class="c" points="18 63.18 0 63.18 0 64.68 0 65.68 0 67.18 18 67.18 18 63.18"/>
+    <rect class="c" y="72.56" width="18" height="4"/>
+    <rect class="c" y="81.94" width="18" height="4"/>
+    <rect class="c" y="91.31" width="18" height="4"/>
+    <polygon class="a" points="18 161.94 18 161.94 18 160.94 18 160.94 18 159.44 0 159.44 0 163.44 18 163.44 18 161.94"/>
+  </g>
+</svg>

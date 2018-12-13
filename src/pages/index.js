@@ -7,6 +7,7 @@ import OdyssyLogoTypeStandard from '../img/odyssy__logo--type--standard.svg';
 import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
+import OdBackground from '../components/shared/od-background/OdBackground';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -53,6 +54,7 @@ export default class IndexPage extends React.Component {
             </p>
             <Link to="/services">View our capabilities</Link>
           </div>
+          <OdBackground />
         </section>
         <section className="Block">
           <div className="Block__Contents">
