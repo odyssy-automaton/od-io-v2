@@ -75,7 +75,7 @@ WorkItemTemplate.propTypes = {
 
 const WorkItem = ({ data }) => {
   const post = data.item;
-  const sections = data.sections;
+  const sections = data.sections || [];
 
   return (
     <Layout>
