@@ -10,8 +10,6 @@ export default class WorkPage extends Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
-    console.log(data);
-
     return (
       <Layout>
         <section className="PageHeader">
