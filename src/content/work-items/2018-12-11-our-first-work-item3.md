@@ -8,5 +8,6 @@ featuredImage: /img/odyssy-icon.png
 tags:
   - ux
   - ui
+className: LandApart__work
 ---
 
