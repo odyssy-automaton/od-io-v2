@@ -18,11 +18,32 @@ collections:
           widget: 'hidden',
           default: 'work-item',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Short Description', name: 'shortDescription', widget: 'text' }
+      - { label: 'Long Description', name: 'longDescription', widget: 'text' }
+      - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
+      - {
+          label: 'Services List 1 Title',
+          name: 'servicesList1Title',
+          widget: 'text',
+        }
+      - { label: 'services List 1', name: 'servicesList1', widget: 'list' }
+      - {
+          label: 'Services List 2 Title',
+          name: 'servicesList2Title',
+          widget: 'text',
+        }
+      - { label: 'Services List 2', name: 'servicesList2', widget: 'list' }
+      - {
+          label: 'Services List 3 Title',
+          name: 'servicesList3Title',
+          widget: 'text',
+        }
+      - { label: 'Services List 3', name: 'servicesList3', widget: 'list' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { lable: 'Link Text', name: 'linkText', widget: 'text' }
+      - { lable: 'Link URL', name: 'linkUrl', widget: 'text' }
   - name: 'work-section'
     label: 'Work Section'
     folder: 'src/pages/work-sections'
@@ -32,3 +53,11 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Related Work Item', name: 'workItem', widget: 'string' }
+      - {
+          label: 'Work Relation',
+          name: 'relatedWorkItem',
+          widget: 'relation',
+          collection: 'work-item',
+          searchFields: ['slug'],
+          valueField: 'slug',
+        }
