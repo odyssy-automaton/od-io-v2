@@ -43,6 +43,7 @@ p.Huge {
 
 // Layout
 .Block {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -57,6 +58,7 @@ p.Huge {
 }
 
 .PageHeader {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;

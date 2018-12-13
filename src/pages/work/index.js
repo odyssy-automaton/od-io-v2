@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/layout/Layout';
+import OdBackground from '../../components/shared/od-background/OdBackground';
 import '../../styles/Work.scss';
 import workPlaceholder from '../../img/Native__Home--iphone.png';
 
@@ -18,6 +19,7 @@ export default class WorkPage extends Component {
           <div className="PageHeader__Contents">
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
+          <OdBackground />
         </section>
         <section className="Filter">
           <div className="Filter__Contents">
