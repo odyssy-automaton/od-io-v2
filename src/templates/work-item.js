@@ -127,6 +127,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
+            className
           }
           html
           rawMarkdownBody
