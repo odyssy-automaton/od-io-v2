@@ -27,9 +27,7 @@
       justify-content: center;
       position: relative;
       height: 80px;
-      &:not(first-child) {
-        margin-left: 50px;
-      }
+      padding: 0px 15px;
       &:after {
         content: '';
         background-color: transparent;
