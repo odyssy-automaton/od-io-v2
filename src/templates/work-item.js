@@ -5,38 +5,28 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
-import Content, { HTMLContent } from '../components/shared/Content';
 import WorkSection from '../components/work-section/WorkSection';
 
-export const WorkItemTemplate = ({
-  content,
-  contentComponent,
-  description,
-  sections,
-  tags,
-  title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content;
-
+export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
   return (
-    <div>
+    <div className={workItem.className}>
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
           <p>
-            <Link to="/work">Proof of Work</Link> / {title}
+            <Link to="/work">Proof of Work</Link> / {workItem.title}
           </p>
-          <h1>{description}</h1>
+          <h1>{workItem.shortDescription}</h1>
         </div>
         <OdBackground />
       </section>
       <section className="Block">
-        <div className="Block__Contents"><p>{description}</p></div>
+        <div className="Block__Contents">
+          <p>{workItem.longDescription}</p>
+        </div>
       </section>
       <section className="Page">
         <div className="Page__Contents">
-          <PostContent content={content} />
           {sections && sections.length ? (
             <div>
               <h4>Sections</h4>
@@ -66,35 +56,31 @@ export const WorkItemTemplate = ({
 };
 
 WorkItemTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
+  workItem: PropTypes.object,
   helmet: PropTypes.object,
 };
 
 const WorkItem = ({ data }) => {
-  const post = data.item;
+  const workItem = data.item;
   const sections = data.sections || [];
+
+  console.log(data);
 
   return (
     <Layout>
       <WorkItemTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        workItem={workItem.frontmatter}
         sections={sections.edges}
         helmet={
           <Helmet titleTemplate="%s | Proof of Work">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{`${workItem.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={`${workItem.frontmatter.description}`}
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        tags={workItem.frontmatter.tags}
       />
     </Layout>
   );
@@ -116,8 +102,10 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
+        shortDescription
+        longDescription
         tags
+        className
       }
     }
     sections: allMarkdownRemark(

@@ -37,7 +37,7 @@ export default class WorkPage extends Component {
                 >
                   <img src={workPlaceholder} alt="featured" />
                   <p>{post.frontmatter.title}</p>
-                  <p>{post.frontmatter.description}</p>
+                  <p>{post.frontmatter.shortDescription}</p>
                   <p>Keep Reading →</p>
                 </Link>
               ))}
@@ -72,7 +72,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
+            shortDescription
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }

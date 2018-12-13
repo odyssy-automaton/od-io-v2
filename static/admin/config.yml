@@ -72,6 +72,12 @@ collections:
           required: false,
         }
       - { label: 'Tags', name: 'tags', widget: 'list' }
+      - {
+          label: 'Class Name',
+          name: 'className',
+          widget: 'string',
+          required: false,
+        }
   - name: 'work-section'
     label: 'Work Section'
     folder: 'src/content/work-sections'
@@ -89,4 +95,9 @@ collections:
           displayFields: ['title', 'shortDescription'],
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Class Name', name: 'className', widget: 'string' }
+      - {
+          label: 'Class Name',
+          name: 'className',
+          widget: 'string',
+          required: false,
+        }
