@@ -6,15 +6,18 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import Content, { HTMLContent } from '../components/shared/Content';
 
-export const WorkTemplate = ({
+export const WorkItemTemplate = ({
   content,
   contentComponent,
   description,
+  sections,
   tags,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
+
+  console.log(sections);
 
   return (
     <section className="section">
@@ -27,6 +30,19 @@ export const WorkTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
+            {sections && sections.length ? (
+              <div>
+                <h4>Sections</h4>
+                {sections.map((section) => {
+                  return (
+                    <h5 key={section.node.id}>
+                      {section.node.frontmatter.title}
+                    </h5>
+                  );
+                })}
+              </div>
+            ) : null}
+
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -46,7 +62,7 @@ export const WorkTemplate = ({
   );
 };
 
-WorkTemplate.propTypes = {
+WorkItemTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -56,18 +72,20 @@ WorkTemplate.propTypes = {
 
 const WorkItem = ({ data }) => {
   // const { markdownRemark: post } = data.item;
-  const post = data.markdownRemark;
+  const post = data.item;
+  const sections = data.sections;
   // const sections = data.sections;
 
-  console.log(data);
+  // console.log(sections.edges);
   // console.log(sections);
 
   return (
     <Layout>
-      <WorkTemplate
+      <WorkItemTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        sections={sections.edges}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -94,7 +112,7 @@ export default WorkItem;
 
 export const pageQuery = graphql`
   query WorkItemByID($id: String, $slug: String) {
-    markdownRemark(id: { eq: $id }) {
+    item: markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
@@ -104,7 +122,9 @@ export const pageQuery = graphql`
         tags
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { workItem: { eq: $slug } } }) {
+    sections: allMarkdownRemark(
+      filter: { frontmatter: { workItem: { eq: $slug } } }
+    ) {
       edges {
         node {
           id
