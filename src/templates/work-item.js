@@ -5,9 +5,14 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
-import WorkSection from '../components/work-section/WorkSection';
+import WorkSection from '../components/work/WorkSection';
+import WorkServices from '../components/work/WorkServices';
 
 export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
+  const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
+
+  console.log(workItem);
+
   return (
     <div className={workItem.className}>
       {helmet || ''}
@@ -37,16 +42,10 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
               })}
             </div>
           ) : null}
-          {tags && tags.length ? (
+          {hasServices ? (
             <div style={{ marginTop: `4rem` }}>
-              <h4>Tags</h4>
-              <ul className="taglist">
-                {tags.map((tag) => (
-                  <li key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  </li>
-                ))}
-              </ul>
+              <h4>Services</h4>
+              <WorkServices workItem={workItem} />
             </div>
           ) : null}
         </div>
@@ -63,8 +62,6 @@ WorkItemTemplate.propTypes = {
 const WorkItem = ({ data }) => {
   const workItem = data.item;
   const sections = data.sections || [];
-
-  console.log(data);
 
   return (
     <Layout>
