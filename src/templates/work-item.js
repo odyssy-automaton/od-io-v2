@@ -55,7 +55,12 @@ WorkTemplate.propTypes = {
 };
 
 const WorkItem = ({ data }) => {
-  const { markdownRemark: post } = data;
+  // const { markdownRemark: post } = data.item;
+  const post = data.markdownRemark;
+  // const sections = data.sections;
+
+  console.log(data);
+  // console.log(sections);
 
   return (
     <Layout>
@@ -88,7 +93,7 @@ WorkItem.propTypes = {
 export default WorkItem;
 
 export const pageQuery = graphql`
-  query WorkItemByID($id: String!) {
+  query WorkItemByID($id: String, $slug: String) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -97,6 +102,20 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+    }
+    allMarkdownRemark(filter: { frontmatter: { workItem: { eq: $slug } } }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+          rawMarkdownBody
+        }
       }
     }
   }
