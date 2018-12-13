@@ -13,10 +13,11 @@ servicesList2Title: design
 servicesList2:
   - ux
   - ui
+linkText: visit site
+linkUrl: 'https://nativeproject.one/'
 tags:
   - ux
   - ui
-linkText: visit site
-linkUrl: 'https://nativeproject.one/'
+className: Native__work
 ---
 
