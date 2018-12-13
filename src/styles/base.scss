@@ -4,6 +4,7 @@ body {
   background-color: $od-cream;
   font-family: $base-font;
   line-height: 1em;
+  letter-spacing: .05em;
 }
 
 a {
@@ -66,5 +67,13 @@ p.Huge {
     max-width: 1140px;
     margin: 0 auto;
     padding: 30px;
+  }
+}
+
+.Page {
+  &__Contents {
+    max-width: 1100px;
+    padding: 50px;
+    margin: 0 auto;
   }
 }

@@ -3,7 +3,8 @@
 .Navbar {
   display: flex;
   align-items: center;
-  padding: 10px 25px;
+  height: 80px;
+  padding: 0px 50px;
   width: 100%;
   border-bottom: 2px solid $od-cream-dark;
   &__Brand {
@@ -16,10 +17,52 @@
     margin-left: auto;
     display: none;
     @media (min-width: 890px) {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    &--Item:not(first-child) {
-      margin-left: 25px;
+    &--Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 80px;
+      &:not(first-child) {
+        margin-left: 50px;
+      }
+      &:after {
+        content: '';
+        background-color: transparent;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .15s linear;
+      }
+      &:hover:after {
+        content: '';
+        background-color: $od-primary;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .15s linear;
+      }
+      &--Active {
+        color: $od-primary;
+        &:after {
+          content: '';
+          background-color: $od-primary;
+          height: 3px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: all .15s linear;
+        }
+      }
     }
   }
   &__Mobile {
@@ -41,6 +84,7 @@
         font-size: 1.25em;
         margin-top: 25px;
       }
+
     }
     &--Open {
       opacity: 1;

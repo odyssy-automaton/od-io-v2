@@ -1,8 +1,8 @@
 ---
 templateKey: work-item
-title: Native
+title: LandApart
 date: 2018-12-11T16:56:56.310Z
-description: Native is the next evolution in social networking & community management.
+description: LandApart is the next evolution in social networking & community management.
 tags:
   - ux
   - ui

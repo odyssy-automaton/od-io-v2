@@ -17,48 +17,51 @@ export const WorkItemTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
-  console.log(sections);
-
   return (
-    <section className="section">
+    <div>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {sections && sections.length ? (
-              <div>
-                <h4>Sections</h4>
-                {sections.map((section) => {
-                  return (
-                    <h5 key={section.node.id}>
-                      {section.node.frontmatter.title}
-                    </h5>
-                  );
-                })}
-              </div>
-            ) : null}
-
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <section className="PageHeader">
+        <div className="PageHeader__Contents">
+          <p>
+            <Link to="/work">Proof of Work</Link> / {title}
+          </p>
+          <h1>{description}</h1>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="Block">
+        <div className="Block__Contents">Long Description</div>
+        <p>{description}</p>
+      </section>
+      <section className="Page">
+        <div className="Page__Contents">
+          <PostContent content={content} />
+          {sections && sections.length ? (
+            <div>
+              <h4>Sections</h4>
+              {sections.map((section) => {
+                return (
+                  <h5 key={section.node.id}>
+                    {section.node.frontmatter.title}
+                  </h5>
+                );
+              })}
+            </div>
+          ) : null}
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </section>
+    </div>
   );
 };
 
@@ -71,13 +74,8 @@ WorkItemTemplate.propTypes = {
 };
 
 const WorkItem = ({ data }) => {
-  // const { markdownRemark: post } = data.item;
   const post = data.item;
   const sections = data.sections;
-  // const sections = data.sections;
-
-  // console.log(sections.edges);
-  // console.log(sections);
 
   return (
     <Layout>
@@ -87,7 +85,7 @@ const WorkItem = ({ data }) => {
         description={post.frontmatter.description}
         sections={sections.edges}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Proof of Work">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"

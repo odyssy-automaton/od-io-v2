@@ -1,5 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
+import './LottieControl.scss';
 
 class LottieControl extends React.Component {
   constructor(props) {
