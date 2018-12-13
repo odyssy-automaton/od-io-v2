@@ -106,9 +106,16 @@ export const pageQuery = graphql`
         longDescription
         tags
         className
+        servicesList1Title
+        servicesList1
+        servicesList2Title
+        servicesList2
+        servicesList3Title
+        servicesList3
       }
     }
     sections: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___sortOrder] }
       filter: { frontmatter: { relatedWorkItem: { eq: $title } } }
     ) {
       edges {

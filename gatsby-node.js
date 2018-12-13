@@ -10,7 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
     {
       allMarkdownRemark(
         limit: 1000
-        filter: { fileAbsolutePath: { regex: "/(work-items)/" } }
+        filter: { frontmatter: { templateKey: { eq: "work-item" } } }
       ) {
         edges {
           node {

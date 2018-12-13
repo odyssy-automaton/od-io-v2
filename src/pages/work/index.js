@@ -61,7 +61,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/(work-items)/" } }
+      filter: { frontmatter: { templateKey: { eq: "work-item" } } }
     ) {
       edges {
         node {
@@ -75,6 +75,25 @@ export const pageQuery = graphql`
             shortDescription
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              id
+              childImageSharp {
+                id
+                resize {
+                  src
+                  tracedSVG
+                  width
+                  height
+                  aspectRatio
+                  originalName
+                }
+                original {
+                  width
+                  height
+                  src
+                }
+              }
+            }
           }
         }
       }
