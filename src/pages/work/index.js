@@ -10,6 +10,8 @@ export default class WorkPage extends Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
+    console.log(data);
+
     return (
       <Layout>
         <section className="PageHeader">
@@ -35,7 +37,7 @@ export default class WorkPage extends Component {
                 >
                   <img src={workPlaceholder} alt="featured" />
                   <p>{post.frontmatter.title}</p>
-                  <p>{post.excerpt}</p>
+                  <p>{post.frontmatter.description}</p>
                   <p>Keep Reading →</p>
                 </Link>
               ))}
@@ -59,7 +61,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "work-item" } } }
+      filter: { fileAbsolutePath: { regex: "/(work-items)/" } }
     ) {
       edges {
         node {
@@ -70,6 +72,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
