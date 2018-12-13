@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: 'work-item'
     label: 'Work'
-    folder: 'src/pages/work-items'
+    folder: 'src/content/work-items'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -74,7 +74,7 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
   - name: 'work-section'
     label: 'Work Section'
-    folder: 'src/pages/work-sections'
+    folder: 'src/content/work-sections'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:

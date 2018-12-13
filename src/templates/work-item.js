@@ -109,7 +109,7 @@ WorkItem.propTypes = {
 export default WorkItem;
 
 export const pageQuery = graphql`
-  query WorkItemByID($id: String, $slug: String) {
+  query WorkItemByID($id: String, $title: String) {
     item: markdownRemark(id: { eq: $id }) {
       id
       html
@@ -121,7 +121,7 @@ export const pageQuery = graphql`
       }
     }
     sections: allMarkdownRemark(
-      filter: { frontmatter: { workItem: { eq: $slug } } }
+      filter: { frontmatter: { relatedWorkItem: { eq: $title } } }
     ) {
       edges {
         node {
