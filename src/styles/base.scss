@@ -69,3 +69,11 @@ p.Huge {
     padding: 30px;
   }
 }
+
+.Page {
+  &__Contents {
+    max-width: 1100px;
+    padding: 50px;
+    margin: 0 auto;
+  }
+}

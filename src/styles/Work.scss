@@ -1,0 +1,29 @@
+@import 'variables';
+
+.Work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__Item {
+    flex-basis: 31%;
+    img {
+      transition: background-color .15s linear;
+      background-color: $od-medium-purple;
+    }
+    &:hover img {
+      background-color: $od-primary;
+    }
+  }
+}
+
+.Filter {
+  background-color: $od-cream-dark;
+  display: flex;
+  align-items: center;
+  &__Contents {
+    width: 1140px;
+    padding: 25px 30px;
+    margin: 0 auto;
+    p { margin: 0;}
+  }
+}

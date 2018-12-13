@@ -6,10 +6,11 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import Content, { HTMLContent } from '../components/shared/Content';
 
-export const WorkTemplate = ({
+export const WorkItemTemplate = ({
   content,
   contentComponent,
   description,
+  sections,
   tags,
   title,
   helmet,
@@ -17,36 +18,54 @@ export const WorkTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <div>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <section className="PageHeader">
+        <div className="PageHeader__Contents">
+          <p>
+            <Link to="/work">Proof of Work</Link> / {title}
+          </p>
+          <h1>{description}</h1>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="Block">
+        <div className="Block__Contents">Long Description</div>
+        <p>{description}</p>
+      </section>
+      <section className="Page">
+        <div className="Page__Contents">
+          <PostContent content={content} />
+          {sections && sections.length ? (
+            <div>
+              <h4>Sections</h4>
+              {sections.map((section) => {
+                return (
+                  <h5 key={section.node.id}>
+                    {section.node.frontmatter.title}
+                  </h5>
+                );
+              })}
+            </div>
+          ) : null}
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </section>
+    </div>
   );
 };
 
-WorkTemplate.propTypes = {
+WorkItemTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -55,16 +74,18 @@ WorkTemplate.propTypes = {
 };
 
 const WorkItem = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const post = data.item;
+  const sections = data.sections;
 
   return (
     <Layout>
-      <WorkTemplate
+      <WorkItemTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        sections={sections.edges}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Proof of Work">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -88,8 +109,8 @@ WorkItem.propTypes = {
 export default WorkItem;
 
 export const pageQuery = graphql`
-  query WorkItemByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query WorkItemByID($id: String, $slug: String) {
+    item: markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
@@ -97,6 +118,22 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+    }
+    sections: allMarkdownRemark(
+      filter: { frontmatter: { workItem: { eq: $slug } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+          rawMarkdownBody
+        }
       }
     }
   }
