@@ -6,6 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import Content, { HTMLContent } from '../components/shared/Content';
+import WorkSection from '../components/work-section/WorkSection';
 
 export const WorkItemTemplate = ({
   content,
@@ -41,9 +42,7 @@ export const WorkItemTemplate = ({
               <h4>Sections</h4>
               {sections.map((section) => {
                 return (
-                  <h5 key={section.node.id}>
-                    {section.node.frontmatter.title}
-                  </h5>
+                  <WorkSection content={section.node} key={section.node.id} />
                 );
               })}
             </div>
@@ -127,12 +126,11 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          fields {
-            slug
-          }
           frontmatter {
             title
+            className
           }
+          html
           rawMarkdownBody
         }
       }

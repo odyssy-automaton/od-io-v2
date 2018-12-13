@@ -89,3 +89,4 @@ collections:
           displayFields: ['title', 'shortDescription'],
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Class Name', name: 'className', widget: 'string' }
