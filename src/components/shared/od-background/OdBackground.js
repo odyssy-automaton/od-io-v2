@@ -11,28 +11,22 @@ const OdBackground = class extends React.Component {
     return (
       <div className="OdBackground">
         <Fade down>
-        <img className="OdBackground--Top" src={OdBackgroundTop} alt="background graphic"/>
+          <img className="OdBackground--Top" src={OdBackgroundTop} alt="background graphic"/>
         </Fade>
-
         <div className="OdBackground--Right">
-        <Fade right>
-        <img src={OdBackgroundRight} alt="background graphic" />
-        </Fade>
+          <Fade right>
+          <img src={OdBackgroundRight} alt="background graphic" />
+          </Fade>
         </div>
-
         <Fade up>
-        <img className="OdBackground--Bottom" src={OdBackgroundBottom} alt="background graphic" />
+          <img className="OdBackground--Bottom" src={OdBackgroundBottom} alt="background graphic" />
         </Fade>
-
         <div className="OdBackground--Left">
-        <Fade left>
-        <img src={OdBackgroundLeft} alt="background graphic" />
-        </Fade>
+          <Fade left>
+          <img src={OdBackgroundLeft} alt="background graphic" />
+          </Fade>
         </div>
-
       </div>
-
-
     );
   }
 };
