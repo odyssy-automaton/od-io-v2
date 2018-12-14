@@ -1,12 +1,10 @@
 ---
-title: This is the work section title
-relatedWorkItem: 'Hello Desc '
+title: Cover Designer
+relatedWorkItem: 'BookBuilder '
 className: Hello
 sortOrder: 0
 ---
 
-## Poopin
+The app has a cover designer built-in, allowing authors to choose from a selection of design layouts and modify to their desire.
 
-test test test test test test test test test test test test
-
-![](/img/odyssy-icon.png)
+![](/img/work/bookbuilder__cover--sample.png)

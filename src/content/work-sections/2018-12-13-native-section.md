@@ -1,10 +1,10 @@
 ---
-title: native section
+title: Marketing Website for Launch
 relatedWorkItem: Native
 className: Native
-sortOrder: 0
+sortOrder: 1
 ---
 
-testing
+While developing the Alpha, we redesigned the static website to prepare for launch marketing.
 
-# testing
+![](/img/)

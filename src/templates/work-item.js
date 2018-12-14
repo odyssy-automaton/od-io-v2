@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
@@ -7,6 +9,7 @@ import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import WorkSection from '../components/work/WorkSection';
 import WorkServices from '../components/work/WorkServices';
+import '../styles/Work.scss'
 
 export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
@@ -21,20 +24,19 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
           <p>
             <Link to="/work">Proof of Work</Link> / {workItem.title}
           </p>
-          <h1>{workItem.shortDescription}</h1>
+          <h1><span className="Weight--400">{workItem.title}</span> {workItem.shortDescription}</h1>
         </div>
         <OdBackground />
       </section>
       <section className="Block">
         <div className="Block__Contents">
-          <p>{workItem.longDescription}</p>
+          <p className="Large">{workItem.longDescription}</p>
         </div>
       </section>
       <section className="Page">
         <div className="Page__Contents">
           {sections && sections.length ? (
             <div>
-              <h4>Sections</h4>
               {sections.map((section) => {
                 return (
                   <WorkSection content={section.node} key={section.node.id} />
@@ -44,7 +46,7 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
           ) : null}
           {hasServices ? (
             <div style={{ marginTop: `4rem` }}>
-              <h4>Services</h4>
+              <h4>Services Rendered</h4>
               <WorkServices workItem={workItem} />
             </div>
           ) : null}

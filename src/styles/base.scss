@@ -25,10 +25,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 3.25em; }
 
-p.Huge {
-  font-size: 2.5em;
-  line-height: 1.35em;
-  font-weight: 100;
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  letter-spacing: 0;
+  &.Huge {
+    font-size: 2.5em;
+    line-height: 1.35em;
+    font-weight: 100;
+  }
+  &.Large {
+    font-size: 1.35em;
+    line-height: 1.35em;
+    font-weight: 100;
+  }
 }
 
 .Weight {
@@ -77,6 +87,23 @@ p.Huge {
     max-width: 1100px;
     padding: 50px;
     margin: 0 auto;
+  }
+}
+
+// Columns
+.Columns {
+  display: flex;
+  width: 100%;
+  &__Column {
+    &--25 {
+      flex-basis: 25%;
+    }
+    &--33 {
+      flex-basis: 33%;
+    }
+    &--50 {
+      flex-basis: 100%;
+    }
   }
 }
 

@@ -11,6 +11,7 @@
     img {
       transition: background-color .15s linear;
       background-color: $od-medium-purple;
+      margin-bottom: 25px;
     }
     &:hover img {
       background-color: $od-primary;
@@ -29,3 +30,6 @@
     p { margin: 0;}
   }
 }
+
+
+// Work Item

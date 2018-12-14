@@ -2,20 +2,26 @@
 templateKey: work-item
 date: 2018-12-11T16:56:56.310Z
 title: Native
-shortDescription: Test short description
-longDescription: Test long description
-featuredImage: /img/odyssy-icon.png
-servicesList1Title: development
+shortDescription: helps digital communities organize, incentivize their members and generate revenue in new ways.
+longDescription: Until now, organizing and operating digital communities has been limited to centralized platforms, resulting in limited capacity to incentivize long-term and meaningful member engagement. Through these major social media networks, digital communities can expand globally but have no universally recognized economic system to realize the value of their efforts. Imagine using blockchain technology to deploy digital community infrastructure at scale, and keeping the value inside the communities. Native enables digital communities to organize members, facilitate growth and simplify operational processes all in one application. Through unique community tokens, a functional set of governance tools and flexible incentive structures for member engagement, Native provides the system for the next wave of community sovereignty.
+featuredImage: '/img/work/Native__Home--iphone.png'
+servicesList1Title: Engineering
 servicesList1:
-  - smart contract
-  - user interface
-servicesList2Title: design
+  - Product Management
+  - Smart Contract
+  - DApp Development
+  - DevOps
+  - User Testing
+servicesList2Title: Design
 servicesList2:
-  - ux
-  - ui
-servicesList3Title: blockchain
+  - Product Design
+  - UX Research
+  - UI Design
+servicesList3Title: Blockchain
 servicesList3:
-  - security audits
+  - Smart Contracts
+  - DApp Development
+  - Security Auditing
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:

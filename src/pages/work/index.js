@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import '../../styles/Work.scss';
-import workPlaceholder from '../../img/Native__Home--iphone.png';
 
 export default class WorkPage extends Component {
   render() {
@@ -15,6 +14,7 @@ export default class WorkPage extends Component {
       <Layout>
         <section className="PageHeader">
           <div className="PageHeader__Contents">
+            <p><strong>Proof of Work</strong></p>
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
           <OdBackground />
@@ -35,9 +35,8 @@ export default class WorkPage extends Component {
                   key={post.id}
                   to={post.fields.slug}
                 >
-                  <img src={workPlaceholder} alt="featured" />
-                  <p>{post.frontmatter.title}</p>
-                  <p>{post.frontmatter.shortDescription}</p>
+                  <img src={post.frontmatter.featuredImage.childImageSharp.original.src} alt="featured" />
+                  <p>{post.frontmatter.title} {post.frontmatter.shortDescription}</p>
                   <p>Keep Reading →</p>
                 </Link>
               ))}

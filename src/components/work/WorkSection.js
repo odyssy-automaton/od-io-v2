@@ -8,7 +8,7 @@ const WorkSection = class extends React.Component {
     const { content } = this.props;
     return (
       <div>
-        <h4>{content.frontmatter.title}</h4>
+        <h4 className="Weight--500">{content.frontmatter.title}</h4>
         <HTMLContent
           content={content.html}
           className={content.frontmatter.className}
