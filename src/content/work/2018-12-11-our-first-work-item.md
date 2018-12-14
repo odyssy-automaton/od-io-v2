@@ -13,6 +13,9 @@ servicesList2Title: design
 servicesList2:
   - ux
   - ui
+servicesList3Title: blockchain
+servicesList3:
+  - security audits
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:
@@ -20,4 +23,3 @@ tags:
   - ui
 className: Native__work
 ---
-
