@@ -1,6 +1,6 @@
 ---
 title: Cover Designer
-relatedWorkItem: 'BookBuilder '
+relatedWorkItem: BookBuilder
 className: Hello
 sortOrder: 0
 ---
