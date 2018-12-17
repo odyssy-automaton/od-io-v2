@@ -14,7 +14,9 @@ export default class WorkPage extends Component {
       <Layout>
         <section className="PageHeader">
           <div className="PageHeader__Contents">
-            <p><strong>Proof of Work</strong></p>
+            <p>
+              <strong>Proof of Work</strong>
+            </p>
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
           <OdBackground />
@@ -35,8 +37,16 @@ export default class WorkPage extends Component {
                   key={post.id}
                   to={post.fields.slug}
                 >
-                  <img src={post.frontmatter.featuredImage.childImageSharp.original.src} alt="featured" />
-                  <p>{post.frontmatter.title} {post.frontmatter.shortDescription}</p>
+                  <img
+                    src={
+                      post.frontmatter.featuredImage.childImageSharp.original
+                        .src
+                    }
+                    alt="featured"
+                  />
+                  <p>
+                    {post.frontmatter.title} {post.frontmatter.shortDescription}
+                  </p>
                   <p>Keep Reading →</p>
                 </Link>
               ))}
