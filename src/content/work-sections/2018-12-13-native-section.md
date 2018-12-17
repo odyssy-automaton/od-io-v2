@@ -7,4 +7,4 @@ sortOrder: 1
 
 While developing the Alpha, we redesigned the static website to prepare for launch marketing.
 
-![](/img/)
+![](/img/Native__Home--iphone.png)
