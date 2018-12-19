@@ -3,18 +3,36 @@
 .Work {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px;
   &__Item {
-    flex-basis: 30%;
-    &:nth-child(n-2) {
-      margin-right: 3%;
+    padding: 25px;
+    flex-basis: 28%;
+    margin-bottom: 25px;
+    &:nth-child(n - 2) {
+      margin-right: 5%;
     }
-    img {
-      transition: background-color .15s linear;
-      background-color: $od-medium-purple;
-      margin-bottom: 25px;
+    @media (max-width: 1199px) {
+      flex-basis: 45%;
+    }
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+    }
+    p {
+      color: #aaa;
+    }
+    &:hover p { color: #333; }
+    &:hover { transform: scale(1.05); background-color: $od-cream-dark; }
+    &--Image {
+      position: relative;
+      height: 100%;
+      display: block;
+      img {
+        transition: all .15s linear;
+        margin-bottom: 25px;
+      }
     }
     &:hover img {
-      background-color: $od-primary;
     }
   }
 }
@@ -30,6 +48,3 @@
     p { margin: 0;}
   }
 }
-
-
-// Work Item

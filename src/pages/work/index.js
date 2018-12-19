@@ -15,7 +15,7 @@ export default class WorkPage extends Component {
         <section className="PageHeader">
           <div className="PageHeader__Contents">
             <p>
-              <strong>Proof of Work</strong>
+              Proof of Work
             </p>
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
@@ -28,31 +28,28 @@ export default class WorkPage extends Component {
             </p>
           </div>
         </section>
-        <section className="Page">
-          <div className="Page__Contents">
-            <div className="Work">
-              {posts.map(({ node: post }) => (
-                <Link
-                  className="Work__Item"
-                  key={post.id}
-                  to={post.fields.slug}
-                >
-                  <img
-                    src={
-                      post.frontmatter.featuredImage.childImageSharp.original
-                        .src
-                    }
-                    alt="featured"
-                  />
-                  <p>
-                    {post.frontmatter.title} {post.frontmatter.shortDescription}
-                  </p>
-                  <p>Keep Reading →</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <div className="Work">
+          {posts.map(({ node: post }) => (
+            <Link
+              className="Work__Item"
+              key={post.id}
+              to={post.fields.slug}
+            >
+              <div className="Work__Item--Image">
+                <img
+                  src={
+                    post.frontmatter.featuredImage.childImageSharp.original.src
+                  }
+                  alt="featured"
+                />
+              </div>
+              <p className="Weight--100">
+                <span className="Weight--500">{post.frontmatter.title}</span> {post.frontmatter.shortDescription}
+              </p>
+              <p>Keep Reading →</p>
+            </Link>
+          ))}
+        </div>
       </Layout>
     );
   }

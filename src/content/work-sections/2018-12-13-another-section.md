@@ -7,4 +7,4 @@ sortOrder: 0
 
 We iterated on the copywriting and design for maximum understanding and appeal to the audience.
 
-![](/img/work/LandApart__Home--desktop.png)
+![](/img/work/LandApart--Featured--1.png)

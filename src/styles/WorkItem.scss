@@ -1,0 +1,31 @@
+// Work Item
+
+h4 {
+  font-weight: 700;
+}
+
+.Columns__Column--50 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p { margin-bottom: 0; font-size: 1.35em; }
+  img { max-width: 300px; }
+}
+
+.WorkSections {
+  font-size: 1.35em;
+  font-weight: 100;
+  p {
+  }
+}
+
+.Services {
+  ul {
+    list-style: none;
+    margin: 0;
+    li {
+      color: #bbb;
+      font-weight: 100;
+    }
+  }
+}

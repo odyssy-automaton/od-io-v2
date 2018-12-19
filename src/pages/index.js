@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
             </Fade>
           </div>
         </section>
-        <section className="Block">
+        <section className="Block ProofOfWork">
           <div className="Block__Contents">
             <p className="Huge">Proof of Work</p>
             <Link to="/work">View</Link>
