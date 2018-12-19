@@ -25,10 +25,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 3.25em; }
 
-p.Huge {
-  font-size: 2.5em;
-  line-height: 1.35em;
-  font-weight: 100;
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  letter-spacing: 0;
+  &.Huge {
+    font-size: 2.5em;
+    line-height: 1.35em;
+    font-weight: 100;
+  }
+  &.Large {
+    font-size: 1.15em;
+    line-height: 1.35em;
+    font-weight: 100;
+  }
 }
 
 .Weight {
@@ -39,6 +49,21 @@ p.Huge {
   &--500 { font-weight: 500 }
   &--700 { font-weight: 700 }
   &--900 { font-weight: 900 }
+}
+
+.Padding {
+  &--25 { padding: 25px; }
+  &--50 { padding: 50px; }
+  &--75 { padding: 75px; }
+  &--100 { padding: 100px; }
+}
+
+.Flex {
+  display: flex;
+  &--Center {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 // Layout
@@ -74,9 +99,31 @@ p.Huge {
 .Page {
   width: 100%;
   &__Contents {
-    max-width: 1100px;
-    padding: 50px;
+    max-width: 1140px;
+    padding: 30px 30px;
     margin: 0 auto;
+  }
+}
+
+// Columns
+.Columns {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__Column {
+    &--25 {
+      flex-basis: 25%;
+    }
+    &--33 {
+      flex-basis: 33%;
+    }
+    &--50 {
+      flex-basis: 50%;
+    }
+    &--100 {
+      flex-basis: 100%;
+    }
   }
 }
 
@@ -84,4 +131,9 @@ p.Huge {
 .Background--Primary {
   background-color: $od-primary;
   color: white;
+}
+
+// Gatsby Overrides
+.gatsby-resp-image-image {
+  box-shadow: none !important;
 }

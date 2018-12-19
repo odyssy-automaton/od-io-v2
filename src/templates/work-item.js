@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
@@ -7,6 +9,7 @@ import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import WorkSection from '../components/work/WorkSection';
 import WorkServices from '../components/work/WorkServices';
+import '../styles/WorkItem.scss'
 
 export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
@@ -21,20 +24,26 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
           <p>
             <Link to="/work">Proof of Work</Link> / {workItem.title}
           </p>
-          <h1>{workItem.shortDescription}</h1>
+          <h1><span className="Weight--400">{workItem.title}</span> {workItem.shortDescription}</h1>
         </div>
         <OdBackground />
       </section>
       <section className="Block">
         <div className="Block__Contents">
-          <p>{workItem.longDescription}</p>
+          <div className="Columns">
+            <div className="Columns__Column--50">
+              <p className="Large">{workItem.longDescription}</p>
+            </div>
+            <div className="Columns__Column--50">
+              <img src={workItem.projectImage.childImageSharp.original.src} />
+            </div>
+          </div>
         </div>
       </section>
       <section className="Page">
         <div className="Page__Contents">
           {sections && sections.length ? (
-            <div>
-              <h4>Sections</h4>
+            <div className="WorkSections">
               {sections.map((section) => {
                 return (
                   <WorkSection content={section.node} key={section.node.id} />
@@ -43,8 +52,7 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
             </div>
           ) : null}
           {hasServices ? (
-            <div style={{ marginTop: `4rem` }}>
-              <h4>Services</h4>
+            <div className="Services">
               <WorkServices workItem={workItem} />
             </div>
           ) : null}
@@ -101,6 +109,44 @@ export const pageQuery = graphql`
         title
         shortDescription
         longDescription
+        featuredImage {
+          id
+          childImageSharp {
+            id
+            resize {
+              src
+              tracedSVG
+              width
+              height
+              aspectRatio
+              originalName
+            }
+            original {
+              width
+              height
+              src
+            }
+          }
+        }
+        projectImage {
+          id
+          childImageSharp {
+            id
+            resize {
+              src
+              tracedSVG
+              width
+              height
+              aspectRatio
+              originalName
+            }
+            original {
+              width
+              height
+              src
+            }
+          }
+        }
         tags
         className
         servicesList1Title

@@ -5,9 +5,9 @@ const WorkServices = class extends React.Component {
     const { workItem } = this.props;
 
     return (
-      <div>
-        <div>
-          <p>{workItem.servicesList1Title}</p>
+      <div className="Columns">
+        <div className="Columns__Column--33">
+          <p className="Weight--500">{workItem.servicesList1Title}</p>
           <ul>
             {workItem.servicesList1.map((item) => (
               <li>{item}</li>
@@ -15,8 +15,8 @@ const WorkServices = class extends React.Component {
           </ul>
         </div>
         {workItem.servicesList2 && workItem.servicesList2.length ? (
-          <div>
-            <p>{workItem.servicesList2Title}</p>
+          <div className="Columns__Column--33">
+            <p className="Weight--500">{workItem.servicesList2Title}</p>
             <ul>
               {workItem.servicesList2.map((item) => (
                 <li>{item}</li>
@@ -25,8 +25,8 @@ const WorkServices = class extends React.Component {
           </div>
         ) : null}
         {workItem.servicesList3 && workItem.servicesList3.length ? (
-          <div>
-            <p>{workItem.servicesList3Title}</p>
+          <div className="Columns__Column--33">
+            <p className="Weight--500">{workItem.servicesList3Title}</p>
             <ul>
               {workItem.servicesList3.map((item) => (
                 <li>{item}</li>
