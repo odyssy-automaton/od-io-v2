@@ -1,0 +1,50 @@
+@import 'variables';
+
+.Work {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px;
+  &__Item {
+    padding: 25px;
+    flex-basis: 28%;
+    margin-bottom: 25px;
+    &:nth-child(n - 2) {
+      margin-right: 5%;
+    }
+    @media (max-width: 1199px) {
+      flex-basis: 45%;
+    }
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+    }
+    p {
+      color: #aaa;
+    }
+    &:hover p { color: #333; }
+    &:hover { transform: scale(1.05); background-color: $od-cream-dark; }
+    &--Image {
+      position: relative;
+      height: 100%;
+      display: block;
+      img {
+        transition: all .15s linear;
+        margin-bottom: 25px;
+      }
+    }
+    &:hover img {
+    }
+  }
+}
+
+.Filter {
+  background-color: $od-cream-dark;
+  display: flex;
+  align-items: center;
+  &__Contents {
+    width: 1140px;
+    padding: 25px 30px;
+    margin: 0 auto;
+    p { margin: 0;}
+  }
+}

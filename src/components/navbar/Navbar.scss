@@ -1,0 +1,111 @@
+@import '../../styles/variables';
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0px 50px;
+  width: 100%;
+  border-bottom: 2px solid $od-cream-dark;
+  &__Brand {
+    height: 60px; width: auto;
+    &--Logo {
+      img { height: 100%; }
+    }
+  }
+  &__Desktop {
+    margin-left: auto;
+    display: none;
+    @media (min-width: 890px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 80px;
+      padding: 0px 15px;
+      &:after {
+        content: '';
+        background-color: transparent;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .15s linear;
+      }
+      &:hover:after {
+        content: '';
+        background-color: $od-primary;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .15s linear;
+      }
+      &--Active {
+        color: $od-primary;
+        &:after {
+          content: '';
+          background-color: $od-primary;
+          height: 3px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: all .15s linear;
+        }
+      }
+    }
+  }
+  &__Mobile {
+    position: fixed;
+    padding: 75px 25px 25px 25px;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    background: $od-cream-dark;
+    opacity: 0;
+    z-index: -1;
+    transition: all .1s linear;
+    &--Contents {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &--Item {
+        font-size: 1.25em;
+        margin-top: 25px;
+      }
+
+    }
+    &--Open {
+      opacity: 1;
+      z-index: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+// Old -- Refactoring
+
+.navbar__hamburger {
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.navbar__hamburger,
+.Navbar__Mobile {
+  display: block;
+  @media (min-width: 890px) {
+    display: none;
+  }
+}

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/layout/Layout';
+import OdBackground from '../../components/shared/od-background/OdBackground';
+import '../../styles/Work.scss';
 
 export default class WorkPage extends Component {
   render() {
@@ -10,36 +12,44 @@ export default class WorkPage extends Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Our Work</h1>
-            </div>
-            {posts.map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #333', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
+        <section className="PageHeader">
+          <div className="PageHeader__Contents">
+            <p>
+              Proof of Work
+            </p>
+            <h1>Ideation. Design. Development. Product. Iteration.</h1>
+          </div>
+          <OdBackground />
+        </section>
+        <section className="Filter">
+          <div className="Filter__Contents">
+            <p>
+              Filter <span>All</span>
+            </p>
           </div>
         </section>
+        <div className="Work">
+          {posts.map(({ node: post }) => (
+            <Link
+              className="Work__Item"
+              key={post.id}
+              to={post.fields.slug}
+            >
+              <div className="Work__Item--Image">
+                <img
+                  src={
+                    post.frontmatter.featuredImage.childImageSharp.original.src
+                  }
+                  alt="featured"
+                />
+              </div>
+              <p className="Weight--100">
+                <span className="Weight--500">{post.frontmatter.title}</span> {post.frontmatter.shortDescription}
+              </p>
+              <p>Keep Reading →</p>
+            </Link>
+          ))}
+        </div>
       </Layout>
     );
   }
@@ -68,8 +78,28 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            shortDescription
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              id
+              childImageSharp {
+                id
+                resize {
+                  src
+                  tracedSVG
+                  width
+                  height
+                  aspectRatio
+                  originalName
+                }
+                original {
+                  width
+                  height
+                  src
+                }
+              }
+            }
           }
         }
       }

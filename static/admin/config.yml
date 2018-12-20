@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: 'work-item'
     label: 'Work'
-    folder: 'src/pages/work-items'
+    folder: 'src/content/work'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -18,8 +18,88 @@ collections:
           widget: 'hidden',
           default: 'work-item',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Short Description', name: 'shortDescription', widget: 'text' }
+      - { label: 'Long Description', name: 'longDescription', widget: 'text' }
+      - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
+      - { label: 'Project Image', name: 'projectImage', widget: 'image' }
+      - {
+          label: 'Services List 1 Title',
+          name: 'servicesList1Title',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'services List 1',
+          name: 'servicesList1',
+          widget: 'list',
+          required: false,
+        }
+      - {
+          label: 'Services List 2 Title',
+          name: 'servicesList2Title',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Services List 2',
+          name: 'servicesList2',
+          widget: 'list',
+          required: false,
+        }
+      - {
+          label: 'Services List 3 Title',
+          name: 'servicesList3Title',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Services List 3',
+          name: 'servicesList3',
+          widget: 'list',
+          required: false,
+        }
+      - {
+          lable: 'Link Text',
+          name: 'linkText',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          lable: 'Link URL',
+          name: 'linkUrl',
+          widget: 'string',
+          required: false,
+        }
       - { label: 'Tags', name: 'tags', widget: 'list' }
+      - {
+          label: 'Class Name',
+          name: 'className',
+          widget: 'string',
+          required: false,
+        }
+  - name: 'work-section'
+    label: 'Work Section'
+    folder: 'src/content/work-sections'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Work Relation',
+          name: 'relatedWorkItem',
+          widget: 'relation',
+          collection: 'work-item',
+          searchFields: ['title'],
+          valueField: 'title',
+          displayFields: ['title', 'shortDescription'],
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Class Name',
+          name: 'className',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Sort Order', name: 'sortOrder', widget: 'number', default: 0 }

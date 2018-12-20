@@ -1,64 +1,70 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import './Navbar.scss';
+import './Hamburger.scss';
+import OdyssyLogoStandard from '../../img/odyssy__logo--standard.svg';
 
 const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll('.navbar-burger'),
-      0,
-    );
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach((el) => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
-      });
+  state = {
+      navOpen: false,
     }
+
+  toggleNav = () => {
+    this.setState({
+      navOpen: !this.state.navOpen,
+    });
   }
 
   render() {
+
+    const mobileNavClass = this.state.navOpen ?
+      'Navbar__Mobile Navbar__Mobile--Open' : 'Navbar__Mobile';
+
+    const hamburgerClass = this.state.navOpen ?
+      'navbar__hamburger hamburger hamburger--spin is-active' : 'navbar__hamburger hamburger hamburger--spin';
+
     return (
       <nav
-        className="navbar is-transparent"
+        className="Navbar"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              Odyssy
+        <div className="Navbar__Brand">
+          <Link to="/" className="Navbar__Brand--Logo" title="Logo">
+            <img alt="Odyssy Logo" src={OdyssyLogoStandard} />
+          </Link>
+        </div>
+        <div className="Navbar__Desktop">
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/work">
+            Work
+          </Link>
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/services">
+            Services
+          </Link>
+          <Link activeClassName="Navbar__Desktop--Item--Active" className="Navbar__Desktop--Item" to="/network">
+            Network
+          </Link>
+        </div>
+        {/* Start Hamburger */}
+        <button className={hamburgerClass} type="button" onClick={this.toggleNav}>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+        <div className={mobileNavClass}>
+          <div className="Navbar__Mobile--Contents">
+            <Link className="Navbar__Mobile--Contents--Item" to="/work">
+              Work
             </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-start has-text-centered" />
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/work">
-                Work
-              </Link>
-              <Link className="navbar-item" to="/services">
-                Services
-              </Link>
-              <Link className="navbar-item" to="/network">
-                Network
-              </Link>
-            </div>
+            <Link className="Navbar__Mobile--Contents--Item" to="/services">
+              Services
+            </Link>
+            <Link className="Navbar__Mobile--Contents--Item" to="/network">
+              Network
+            </Link>
           </div>
         </div>
+        {/* End Hamburger */}
       </nav>
     );
   }

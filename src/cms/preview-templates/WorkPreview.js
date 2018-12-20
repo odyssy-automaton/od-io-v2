@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { WorkTemplate } from '../../templates/work-item';
+import { WorkItemTemplate } from '../../templates/work-item';
 
 const WorkPreview = ({ entry, widgetFor }) => (
-  <WorkTemplate
+  <WorkItemTemplate
     content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
     tags={entry.getIn(['data', 'tags'])}

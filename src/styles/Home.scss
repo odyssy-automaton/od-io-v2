@@ -1,0 +1,28 @@
+@import 'variables';
+
+.Hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &__Contents {
+    p {color: $od-medium-purple; margin: 0; text-transform: uppercase; text-align: center; line-height: 1.25em;}
+  }
+  .LottieControl {
+    position: absolute;
+    height: 105%;
+    width: 105%;
+  }
+}
+
+.ProofOfWork {
+  background-image: url('/img/work/Work__BG.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: $od-primary;
+  color: white;
+}
