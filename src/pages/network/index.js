@@ -22,7 +22,8 @@ export default class NetworkPage extends Component {
         <section className="Page">
           <div className="Block">
             <div className="Block__Contents">
-              <Contact />
+              <h1>Contact</h1>
+              <Contact formName="contact" />
             </div>
           </div>
           <div className="Page__Contents">
@@ -38,6 +39,12 @@ export default class NetworkPage extends Component {
               Vestibulum mattis ullamcorper velit sed ullamcorper morbi
               tincidunt ornare massa.
             </p>
+          </div>
+          <div className="Block">
+            <div className="Block__Contents">
+              <h1>Work with us</h1>
+              <Contact formName="network" />
+            </div>
           </div>
         </section>
       </Layout>
