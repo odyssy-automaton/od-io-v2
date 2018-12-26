@@ -1,5 +1,4 @@
 import React from 'react';
-// import { navigateTo } from "gatsby-link";
 
 function encode(data) {
   return Object.keys(data)
@@ -11,6 +10,7 @@ export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.submitted = false;
   }
 
   handleChange = (e) => {
@@ -18,7 +18,6 @@ export default class Contact extends React.Component {
   };
 
   handleSubmit = (e) => {
-    console.log('submitting');
     e.preventDefault();
     const form = e.target;
     fetch('/', {
@@ -29,56 +28,62 @@ export default class Contact extends React.Component {
         ...this.state,
       }),
     })
-      // .then(() => navigateTo(form.getAttribute("action")))
-      .then(() => console.log('submitted'))
+      .then(() => this.setState({ submitted: true }))
       .catch((error) => alert(error));
   };
 
   render() {
+    const { submitted } = this.state;
+
     return (
       <div>
         <h1>Contact</h1>
-        <form
-          name="contact"
-          method="post"
-          // action="/thanks/"
-          action="#"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out:{' '}
-              <input name="bot-field" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your name:
-              <br />
-              <input type="text" name="name" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your email:
-              <br />
-              <input type="email" name="email" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:
-              <br />
-              <textarea name="message" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+        {submitted ? (
+          <div>
+            <h3>Thanks for making contact</h3>
+          </div>
+        ) : (
+          <form
+            name="contact"
+            method="post"
+            action="#"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{' '}
+                <input name="bot-field" onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your name:
+                <br />
+                <input type="text" name="name" onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your email:
+                <br />
+                <input type="email" name="email" onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
+                Message:
+                <br />
+                <textarea name="message" onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+        )}
       </div>
     );
   }
