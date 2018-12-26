@@ -34,24 +34,24 @@ export default class Contact extends React.Component {
 
   render() {
     const { submitted } = this.state;
+    const { formName } = this.props;
 
     return (
       <div>
-        <h1>Contact</h1>
         {submitted ? (
           <div>
             <h3>Thanks for making contact</h3>
           </div>
         ) : (
           <form
-            name="contact"
+            name={formName}
             method="post"
             action="#"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value={formName} />
             <p hidden>
               <label>
                 Don’t fill this out:{' '}
@@ -72,6 +72,19 @@ export default class Contact extends React.Component {
                 <input type="email" name="email" onChange={this.handleChange} />
               </label>
             </p>
+            {formName === 'network' ? (
+              <p>
+                <label>
+                  Your specialty:
+                  <br />
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={this.handleChange}
+                  />
+                </label>
+              </p>
+            ) : null}
             <p>
               <label>
                 Message:
