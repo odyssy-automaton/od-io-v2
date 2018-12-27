@@ -1,6 +1,5 @@
 ---
 templateKey: work-item
-date: 2018-12-13T13:20:53.401Z
 title: BookBuilder
 shortDescription: is an enterprise-level self-publishing platform.
 longDescription:
@@ -39,3 +38,7 @@ tags:
   - ux
   - ui
 ---
+
+# title test
+
+something here.

@@ -9,8 +9,8 @@ const WorkServices = class extends React.Component {
         <div className="Columns__Column--33">
           <p className="Weight--500">{workItem.servicesList1Title}</p>
           <ul>
-            {workItem.servicesList1.map((item) => (
-              <li>{item}</li>
+            {workItem.servicesList1.map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ul>
         </div>
@@ -18,8 +18,8 @@ const WorkServices = class extends React.Component {
           <div className="Columns__Column--33">
             <p className="Weight--500">{workItem.servicesList2Title}</p>
             <ul>
-              {workItem.servicesList2.map((item) => (
-                <li>{item}</li>
+              {workItem.servicesList2.map((item, i) => (
+                <li key={i}>{item}</li>
               ))}
             </ul>
           </div>
@@ -28,8 +28,8 @@ const WorkServices = class extends React.Component {
           <div className="Columns__Column--33">
             <p className="Weight--500">{workItem.servicesList3Title}</p>
             <ul>
-              {workItem.servicesList3.map((item) => (
-                <li>{item}</li>
+              {workItem.servicesList3.map((item, i) => (
+                <li key={i}>{item}</li>
               ))}
             </ul>
           </div>

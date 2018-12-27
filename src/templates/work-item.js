@@ -12,10 +12,8 @@ import { HTMLContent } from '../components/shared/Content';
 
 import '../styles/WorkItem.scss';
 
-export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
+export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
-
-  console.log(workItem);
 
   return (
     <div className={workItem.className}>
@@ -36,7 +34,6 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
         <div className="Block__Contents">
           <div className="Columns">
             <div className="Columns__Column--50">
-              {/* <p className="Large">{workItem.longDescription}</p> */}
               <HTMLContent content={workItem.longDescription} />
             </div>
             <div className="Columns__Column--50">
@@ -74,6 +71,7 @@ WorkItemTemplate.propTypes = {
 
 const WorkItem = ({ data }) => {
   const workItem = data.item;
+  workItem.frontmatter.longDescription = data.item.html;
   const sections = data.sections || [];
 
   return (
@@ -110,7 +108,6 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         shortDescription
         longDescription
@@ -162,7 +159,6 @@ export const pageQuery = graphql`
         servicesList3
       }
       html
-      rawMarkdownBody
     }
     sections: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___sortOrder] }
