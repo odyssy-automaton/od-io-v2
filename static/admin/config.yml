@@ -19,6 +19,7 @@ collections:
           default: 'work-item',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Sort Order', name: 'sortOrder', widget: 'number', default: 0 }
       - { label: 'Short Description', name: 'shortDescription', widget: 'text' }
       - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
       - { label: 'Project Image', name: 'projectImage', widget: 'image' }
