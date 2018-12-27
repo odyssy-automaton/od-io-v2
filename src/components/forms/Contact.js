@@ -9,8 +9,11 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.submitted = false;
+    this.state = {
+      email: '',
+      message: '',
+      submitted: false,
+    };
   }
 
   handleChange = (e) => {
@@ -30,6 +33,11 @@ export default class Contact extends React.Component {
     })
       .then(() => this.setState({ submitted: true }))
       .catch((error) => alert(error));
+  };
+
+  validForm = () => {
+    const emailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    return emailReg.test(this.state.email) && this.state.message.length > 10;
   };
 
   render() {
@@ -60,31 +68,11 @@ export default class Contact extends React.Component {
             </p>
             <p>
               <label>
-                Your name:
-                <br />
-                <input type="text" name="name" onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your email:
+                Email:
                 <br />
                 <input type="email" name="email" onChange={this.handleChange} />
               </label>
             </p>
-            {formName === 'network' ? (
-              <p>
-                <label>
-                  Your specialty:
-                  <br />
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={this.handleChange}
-                  />
-                </label>
-              </p>
-            ) : null}
             <p>
               <label>
                 Message:
@@ -93,7 +81,9 @@ export default class Contact extends React.Component {
               </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button disabled={!this.invalidForm()} type="submit">
+                Send
+              </button>
             </p>
           </form>
         )}
