@@ -14,9 +14,7 @@ export default class WorkPage extends Component {
       <Layout>
         <section className="PageHeader">
           <div className="PageHeader__Contents">
-            <p>
-              Proof of Work
-            </p>
+            <p>Proof of Work</p>
             <h1>Ideation. Design. Development. Product. Iteration.</h1>
           </div>
           <OdBackground />
@@ -30,11 +28,7 @@ export default class WorkPage extends Component {
         </section>
         <div className="Work">
           {posts.map(({ node: post }) => (
-            <Link
-              className="Work__Item"
-              key={post.id}
-              to={post.fields.slug}
-            >
+            <Link className="Work__Item" key={post.id} to={post.fields.slug}>
               <div className="Work__Item--Image">
                 <img
                   src={
@@ -44,7 +38,8 @@ export default class WorkPage extends Component {
                 />
               </div>
               <p className="Weight--100">
-                <span className="Weight--500">{post.frontmatter.title}</span> {post.frontmatter.shortDescription}
+                <span className="Weight--500">{post.frontmatter.title}</span>{' '}
+                {post.frontmatter.shortDescription}
               </p>
               <p>Keep Reading →</p>
             </Link>
@@ -66,7 +61,6 @@ WorkPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "work-item" } } }
     ) {
       edges {
@@ -80,7 +74,6 @@ export const pageQuery = graphql`
             title
             shortDescription
             templateKey
-            date(formatString: "MMMM DD, YYYY")
             featuredImage {
               id
               childImageSharp {

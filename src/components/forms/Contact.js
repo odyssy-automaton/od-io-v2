@@ -81,7 +81,7 @@ export default class Contact extends React.Component {
               </label>
             </p>
             <p>
-              <button disabled={!this.invalidForm()} type="submit">
+              <button disabled={!this.validForm()} type="submit">
                 Send
               </button>
             </p>
