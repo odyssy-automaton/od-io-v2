@@ -26,7 +26,7 @@ export default class NetworkPage extends Component {
           </Fade>
           <OdBackground />
         </section>
-        <section className="Page">
+        <section className="Page Network">
           <div className="Block">
             <div className="Block__Contents">
               <h1>Contact</h1>
