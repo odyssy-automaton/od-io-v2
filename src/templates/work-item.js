@@ -2,19 +2,18 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import WorkSection from '../components/work/WorkSection';
 import WorkServices from '../components/work/WorkServices';
-import '../styles/WorkItem.scss'
+import { HTMLContent } from '../components/shared/Content';
 
-export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
+import '../styles/WorkItem.scss';
+
+export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
-
-  console.log(workItem);
 
   return (
     <div className={workItem.className}>
@@ -24,7 +23,10 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
           <p>
             <Link to="/work">Proof of Work</Link> / {workItem.title}
           </p>
-          <h1><span className="Weight--400">{workItem.title}</span> {workItem.shortDescription}</h1>
+          <h1>
+            <span className="Weight--400">{workItem.title}</span>{' '}
+            {workItem.shortDescription}
+          </h1>
         </div>
         <OdBackground />
       </section>
@@ -32,7 +34,7 @@ export const WorkItemTemplate = ({ workItem, sections, tags, helmet }) => {
         <div className="Block__Contents">
           <div className="Columns">
             <div className="Columns__Column--50">
-              <p className="Large">{workItem.longDescription}</p>
+              <HTMLContent content={workItem.longDescription} />
             </div>
             <div className="Columns__Column--50">
               <img src={workItem.projectImage.childImageSharp.original.src} />
@@ -69,6 +71,7 @@ WorkItemTemplate.propTypes = {
 
 const WorkItem = ({ data }) => {
   const workItem = data.item;
+  workItem.frontmatter.longDescription = data.item.html;
   const sections = data.sections || [];
 
   return (
@@ -105,7 +108,6 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         shortDescription
         longDescription
@@ -156,6 +158,7 @@ export const pageQuery = graphql`
         servicesList3Title
         servicesList3
       }
+      html
     }
     sections: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___sortOrder] }

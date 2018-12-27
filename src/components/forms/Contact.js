@@ -9,8 +9,11 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.submitted = false;
+    this.state = {
+      email: '',
+      message: '',
+      submitted: false,
+    };
   }
 
   handleChange = (e) => {
@@ -32,26 +35,31 @@ export default class Contact extends React.Component {
       .catch((error) => alert(error));
   };
 
+  validForm = () => {
+    const emailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    return emailReg.test(this.state.email) && this.state.message.length > 10;
+  };
+
   render() {
     const { submitted } = this.state;
+    const { formName } = this.props;
 
     return (
       <div>
-        <h1>Contact</h1>
         {submitted ? (
           <div>
             <h3>Thanks for making contact</h3>
           </div>
         ) : (
           <form
-            name="contact"
+            name={formName}
             method="post"
             action="#"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value={formName} />
             <p hidden>
               <label>
                 Don’t fill this out:{' '}
@@ -60,14 +68,7 @@ export default class Contact extends React.Component {
             </p>
             <p>
               <label>
-                Your name:
-                <br />
-                <input type="text" name="name" onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your email:
+                Email:
                 <br />
                 <input type="email" name="email" onChange={this.handleChange} />
               </label>
@@ -80,7 +81,9 @@ export default class Contact extends React.Component {
               </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button disabled={!this.validForm()} type="submit">
+                Send
+              </button>
             </p>
           </form>
         )}
