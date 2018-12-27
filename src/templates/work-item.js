@@ -110,7 +110,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         shortDescription
-        longDescription
         featuredImage {
           id
           childImageSharp {
