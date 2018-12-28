@@ -12,7 +12,7 @@ export default class ServicesPage extends Component {
         <section className="PageHeader">
           <Fade>
           <div className="PageHeader__Contents">
-            <h1>The recipe for success calls for equal parts Design, Engineering, and Strategy. Add some Blockchain for spice.</h1>
+            <h1>Research, Design, Develop, Test, Deploy, Maintain, Improve.</h1>
           </div>
           </Fade>
           <OdBackground />
