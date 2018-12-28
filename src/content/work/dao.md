@@ -1,12 +1,13 @@
 ---
 templateKey: work-item
-title: Wander Coin
-shortDescription: is an experimental dApp and token model built to test various game theories.
-featuredImage: /img/work/Wandercoin--Featured.png
-projectImage: /img/work/Wander--Icon.png
+title: DAO Interface
+shortDescription: is an interface for Odyssy members to manage the DAO and its resources.
+featuredImage: /img/work/DAO--Featured.png
+projectImage: /img/work/DOLO--Featured.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
+  - Smart Contract
   - DApp Development
   - DevOps
   - User Testing
@@ -19,6 +20,7 @@ servicesList3Title: Blockchain
 servicesList3:
   - Smart Contracts
   - DApp Development
+  - Security Auditing
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:
