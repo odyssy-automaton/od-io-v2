@@ -15,7 +15,10 @@ export default class WorkPage extends Component {
         <section className="PageHeader">
           <div className="PageHeader__Contents">
             <p>Proof of Work</p>
-            <h1>We build experiences in the form of Apps, Websites, Protocols & Prototyping for Enterprise, Open Source, and ourselves.</h1>
+            <h1>
+              We build experiences in the form of Apps, Websites, Protocols &
+              Prototyping for Enterprise, Open Source, and ourselves.
+            </h1>
           </div>
           <OdBackground />
         </section>
@@ -61,6 +64,7 @@ WorkPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___sortOrder] }
       filter: { frontmatter: { templateKey: { eq: "work-item" } } }
     ) {
       edges {
