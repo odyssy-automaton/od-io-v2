@@ -1,6 +1,7 @@
 ---
 templateKey: work-item
 title: LandApart
+sortOrder: 3
 shortDescription: is like the Airbnb of nature. Keep private land wild. Enjoy quality time in nature.
 featuredImage: /img/work/LandApart--Flag.png
 projectImage: /img/work/LandApart--Brand.png
