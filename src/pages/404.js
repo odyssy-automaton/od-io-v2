@@ -8,7 +8,7 @@ const NotFoundPage = () => (
     <section className="PageHeader">
       <div className="PageHeader__Contents">
         <p>Not Found</p>
-        <h1>Whoops. That's not a real page.</h1>
+        <h1>Whoops. You got lost.</h1>
         <Link to="/">Take me home</Link>
       </div>
     </section>
