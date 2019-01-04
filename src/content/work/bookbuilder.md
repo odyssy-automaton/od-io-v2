@@ -1,10 +1,10 @@
 ---
 templateKey: work-item
 title: BookBuilder
-sortOrder: 0
+sortOrder: 2
 shortDescription: is an enterprise-level self-publishing platform.
-featuredImage: /img/work/BookBuilder--Featured--1.png
-projectImage: /img/work/DOLO--Brand.png
+featuredImage: /img/work/BookBuilder__App--Cover.png
+projectImage: /img/work/BookBuilder__App--Cover.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
