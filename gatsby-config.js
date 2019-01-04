@@ -1,7 +1,12 @@
+const policy = process.env.ALLOW_ROBOTS
+  ? [{ userAgent: '*', allow: '/' }]
+  : [{ userAgent: '*', disallow: '/' }];
+
 module.exports = {
   siteMetadata: {
     title: 'Odyssy.io',
     description: 'Building for the Blockchain and Beyond',
+    siteUrl: `https://odyssy.io`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -75,6 +80,13 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: policy,
       },
     },
     'gatsby-plugin-purgecss', // must be after other CSS plugins
