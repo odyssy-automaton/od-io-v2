@@ -16,3 +16,5 @@ The prototype showcases how the DOLO decentralized learning platform will distri
 ![](/img/work/DOLO__Prototype--Course--1.png)
 
 ![](/img/work/DOLO__Prototype--Course--2.png)
+
+![](/img/work/DOLO__Prototype--Dash.png)
