@@ -112,19 +112,25 @@ p {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   &__Column {
+    flex-direction: column;
     &--25 {
       flex-basis: 25%;
+      flex-direction: column;
     }
     &--33 {
       flex-basis: 33%;
+      flex-direction: column;
     }
     &--50 {
       flex-basis: 50%;
+      flex-direction: column;
     }
     &--100 {
       flex-basis: 100%;
+      flex-direction: column;
     }
   }
 }
@@ -138,4 +144,8 @@ p {
 // Gatsby Overrides
 .gatsby-resp-image-image {
   box-shadow: none !important;
+}
+
+.gatsby-resp-image-link {
+  pointer-events: none;
 }

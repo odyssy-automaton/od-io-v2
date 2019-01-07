@@ -4,7 +4,7 @@ title: DAO Interface
 sortOrder: 6
 shortDescription: is an interface for Odyssy members to manage the DAO and its resources.
 featuredImage: /img/work/DAO--Featured.png
-projectImage: /img/work/DOLO--Featured.png
+projectImage: /img/work/DAO--Featured.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
