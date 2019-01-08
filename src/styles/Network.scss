@@ -5,11 +5,23 @@ $hex-url: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXR
   height: 180px;
 }
 
+.Block.Manifesto {
+  > h2 {text-align: center; width: 100%; }
+}
+
 .Bios {
+  > h2 {text-align: center; width: 100%; }
+  .Columns {
+    max-width: 1400px;
+  }
+  .Columns__Column--33:not(last-child) {
+    padding-right: 50px;
+  }
   &__Pic {
     display: block;
-    width: 180px;
+    width: 176px;
     height: auto;
+    margin-bottom: 25px;
     mask-image: url($hex-url);
     -webkit-mask-image: url($hex-url);
     -moz-mask-image: url($hex-url);

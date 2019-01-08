@@ -21,9 +21,11 @@ h1, h2, h3, h4, h5, h6 {
   color: $od-primary;
   font-weight: 100;
   font-family: $base-font;
+  margin-bottom: 1em;
 }
 
 h1 { font-size: 3.25em; }
+h2 { font-size: 2.75em; }
 
 p {
   font-size: 1em;
@@ -40,6 +42,36 @@ p {
     font-weight: 100;
   }
 }
+
+// Forms & Inputs
+
+label {
+  font-size: 0.85em;
+}
+input, textarea {
+  outline: none;
+  width: 100%;
+  font-size: 1.15em;
+  font-weight: 100;
+  padding: 15px;
+  border: none;
+  background: rgba(0,0,0,0.02);
+  resize: none;
+}
+button, .button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid $od-medium-purple;
+  border-radius: 25px;
+  padding: 5px 15px;
+  background: none;
+  color: $od-medium-purple;
+  &:disabled {
+    color: rgba(0,0,0,0.35);
+    border-color: rgba(0,0,0,0.35);
+  }
+}
+
 
 // Utils
 
@@ -60,6 +92,12 @@ p {
   &--100 { padding: 100px; }
 }
 
+.Text{
+  &--Center {
+    text-align: center;
+  }
+}
+
 .Flex {
   display: flex;
   &--Center {
@@ -76,11 +114,12 @@ p {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  &:nth-of-type(even) { background-color: $od-cream-dark; }
+  flex-wrap: wrap;
+  &:nth-of-type(odd) { background-color: $od-cream-dark; }
   &__Contents {
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 50px;
   }
 }
 
@@ -91,10 +130,15 @@ p {
   align-items: center;
   justify-content: flex-start;
   min-height: 75vh;
+  background-color: $od-primary;
+  color: white !important;
   &__Contents {
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 50px;
+    h4 { color: white; font-weight: 500; }
+    a { color: $od-medium-purple; &:hover { color: white; } }
+    h1 { color: white }
   }
 }
 
@@ -119,14 +163,25 @@ p {
     &--25 {
       flex-basis: 25%;
       flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+      }
     }
     &--33 {
       flex-basis: 33%;
       flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+        padding-bottom: 25px;
+      }
     }
     &--50 {
       flex-basis: 50%;
       flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+        padding-bottom: 25px;
+      }
     }
     &--100 {
       flex-basis: 100%;

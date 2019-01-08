@@ -13,8 +13,12 @@ const Footer = class extends React.Component {
           <Link to="/" className="Footer__Brand--Logo" title="Logo">
             <img alt="Odyssy Logo" src={OdyssyLogoStandard} />
           </Link>
+          <p>© 2019 Odyssy. All Rights Reserved.</p>
         </div>
         <nav className="Footer__Nav">
+          <Link activeClassName="Footer__Nav--Item--Active" className="Footer__Nav--Item" to="/">
+            Home
+          </Link>
           <Link activeClassName="Footer__Nav--Item--Active" className="Footer__Nav--Item" to="/work">
             Work
           </Link>
@@ -25,6 +29,11 @@ const Footer = class extends React.Component {
             Network
           </Link>
         </nav>
+        <div className="Row Footer__Socials">
+          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
+          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
+          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
+        </div>
       </div>
     );
   }

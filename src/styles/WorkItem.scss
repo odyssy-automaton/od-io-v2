@@ -1,10 +1,12 @@
+@import '../styles/variables';
+
 // Work Item
 
 h4 {
   font-weight: 700;
 }
 
-.Columns__Column--50 {
+.WorkItem .Columns__Column--50 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +14,11 @@ h4 {
   img { max-width: 300px; }
 }
 
+.WorkItem .Block {
+  &:nth-of-type(2) {
+    background-color: $od-cream-dark;
+  }
+}
 .WorkSections {
   font-size: 1.35em;
   font-weight: 100;
@@ -24,7 +31,7 @@ h4 {
     list-style: none;
     margin: 0;
     li {
-      color: #bbb;
+      color: rgba(0,0,0,0.65);
       font-weight: 100;
     }
   }
