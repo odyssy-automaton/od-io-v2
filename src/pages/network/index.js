@@ -18,21 +18,34 @@ export default class NetworkPage extends Component {
         <section className="PageHeader">
           <Fade>
             <div className="PageHeader__Contents">
+              <h4>The Digital Agency, Evolved.</h4>
               <h1>
                 Odyssy is more like a super organism, a network of autonomous
-                cells distributing value across its network and projects.
+                cells incentivized to distribute value across its network and projects.
               </h1>
             </div>
           </Fade>
           <OdBackground />
         </section>
           <div className="Block">
-            <div className="Block__Contents">
-              <h1>Contact</h1>
-              <Contact formName="contact" />
+            <div className="Block__Contents Columns">
+              <div className="Columns__Column--50">
+                <p>
+                  For the cost of an internal hire, a project gets a distributed team called a cell, fully autonomous and optimized to each project’s needs. Cells are loosely coupled, but tightly aligned to maintain agility and continuous iteration. Cells learn from each other and share what works with the network.
+                </p>
+                <p>
+                  An example cell could be comprised of Product, Design, Engineering, and Blockchain skillsets.
+                  <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
+                </p>
+              </div>
+              <div className="Columns__Column--50">
+                <h2>Start a Project</h2>
+                <Contact formName="contact" />
+              </div>
             </div>
           </div>
-          <div className="Block">
+          <div className="Block Manifesto">
+            <h2>Manifesto</h2>
             <div className="Block__Contents">
               <div className="Columns">
                 <div className="Columns__Column--50">
@@ -54,44 +67,17 @@ export default class NetworkPage extends Component {
               </div>
             </div>
           </div>
-          <div className="Block">
-            <div className="Block__Contents">
-              <div className="Columns">
-                <div className="Columns__Column--50">
-                  <p>
-                    For the cost of one internal hire, a
-                    project gets a distributed team called a
-                    cell, fully autonomous and optimized to
-                    each project’s needs. An example cell
-                    could be comprised of Management,
-                    Product, Design, Development, and QA
-                    skillsets.
-                    Cells are loosely coupled, but tightly
-                    aligned to maintain agility and
-                    continuous iteration. Cells learn from
-                    each other and share what works with
-                    the network.
-                  </p>
-                  <p>
-                    Cells are loosely coupled, but tightly
-                    aligned to maintain agility and
-                    continuous iteration. Cells learn from
-                    each other and share what works with
-                    the network.
-                  </p>
-                </div>
-                <div className="Columns__Column--50">
-                  <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="Block Bios">
-            <div className="Columns">
+
+            <div className="Block__Contents Columns">
+              <div className="Columns__Column--100">
+                <h2>Core Team</h2>
+              </div>
               <div className="Columns__Column--33">
                 <img className="Bios__Pic" src={DekePic} alt="bio pic"/>
                 <div>
-                  <h2>Dekan Brown <small>Full Stack Developer</small></h2>
+                  <h3>Dekan Brown</h3>
+                  <h4>Full Stack Developer</h4>
                   <p>Dekan Brown is a Colorado native, adventurer and technophile. A full stack developer and co
                     founder of Odyssy.io, a crypto centric development shop focusing on the future of work with
                     developer coops and business automation using smart contracts. Other ventures include
@@ -104,7 +90,8 @@ export default class NetworkPage extends Component {
               <div className="Columns__Column--33">
                 <img className="Bios__Pic" src={VenPic} alt="bio pic"/>
                 <div>
-                  <h2>Ven Gist <small>Product + Design</small></h2>
+                  <h3>Ven Gist</h3>
+                  <h4>Product + Design</h4>
                   <p>Ven Gist started as a visual designer for global brands such as Adobe, Nike, and Uniqlo. As the
                     human experience became increasingly digitized, Ven learned code and migrated to Product
                     Design to facilitate the best possible user experience across all interactions. Following an
@@ -117,7 +104,8 @@ export default class NetworkPage extends Component {
               <div className="Columns__Column--33">
                 <img className="Bios__Pic" src={SamPic} alt="bio pic"/>
                 <div>
-                  <h2>Sam Kuhlmann <small>Full Stack Developer</small></h2>
+                  <h3>Sam Kuhlmann</h3>
+                  <h4>Full Stack Developer</h4>
                   <p>Sam Kuhlmann has taken a circuitous route to co-founding Odyssy.io. An art degree in film,
                     a stint in cartoon production, a detour as a magazine publisher/editor and years in software
                     management roles for global brands including Audi of America and The North Face have lead
@@ -132,7 +120,8 @@ export default class NetworkPage extends Component {
           </div>
           <div className="Block">
             <div className="Block__Contents">
-              <h1>Work with us</h1>
+              <h2>Network</h2>
+              <h3>Reach out if you're interested in joining our network of designers, developers, and thinkers.</h3>
               <Contact formName="network" />
             </div>
           </div>

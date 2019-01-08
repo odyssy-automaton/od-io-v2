@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
-import '../styles/Home.scss';
 import LottieControl from '../components/shared/lottie/LottieControl';
 import OdyssyLogoTypeStandard from '../img/odyssy__logo--type--standard.svg';
 import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
+import '../styles/Home.scss';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -29,7 +29,7 @@ export default class IndexPage extends React.Component {
             swapLoop={true}
           />
         </section>
-        <section className="Block">
+        <section className="Block Intro">
           <div className="Block__Contents">
             <Fade up>
               <p className="Huge">
@@ -45,7 +45,7 @@ export default class IndexPage extends React.Component {
             <Link to="/work">View</Link>
           </div>
         </section>
-        <section className="Block">
+        <section className="Block Capabilities">
           <div className="Block__Contents">
             <p className="Huge">
               <span className="Weight--500">Odyssy</span> is a decentralized
@@ -56,7 +56,7 @@ export default class IndexPage extends React.Component {
           </div>
           <OdBackground />
         </section>
-        <section className="Block">
+        <section className="Block Network">
           <div className="Block__Contents">
             <p className="Huge">
               We are iterating on the future of work right now
