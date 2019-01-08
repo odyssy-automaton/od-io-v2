@@ -10,6 +10,10 @@ import OdMesh from '../../img/Graphic__Od--Mesh.png';
 import DekePic from '../../img/deke.png';
 import SamPic from '../../img/sam.png';
 import VenPic from '../../img/ven.png';
+import IconDecentralized from '../../img/icons/icon__decentralized.png';
+import IconDevfund from '../../img/icons/icon__devfund.png';
+import IconEthereum from '../../img/icons/icon__ethereum.png';
+import IconGovernance from '../../img/icons/icon__governance.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -28,6 +32,82 @@ export default class NetworkPage extends Component {
           </Fade>
           <OdBackground />
         </section>
+<<<<<<< HEAD
+          <div className="Block">
+            <div className="Block__Contents Columns">
+              <div className="Columns__Column--100">
+                <p className="Huge">Decentralized Autonomous Organism</p>
+              </div>
+              <div className="Columns__Column--50">
+                <p>
+                  For the cost of an internal hire, a project gets a distributed team called a cell, fully autonomous and optimized to each project’s needs. Cells are loosely coupled, but tightly aligned to maintain agility and continuous iteration. Cells learn from each other and share what works with the network.
+                </p>
+                <p>
+                  An example cell could be comprised of Product, Design, Engineering, and Blockchain skillsets.
+                </p>
+              </div>
+              <div className="Columns__Column--50">
+
+                <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
+              </div>
+              <div className="Columns__Column--100">
+                <h3>Start a Project</h3>
+                <Contact formName="contact" />
+              </div>
+            </div>
+          </div>
+          <div className="Block Manifesto">
+            <div className="Block__Contents">
+              <div className="Columns">
+                <div className="Columns__Column--100">
+                  <h2>Manifesto</h2>
+                </div>
+                <div className="Columns__Column--33">
+                  <img src={IconDecentralized}/>
+                  <h4>Decentralized</h4>
+                  <p>Local autonomy for optimal efficiency and value distribution</p>
+                  <img src={IconDevfund}/>
+                  <h4>Collaborative</h4>
+                  <p>Anti-rivalrous network structure and incentive mechanisms</p>
+                </div>
+                <div className="Columns__Column--33">
+                  <img src={IconGovernance}/>
+                  <h4>Trustless</h4>
+                  <p>Autonomous value creation over managerial perception</p>
+                  <img src={IconGovernance}/>
+                  <h4>Transparent</h4>
+                  <p>Information open to all stakeholders and members</p>
+                </div>
+                <div className="Columns__Column--33">
+                  <img src={IconEthereum}/>
+                  <h4>Balance</h4>
+                  <p>Balance between centralized and decentralized systems</p>
+                  <img src={IconGovernance}/>
+                  <h4>Iterative</h4>
+                  <p>Understand, Diverge, Converge, Test, Prototype, Deploy, Iterate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="Block Bios">
+            <div className="Block__Contents Columns">
+              <div className="Columns__Column--100">
+                <h2>Core Team</h2>
+              </div>
+              <div className="Columns__Column--33">
+                <img className="Bios__Pic" src={DekePic} alt="bio pic"/>
+                <div>
+                  <h3>Dekan Brown</h3>
+                  <h4>Full Stack Developer</h4>
+                  <p>Dekan Brown is a Colorado native, adventurer and technophile. A full stack developer and co
+                    founder of Odyssy.io, a crypto centric development shop focusing on the future of work with
+                    developer coops and business automation using smart contracts. Other ventures include
+                    Landapart.com, a Land sharing platform. Dekan has been working as a developer for over 15
+                    years with five years in the crypto space, developing products, dapp front ends and solidity
+                    smart contracts.
+                  </p>
+                </div>
+=======
         <div className="Block">
           <div className="Block__Contents Columns">
             <div className="Columns__Column--50">
@@ -100,6 +180,7 @@ export default class NetworkPage extends Component {
                   five years in the crypto space, developing products, dapp
                   front ends and solidity smart contracts.
                 </p>
+>>>>>>> e3dd31b1c2cf685fbad270198519f3a226d4820e
               </div>
             </div>
             <div className="Columns__Column--33">

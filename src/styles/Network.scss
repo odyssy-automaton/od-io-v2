@@ -7,6 +7,16 @@ $hex-url: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXR
 
 .Block.Manifesto {
   > h2 {text-align: center; width: 100%; }
+  .Columns__Column--33 {
+    text-align: center;
+    h4 { margin: 15px 0px 10px 0px; }
+    p {
+      margin-bottom: 75px;
+    }
+  }
+  img {
+    width: 80px;
+  }
 }
 
 .Bios {
