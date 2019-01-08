@@ -1,10 +1,11 @@
 import React from 'react';
+import HubspotApi from '../../utils/hubspot-api';
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-}
+// function encode(data) {
+//   return Object.keys(data)
+//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&');
+// }
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class Contact extends React.Component {
       message: '',
       submitted: false,
     };
+    // this.hubspotApi = new HubspotApi();
   }
 
   handleChange = (e) => {
@@ -23,16 +25,27 @@ export default class Contact extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => this.setState({ submitted: true }))
-      .catch((error) => alert(error));
+
+    const hubspotApi = new HubspotApi();
+
+    console.log('form');
+    console.log(form);
+    console.log('state');
+    console.log(this.state);
+    console.log('hubspotApi');
+    console.log(hubspotApi);
+
+    hubspotApi.addContact(this.state);
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({
+    //     'form-name': form.getAttribute('name'),
+    //     ...this.state,
+    //   }),
+    // })
+    //   .then(() => this.setState({ submitted: true }))
+    //   .catch((error) => alert(error));
   };
 
   validForm = () => {
