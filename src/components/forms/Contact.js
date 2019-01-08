@@ -20,9 +20,13 @@ export default class Contact extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ loading: true });
-    const hubspotApi = new HubspotApi();
 
-    const res = await hubspotApi.addContact(this.state);
+    const res = await new HubspotApi().addContact({
+      contactType: this.props.formName,
+      email: this.state.email,
+      message: this.state.message,
+    });
+
     if (res.status === 'error') {
       this.setState({
         error: res.errors[0].message,
@@ -53,12 +57,22 @@ export default class Contact extends React.Component {
             {error ? <p>{error}</p> : null}
             <p>
               <label>
-                <input type="email" name="email" onChange={this.handleChange} placeholder="Email"/>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.handleChange}
+                  placeholder="Email"
+                />
               </label>
             </p>
             <p>
               <label>
-                <textarea name="message" onChange={this.handleChange} placeholder="Message (including any relevant links)" rows="5"/>
+                <textarea
+                  name="message"
+                  onChange={this.handleChange}
+                  placeholder="Message (including any relevant links)"
+                  rows="5"
+                />
               </label>
             </p>
             <p>

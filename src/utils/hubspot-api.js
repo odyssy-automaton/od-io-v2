@@ -17,6 +17,10 @@ export default class HubspotApi {
           value: formData.message,
         },
         {
+          name: 'contact_type',
+          value: formData.contactType,
+        },
+        {
           name: 'lifecyclestage',
           value: 'subscriber',
         },
