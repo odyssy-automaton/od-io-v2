@@ -1,10 +1,5 @@
 import React from 'react';
-
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-}
+import HubspotApi from '../../utils/hubspot-api';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -13,6 +8,8 @@ export default class Contact extends React.Component {
       email: '',
       message: '',
       submitted: false,
+      loading: false,
+      error: null,
     };
   }
 
@@ -20,28 +17,33 @@ export default class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => this.setState({ submitted: true }))
-      .catch((error) => alert(error));
+    this.setState({ loading: true });
+
+    const res = await new HubspotApi().addContact({
+      contactType: this.props.formName,
+      email: this.state.email,
+      message: this.state.message,
+    });
+
+    if (res.status === 'error') {
+      this.setState({
+        error: res.errors[0].message,
+        loading: false,
+      });
+    } else {
+      this.setState({ submitted: true });
+    }
   };
 
   validForm = () => {
     const emailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    return emailReg.test(this.state.email) && this.state.message.length > 10;
+    return emailReg.test(this.state.email) && this.state.message.length > 5;
   };
 
   render() {
-    const { submitted } = this.state;
+    const { submitted, loading, error } = this.state;
     const { formName } = this.props;
 
     return (
@@ -51,33 +53,30 @@ export default class Contact extends React.Component {
             <h3>Thanks for making contact</h3>
           </div>
         ) : (
-          <form
-            name={formName}
-            method="post"
-            action="#"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={this.handleSubmit}
-          >
-            <input type="hidden" name="form-name" value={formName} />
-            <p hidden>
+          <form name={formName} onSubmit={this.handleSubmit}>
+            {error ? <p>{error}</p> : null}
+            <p>
               <label>
-                Don’t fill this out:{' '}
-                <input name="bot-field" onChange={this.handleChange} />
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.handleChange}
+                  placeholder="Email"
+                />
               </label>
             </p>
             <p>
               <label>
-                <input type="email" name="email" onChange={this.handleChange} placeholder="Email"/>
+                <textarea
+                  name="message"
+                  onChange={this.handleChange}
+                  placeholder="Message (including any relevant links)"
+                  rows="5"
+                />
               </label>
             </p>
             <p>
-              <label>
-                <textarea name="message" onChange={this.handleChange} placeholder="Message (including any relevant links)" rows="5"/>
-              </label>
-            </p>
-            <p>
-              <button disabled={!this.validForm()} type="submit">
+              <button disabled={!this.validForm() || loading} type="submit">
                 Send
               </button>
             </p>
