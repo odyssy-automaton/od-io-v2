@@ -53,16 +53,12 @@ export default class Contact extends React.Component {
             {error ? <p>{error}</p> : null}
             <p>
               <label>
-                Email:
-                <br />
-                <input type="email" name="email" onChange={this.handleChange} />
+                <input type="email" name="email" onChange={this.handleChange} placeholder="Email"/>
               </label>
             </p>
             <p>
               <label>
-                Message:
-                <br />
-                <textarea name="message" onChange={this.handleChange} />
+                <textarea name="message" onChange={this.handleChange} placeholder="Message (including any relevant links)" rows="5"/>
               </label>
             </p>
             <p>

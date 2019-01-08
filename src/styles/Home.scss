@@ -9,7 +9,13 @@
   align-items: center;
   overflow: hidden;
   &__Contents {
-    p {color: $od-medium-purple; margin: 0; text-transform: uppercase; text-align: center; line-height: 1.25em;}
+    p {
+      color: $od-medium-purple;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.25em;
+    }
   }
   .LottieControl {
     position: absolute;
@@ -18,11 +24,22 @@
   }
 }
 
-.ProofOfWork {
-  background-image: url('/img/work/Work__BG.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: $od-primary;
-  color: white;
+.Block {
+  &.Intro {
+    background-color: $od-cream-dark;
+  }
+  &.ProofOfWork {
+    background-image: url('/img/work/Work__BG.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $od-primary;
+    color: white;
+  }
+  &.Capabilities {
+    background-color: $od-cream-dark;
+  }
+  &.Network {
+    background-color: $od-cream;
+  }
 }

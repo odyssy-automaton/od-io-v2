@@ -16,13 +16,13 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
 
   return (
-    <div className={workItem.className}>
+    <div className="WorkItem">
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
-          <p>
+          <h4>
             <Link to="/work">Proof of Work</Link> / {workItem.title}
-          </p>
+          </h4>
           <h1>
             <span className="Weight--400">{workItem.title}</span>{' '}
             {workItem.shortDescription}

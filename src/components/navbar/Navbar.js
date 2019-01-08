@@ -68,6 +68,9 @@ const Navbar = class extends React.Component {
         </button>
         <div className={mobileNavClass}>
           <div className="Navbar__Mobile--Contents">
+            <Link className="Navbar__Mobile--Contents--Item" to="/">
+              Home
+            </Link>
             <Link className="Navbar__Mobile--Contents--Item" to="/work">
               Work
             </Link>

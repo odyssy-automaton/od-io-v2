@@ -14,7 +14,7 @@ export default class WorkPage extends Component {
       <Layout>
         <section className="PageHeader">
           <div className="PageHeader__Contents">
-            <p>Proof of Work</p>
+            <h4>Proof of Work</h4>
             <h1>
               We build experiences in the form of Apps, Websites, Protocols &
               Prototyping for Enterprise, Open Source, and ourselves.
