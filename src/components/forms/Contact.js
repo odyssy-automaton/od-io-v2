@@ -1,12 +1,6 @@
 import React from 'react';
 import HubspotApi from '../../utils/hubspot-api';
 
-// function encode(data) {
-//   return Object.keys(data)
-//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//     .join('&');
-// }
-
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -14,47 +8,38 @@ export default class Contact extends React.Component {
       email: '',
       message: '',
       submitted: false,
+      loading: false,
+      error: null,
     };
-    // this.hubspotApi = new HubspotApi();
   }
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-
+    this.setState({ loading: true });
     const hubspotApi = new HubspotApi();
 
-    console.log('form');
-    console.log(form);
-    console.log('state');
-    console.log(this.state);
-    console.log('hubspotApi');
-    console.log(hubspotApi);
-
-    hubspotApi.addContact(this.state);
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({
-    //     'form-name': form.getAttribute('name'),
-    //     ...this.state,
-    //   }),
-    // })
-    //   .then(() => this.setState({ submitted: true }))
-    //   .catch((error) => alert(error));
+    const res = await hubspotApi.addContact(this.state);
+    if (res.status === 'error') {
+      this.setState({
+        error: res.errors[0].message,
+        loading: false,
+      });
+    } else {
+      this.setState({ submitted: true });
+    }
   };
 
   validForm = () => {
     const emailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    return emailReg.test(this.state.email) && this.state.message.length > 10;
+    return emailReg.test(this.state.email) && this.state.message.length > 5;
   };
 
   render() {
-    const { submitted } = this.state;
+    const { submitted, loading, error } = this.state;
     const { formName } = this.props;
 
     return (
@@ -64,21 +49,8 @@ export default class Contact extends React.Component {
             <h3>Thanks for making contact</h3>
           </div>
         ) : (
-          <form
-            name={formName}
-            method="post"
-            action="#"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={this.handleSubmit}
-          >
-            <input type="hidden" name="form-name" value={formName} />
-            <p hidden>
-              <label>
-                Don’t fill this out:{' '}
-                <input name="bot-field" onChange={this.handleChange} />
-              </label>
-            </p>
+          <form name={formName} onSubmit={this.handleSubmit}>
+            {error ? <p>{error}</p> : null}
             <p>
               <label>
                 Email:
@@ -94,7 +66,7 @@ export default class Contact extends React.Component {
               </label>
             </p>
             <p>
-              <button disabled={!this.validForm()} type="submit">
+              <button disabled={!this.validForm() || loading} type="submit">
                 Send
               </button>
             </p>
