@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import '../../styles/Work.scss';
@@ -13,6 +14,7 @@ export default class WorkPage extends Component {
     return (
       <Layout>
         <section className="PageHeader">
+          <Fade>
           <div className="PageHeader__Contents">
             <h4>Proof of Work</h4>
             <h1>
@@ -20,6 +22,7 @@ export default class WorkPage extends Component {
               Prototyping for Enterprise, Open Source, and ourselves.
             </h1>
           </div>
+          </Fade>
           <OdBackground />
         </section>
         <section className="Filter">

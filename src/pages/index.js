@@ -58,8 +58,9 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="Block Network">
           <div className="Block__Contents">
+            <h4>The Agency has Evolved.</h4>
             <p className="Huge">
-              We are iterating on the future of work right now
+              We are iterating on the future of work right now.
             </p>
             <Link to="/network">Learn more about our network</Link>
           </div>

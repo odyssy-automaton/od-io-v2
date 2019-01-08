@@ -10,6 +10,10 @@ import OdMesh from '../../img/Graphic__Od--Mesh.png';
 import DekePic from '../../img/deke.png';
 import SamPic from '../../img/sam.png';
 import VenPic from '../../img/ven.png';
+import IconDecentralized from '../../img/icons/icon__decentralized.png';
+import IconDevfund from '../../img/icons/icon__devfund.png';
+import IconEthereum from '../../img/icons/icon__ethereum.png';
+import IconGovernance from '../../img/icons/icon__governance.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -29,38 +33,54 @@ export default class NetworkPage extends Component {
         </section>
           <div className="Block">
             <div className="Block__Contents Columns">
+              <div className="Columns__Column--100">
+                <p className="Huge">Decentralized Autonomous Organism</p>
+              </div>
               <div className="Columns__Column--50">
                 <p>
                   For the cost of an internal hire, a project gets a distributed team called a cell, fully autonomous and optimized to each project’s needs. Cells are loosely coupled, but tightly aligned to maintain agility and continuous iteration. Cells learn from each other and share what works with the network.
                 </p>
                 <p>
                   An example cell could be comprised of Product, Design, Engineering, and Blockchain skillsets.
-                  <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
                 </p>
               </div>
               <div className="Columns__Column--50">
-                <h2>Start a Project</h2>
+
+                <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
+              </div>
+              <div className="Columns__Column--100">
+                <h3>Start a Project</h3>
                 <Contact formName="contact" />
               </div>
             </div>
           </div>
           <div className="Block Manifesto">
-            <h2>Manifesto</h2>
             <div className="Block__Contents">
               <div className="Columns">
-                <div className="Columns__Column--50">
-                  <h4>Decentralized</h4>
-                  <p>Local autonomy for optimal efficiency</p>
-                  <h4>Transparent</h4>
-                  <p>Information open to all stakeholders</p>
-                  <h4>Collaborative</h4>
-                  <p>Anti-rivalrous network structure</p>
+                <div className="Columns__Column--100">
+                  <h2>Manifesto</h2>
                 </div>
-                <div className="Columns__Column--50">
+                <div className="Columns__Column--33">
+                  <img src={IconDecentralized}/>
+                  <h4>Decentralized</h4>
+                  <p>Local autonomy for optimal efficiency and value distribution</p>
+                  <img src={IconDevfund}/>
+                  <h4>Collaborative</h4>
+                  <p>Anti-rivalrous network structure and incentive mechanisms</p>
+                </div>
+                <div className="Columns__Column--33">
+                  <img src={IconGovernance}/>
                   <h4>Trustless</h4>
-                  <p>Value Creation over Perception</p>
+                  <p>Autonomous value creation over managerial perception</p>
+                  <img src={IconGovernance}/>
+                  <h4>Transparent</h4>
+                  <p>Information open to all stakeholders and members</p>
+                </div>
+                <div className="Columns__Column--33">
+                  <img src={IconEthereum}/>
                   <h4>Balance</h4>
-                  <p>Balance between centralized and decentralized</p>
+                  <p>Balance between centralized and decentralized systems</p>
+                  <img src={IconGovernance}/>
                   <h4>Iterative</h4>
                   <p>Understand, Diverge, Converge, Test, Prototype, Deploy, Iterate</p>
                 </div>
@@ -68,7 +88,6 @@ export default class NetworkPage extends Component {
             </div>
           </div>
           <div className="Block Bios">
-
             <div className="Block__Contents Columns">
               <div className="Columns__Column--100">
                 <h2>Core Team</h2>
