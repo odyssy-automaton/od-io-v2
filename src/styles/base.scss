@@ -129,6 +129,15 @@ button, .button {
   }
 }
 
+.Icon {
+  &--Medium {
+    width: 80px;
+    &:not(last-child) {
+        margin-right: 25px;
+    }
+  }
+}
+
 // Layout
 .Block {
   position: relative;

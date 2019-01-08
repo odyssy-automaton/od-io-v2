@@ -8,6 +8,11 @@ import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import '../styles/Home.scss';
+// Icons
+import IconDecentralized from '../img/icons/icon__decentralized.png';
+import IconDevfund from '../img/icons/icon__devfund.png';
+import IconEthereum from '../img/icons/icon__ethereum.png';
+import IconGovernance from '../img/icons/icon__governance.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -42,16 +47,22 @@ export default class IndexPage extends React.Component {
         <section className="Block ProofOfWork">
           <div className="Block__Contents">
             <p className="Huge">Proof of Work</p>
-            <Link to="/work">View</Link>
+            <a className="button" href="/work">View</a>
           </div>
         </section>
         <section className="Block Capabilities">
           <div className="Block__Contents">
+          <h4>Research, Strategy, Design, Develop, Test, Deploy, Improve.</h4>
             <p className="Huge">
               <span className="Weight--500">Odyssy</span> is a decentralized
               collective delivering full stack Design & Development to the
               blockchain and beyond.
             </p>
+            <div className="IconsBar">
+              <img className="Icon--Medium" src={IconDecentralized} />
+              <img className="Icon--Medium" src={IconGovernance} />
+              <img className="Icon--Medium" src={IconDevfund} />
+            </div>
             <Link to="/services">View our capabilities</Link>
           </div>
           <OdBackground />
@@ -62,6 +73,12 @@ export default class IndexPage extends React.Component {
             <p className="Huge">
               We are iterating on the future of work right now.
             </p>
+            <div className="IconsBar">
+              <img className="Icon--Medium" src={IconDecentralized} />
+              <img className="Icon--Medium" src={IconEthereum} />
+              <img className="Icon--Medium" src={IconGovernance} />
+              <img className="Icon--Medium" src={IconDevfund} />
+            </div>
             <Link to="/network">Learn more about our network</Link>
           </div>
         </section>

@@ -35,6 +35,13 @@
     background-repeat: no-repeat;
     background-color: $od-primary;
     color: white;
+    text-align: center;
+    .button {
+      font-size: 1.35em;
+      padding: 10px 30px;
+      border-radius: 50px;
+      &:hover { color: white; border-color: white; }
+    }
   }
   &.Capabilities {
     background-color: $od-cream-dark;
@@ -42,4 +49,8 @@
   &.Network {
     background-color: $od-cream;
   }
+}
+
+.IconsBar {
+  margin-bottom: 35px;
 }

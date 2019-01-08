@@ -107,42 +107,42 @@ export default class NetworkPage extends Component {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="Columns__Column--33">
-              <img className="Bios__Pic" src={VenPic} alt="bio pic" />
-              <div>
-                <h3>Ven Gist</h3>
-                <h4>Product + Design</h4>
-                <p>
-                  Ven Gist started as a visual designer for global brands such
-                  as Adobe, Nike, and Uniqlo. As the human experience became
-                  increasingly digitized, Ven learned code and migrated to
-                  Product Design to facilitate the best possible user experience
-                  across all interactions. Following an introduction to
-                  cryptocurrency in 2014, he now creates within a broad spectrum
-                  of design and technology focused on accelerating the utility
-                  and adoption of blockchain technologies and decentralized
-                  systems.
-                </p>
+              <div className="Columns__Column--33">
+                <img className="Bios__Pic" src={VenPic} alt="bio pic" />
+                <div>
+                  <h3>Ven Gist</h3>
+                  <h4>Product + Design</h4>
+                  <p>
+                    Ven Gist started as a visual designer for global brands such
+                    as Adobe, Nike, and Uniqlo. As the human experience became
+                    increasingly digitized, Ven learned code and migrated to
+                    Product Design to facilitate the best possible user experience
+                    across all interactions. Following an introduction to
+                    cryptocurrency in 2014, he now creates within a broad spectrum
+                    of design and technology focused on accelerating the utility
+                    and adoption of blockchain technologies and decentralized
+                    systems.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="Columns__Column--33">
-              <img className="Bios__Pic" src={SamPic} alt="bio pic" />
-              <div>
-                <h3>Sam Kuhlmann</h3>
-                <h4>Full Stack Developer</h4>
-                <p>
-                  Sam Kuhlmann has taken a circuitous route to co-founding
-                  Odyssy.io. An art degree in film, a stint in cartoon
-                  production, a detour as a magazine publisher/editor and years
-                  in software management roles for global brands including Audi
-                  of America and The North Face have lead the way to full stack
-                  web and blockchain development. He blends a passion for
-                  technology with a diverse and extensive history in the
-                  business of software on the web. Excitement about blockchain’s
-                  potential to advance social good and serve the underserved
-                  attracted him to the crypto space.
-                </p>
+              <div className="Columns__Column--33">
+                <img className="Bios__Pic" src={SamPic} alt="bio pic" />
+                <div>
+                  <h3>Sam Kuhlmann</h3>
+                  <h4>Full Stack Developer</h4>
+                  <p>
+                    Sam Kuhlmann has taken a circuitous route to co-founding
+                    Odyssy.io. An art degree in film, a stint in cartoon
+                    production, a detour as a magazine publisher/editor and years
+                    in software management roles for global brands including Audi
+                    of America and The North Face have lead the way to full stack
+                    web and blockchain development. He blends a passion for
+                    technology with a diverse and extensive history in the
+                    business of software on the web. Excitement about blockchain’s
+                    potential to advance social good and serve the underserved
+                    attracted him to the crypto space.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

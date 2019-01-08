@@ -20,11 +20,14 @@ $hex-url: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXR
 }
 
 .Bios {
-  > h2 {text-align: center; width: 100%; }
+  > h2 {text-align: center; }
   .Columns {
     max-width: 1400px;
   }
-  .Columns__Column--33:not(last-child) {
+  .Columns__Column--33:nth-of-type(2) {
+    padding-right: 50px;
+  }
+  .Columns__Column--33:nth-of-type(3) {
     padding-right: 50px;
   }
   &__Pic {
