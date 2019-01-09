@@ -55,6 +55,13 @@
   }
 }
 
+.POWLink {
+  cursor: pointer;
+  &:hover .button {
+    color: $od-primary; border-color: $od-primary; 
+  }
+}
+
 .IconsBar {
   margin-bottom: 35px;
 }
