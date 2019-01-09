@@ -37,12 +37,14 @@ export default class IndexPage extends React.Component {
         <section className="Block Intro">
           <div className="Block__Contents">
             <Fade up>
+              <h4>The agency has evolved.</h4>
               <p className="Huge">
                 We design & build at the forefront of human experience
                 innovation.
               </p>
             </Fade>
           </div>
+          <OdBackground />
         </section>
         <section className="Block ProofOfWork">
           <div className="Block__Contents">
@@ -81,6 +83,7 @@ export default class IndexPage extends React.Component {
             </div>
             <Link to="/network">Learn more about our network</Link>
           </div>
+          <OdBackground />
         </section>
       </Layout>
     );

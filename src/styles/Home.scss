@@ -26,21 +26,25 @@
 
 .Block {
   &.Intro {
-    background-color: $od-cream-dark;
+    background-color: $od-primary;
+    color: white;
+    h4 { color: white; }
   }
   &.ProofOfWork {
-    background-image: url('/img/work/Work__BG.png');
+    background-image: url('/img/work/Work--Background.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: $od-primary;
+    background-color: $od-medium-purple;
     color: white;
     text-align: center;
     .button {
       font-size: 1.35em;
       padding: 10px 30px;
       border-radius: 50px;
-      &:hover { color: white; border-color: white; }
+      border-color: white;
+      color: white;
+      &:hover { color: $od-primary; border-color: $od-primary; }
     }
   }
   &.Capabilities {
