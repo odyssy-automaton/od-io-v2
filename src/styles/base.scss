@@ -51,6 +51,14 @@ p {
       font-size: 1.5em;
     }
   }
+  &.Extra-Large {
+    font-size: 1.75em;
+    line-height: 1.35em;
+    font-weight: 100;
+    @media (max-width: $phone) {
+      font-size: 1.25em;
+    }
+  }
   &.Large {
     font-size: 1.15em;
     line-height: 1.35em;
@@ -150,9 +158,18 @@ button, .button {
   &:nth-of-type(odd) { background-color: $od-cream-dark; }
   &__Contents {
     max-width: 1100px;
-    margin: 0 auto;
+    width: calc(100% - 100px);
     padding: 50px;
+    margin: 0 auto;
   }
+}
+
+.Background--Dark {
+  background-color: $od-cream-dark;
+}
+
+.Background--Standard {
+  background-color: $od-cream;
 }
 
 .PageHeader {

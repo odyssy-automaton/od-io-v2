@@ -53,11 +53,20 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
               })}
             </div>
           ) : null}
+        </div>
+      </section>
+      <section className="Block Background--Dark">
+        <div className="Block__Contents">
           {hasServices ? (
             <div className="Services">
               <WorkServices workItem={workItem} />
             </div>
           ) : null}
+          <div className="BackToWork">
+            <p className="Extra-Large">
+              <Link to="/work">Back to Proof of Work</Link>
+            </p>
+          </div>
         </div>
       </section>
     </div>

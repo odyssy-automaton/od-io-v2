@@ -95,7 +95,7 @@ export default class NetworkPage extends Component {
         <div className="Block">
           <div className="Block__Contents">
             <h4>The Network is Incentivized</h4>
-            <p className="Huge">Decentralized Autonomous Organism</p>
+            <p className="Huge">We’re iterating on the future of work and value creation right now.</p>
             <div className="Columns">
               <div className="Columns__Column--50">
                 <h4>The Network is Tokenized</h4>
