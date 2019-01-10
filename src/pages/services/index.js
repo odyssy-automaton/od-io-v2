@@ -39,7 +39,7 @@ export default class ServicesPage extends Component {
             </div>
             <div className="Columns__Column--33">
               <img src={IconDesign} alt="design icon" width="80px" />
-              <h4>Design</h4>
+              <h3>Design</h3>
               <ul>
                 <li>Product Design</li>
                 <li>Strategy</li>
@@ -52,7 +52,7 @@ export default class ServicesPage extends Component {
             </div>
             <div className="Columns__Column--33">
               <img src={IconCode} alt="engineering icon" width="80px" />
-              <h4>Engineering</h4>
+              <h3>Engineering</h3>
               <ul>
                 <li>Front End Development</li>
                 <li>Back End Development</li>
@@ -65,7 +65,7 @@ export default class ServicesPage extends Component {
             </div>
             <div className="Columns__Column--33">
               <img src={IconBlockchain} alt="blockchain icon" width="80px" />
-              <h4>Blockchain</h4>
+              <h3>Blockchain</h3>
               <ul>
                 <li>Smart Contract Development and Consulting</li>
                 <li>Decentralized Apps (DApps)</li>

@@ -1,5 +1,16 @@
 @import 'variables';
 
+.CryptoAccepted {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(12deg);
+  margin-top: 60px;
+  margin-left: 30px;
+  width: 120px;
+  z-index: 99;
+}
+
 .Hero {
   position: relative;
   width: 100%;
@@ -58,7 +69,7 @@
 .POWLink {
   cursor: pointer;
   &:hover .button {
-    color: $od-primary; border-color: $od-primary; 
+    color: $od-primary; border-color: $od-primary;
   }
 }
 

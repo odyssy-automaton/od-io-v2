@@ -16,6 +16,7 @@ import IconGovernance from '../img/icons/icon__governance.png';
 import IconDesign from '../img/icons/icon__design--multicolor.png';
 import IconCode from '../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../img/icons/icon__blockchain--multicolor.png';
+import IconCrypto from '../img/icons/icon__crypto--multicolor--invert.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -39,6 +40,9 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="Block Intro">
           <div className="Block__Contents">
+            <div className="CryptoAccepted">
+              <img src={IconCrypto} />
+            </div>
             <Fade up>
               <h4>The agency has evolved.</h4>
               <p className="Huge">
