@@ -66,6 +66,13 @@
       &:not(last-child) {
         margin-right: 25px;
       }
+      path, polygon {
+        fill: #333;
+        transition: all .15s linear;
+      }
+      :hover path, :hover polygon {
+        fill: $od-medium-purple;
+      }
     }
   }
 }

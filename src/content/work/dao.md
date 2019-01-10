@@ -30,4 +30,8 @@ tags:
 className: Native__work
 ---
 
-Until now, organizing and operating digital communities has been limited to centralized platforms, resulting in limited capacity to incentivize long-term and meaningful member engagement. Through these major social media networks, digital communities can expand globally but have no universally recognized economic system to realize the value of their efforts. Imagine using blockchain technology to deploy digital community infrastructure at scale, and keeping the value inside the communities. Native enables digital communities to organize members, facilitate growth and simplify operational processes all in one application. Through unique community tokens, a functional set of governance tools and flexible incentive structures for member engagement, Native provides the system for the next wave of community sovereignty.
+#### Summary
+
+In order for Odyssy to efficiently operate as a Decentralized Autonomous Organism, our members needed an interface. With many teams working on DAO tools, but none near a milestone that we could reasonably build upon, we built our own frontend interface on top of a multisig proxy wallet to enhance DAO interactions and transparency, such as governance and transactional histories.
+
+It also allows us to facilitate new interactions such as an ‘address book’ for members and data visualizations on the performance of Odyssy, its token, and individual members. All of our tools are built with open-source in mind, so that other communities and fork and iterate.

@@ -10,11 +10,13 @@ import OdMesh from '../../img/Graphic__Od--Mesh.png';
 import DekePic from '../../img/deke.png';
 import SamPic from '../../img/sam.png';
 import VenPic from '../../img/ven.png';
-import IconDecentralized from '../../img/icons/icon__decentralized.png';
 import IconDevfund from '../../img/icons/icon__devfund.png';
 import IconEthereum from '../../img/icons/icon__ethereum.png';
-import IconGovernance from '../../img/icons/icon__governance.png';
+import IconDecentralized from '../../img/icons/icon__decentralized--multicolor.png';
+import IconCollaboration from '../../img/icons/icon__collaboration--multicolor.png';
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
+import IconIterative from '../../img/icons/icon__iterative--multicolor.png';
+import IconBalance from '../../img/icons/icon__balance--multicolor.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -70,12 +72,12 @@ export default class NetworkPage extends Component {
                 <img src={IconDecentralized}/>
                 <h4>Decentralized</h4>
                 <p>Local autonomy for optimal efficiency and value distribution</p>
-                <img src={IconDevfund}/>
+                <img src={IconCollaboration}/>
                 <h4>Collaborative</h4>
                 <p>Anti-rivalrous network structure and incentive mechanisms</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconGovernance}/>
+                <img src={IconCollaboration}/>
                 <h4>Trustless</h4>
                 <p>Autonomous value creation over managerial perception</p>
                 <img src={IconBlockchain}/>
@@ -83,10 +85,10 @@ export default class NetworkPage extends Component {
                 <p>Information open to all stakeholders and members</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconEthereum}/>
+                <img src={IconBalance}/>
                 <h4>Balance</h4>
                 <p>Balance between centralized and decentralized systems</p>
-                <img src={IconGovernance}/>
+                <img src={IconIterative}/>
                 <h4>Iterative</h4>
                 <p>Understand, Diverge, Converge, Test, Prototype, Deploy, Iterate</p>
               </div>

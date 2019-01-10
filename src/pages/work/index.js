@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Icon from '../../components/shared/icons/Icon'
 import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
@@ -39,7 +40,7 @@ export default class WorkPage extends Component {
                 <span className="Weight--500">{post.frontmatter.title}</span>{' '}
                 {post.frontmatter.shortDescription}
               </p>
-              <p>Keep Reading →</p>
+              <p>Keep Reading <Icon name="arrow-forward" /></p>
             </Link>
           ))}
         </div>
