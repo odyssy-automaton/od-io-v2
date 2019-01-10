@@ -31,6 +31,7 @@ const Footer = class extends React.Component {
         </nav>
         <div className="Row Footer__Socials">
           <a href="https://medium.com/odyssy" className="Footer__Socials--Item">Medium</a>
+          <a href="https://medium.com" className="Footer__Socials--Item">Github</a>
           <a href="https://medium.com" className="Footer__Socials--Item">Peepeth</a>
           <a href="https://medium.com" className="Footer__Socials--Item">Linkedin</a>
         </div>

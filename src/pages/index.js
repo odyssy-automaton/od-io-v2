@@ -41,7 +41,9 @@ export default class IndexPage extends React.Component {
         <section className="Block Intro">
           <div className="Block__Contents">
             <div className="CryptoAccepted">
-              <img src={IconCrypto} />
+              <Fade>
+                <img src={IconCrypto} />
+              </Fade>
             </div>
             <Fade up>
               <h4>The agency has evolved.</h4>
