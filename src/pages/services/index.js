@@ -3,6 +3,10 @@ import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import Fade from 'react-reveal/Fade';
 
+import IconDesign from '../../img/icons/icon__design--multicolor.png';
+import IconCode from '../../img/icons/icon__code--multicolor.png';
+import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
+
 import '../../styles/Services.scss';
 
 export default class ServicesPage extends Component {
@@ -34,7 +38,8 @@ export default class ServicesPage extends Component {
               <h2>Capabilities</h2>
             </div>
             <div className="Columns__Column--33">
-              <h4>Design</h4>
+              <img src={IconDesign} alt="design icon" width="80px" />
+              <h3>Design</h3>
               <ul>
                 <li>Product Design</li>
                 <li>Strategy</li>
@@ -46,7 +51,8 @@ export default class ServicesPage extends Component {
               </ul>
             </div>
             <div className="Columns__Column--33">
-              <h4>Engineering</h4>
+              <img src={IconCode} alt="engineering icon" width="80px" />
+              <h3>Engineering</h3>
               <ul>
                 <li>Front End Development</li>
                 <li>Back End Development</li>
@@ -58,7 +64,8 @@ export default class ServicesPage extends Component {
               </ul>
             </div>
             <div className="Columns__Column--33">
-              <h4>Blockchain</h4>
+              <img src={IconBlockchain} alt="blockchain icon" width="80px" />
+              <h3>Blockchain</h3>
               <ul>
                 <li>Smart Contract Development and Consulting</li>
                 <li>Decentralized Apps (DApps)</li>

@@ -13,6 +13,10 @@ import IconDecentralized from '../img/icons/icon__decentralized.png';
 import IconDevfund from '../img/icons/icon__devfund.png';
 import IconEthereum from '../img/icons/icon__ethereum.png';
 import IconGovernance from '../img/icons/icon__governance.png';
+import IconDesign from '../img/icons/icon__design--multicolor.png';
+import IconCode from '../img/icons/icon__code--multicolor.png';
+import IconBlockchain from '../img/icons/icon__blockchain--multicolor.png';
+import IconCrypto from '../img/icons/icon__crypto--multicolor--invert.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -36,20 +40,27 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="Block Intro">
           <div className="Block__Contents">
+            <div className="CryptoAccepted">
+              <img src={IconCrypto} />
+            </div>
             <Fade up>
+              <h4>The agency has evolved.</h4>
               <p className="Huge">
                 We design & build at the forefront of human experience
                 innovation.
               </p>
             </Fade>
           </div>
+          <OdBackground />
         </section>
+        <Link to="/work" className="POWLink">
         <section className="Block ProofOfWork">
           <div className="Block__Contents">
             <p className="Huge">Proof of Work</p>
             <a className="button" href="/work">View</a>
           </div>
         </section>
+        </Link>
         <section className="Block Capabilities">
           <div className="Block__Contents">
           <h4>Research, Strategy, Design, Develop, Test, Deploy, Improve.</h4>
@@ -59,9 +70,9 @@ export default class IndexPage extends React.Component {
               blockchain and beyond.
             </p>
             <div className="IconsBar">
-              <img className="Icon--Medium" src={IconDecentralized} />
-              <img className="Icon--Medium" src={IconGovernance} />
-              <img className="Icon--Medium" src={IconDevfund} />
+              <img className="Icon--Medium" src={IconDesign} />
+              <img className="Icon--Medium" src={IconCode} />
+              <img className="Icon--Medium" src={IconBlockchain} />
             </div>
             <Link to="/services">View our capabilities</Link>
           </div>
@@ -81,6 +92,7 @@ export default class IndexPage extends React.Component {
             </div>
             <Link to="/network">Learn more about our network</Link>
           </div>
+          <OdBackground />
         </section>
       </Layout>
     );

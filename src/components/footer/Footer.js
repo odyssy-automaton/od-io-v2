@@ -30,9 +30,9 @@ const Footer = class extends React.Component {
           </Link>
         </nav>
         <div className="Row Footer__Socials">
-          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
-          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
-          <a href="https://medium.co" className="Footer__Socials--Item">Medium</a>
+          <a href="https://medium.com/odyssy" className="Footer__Socials--Item">Medium</a>
+          <a href="https://medium.com" className="Footer__Socials--Item">Peepeth</a>
+          <a href="https://medium.com" className="Footer__Socials--Item">Linkedin</a>
         </div>
       </div>
     );
