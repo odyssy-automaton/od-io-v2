@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import Fade from 'react-reveal/Fade';
+import Contact from '../../components/forms/Contact';
 
 import IconDesign from '../../img/icons/icon__design--multicolor.png';
 import IconCode from '../../img/icons/icon__code--multicolor.png';
@@ -89,6 +90,14 @@ Heroku, IPFS, Ethereum, Solidity.
             </p>
           </div>
         </div>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Let us know about your idea, project, or collaborative potential.</p>
+            <Contact formName="contact" />
+          </div>
+          <OdBackground />
+        </section>
       </Layout>
     );
   }

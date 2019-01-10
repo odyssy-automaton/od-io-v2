@@ -78,20 +78,21 @@ input, textarea {
   font-weight: 100;
   padding: 15px;
   border: none;
-  background: rgba(0,0,0,0.02);
+  background: rgba(0,0,0,0.15);
   resize: none;
+  color: rgba(255,255,255,0.85);
 }
 button, .button {
   appearance: none;
   -webkit-appearance: none;
-  border: 2px solid $od-medium-purple;
+  border: 2px solid $od-primary;
   border-radius: 25px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   background: none;
-  color: $od-medium-purple;
+  color: $od-primary;
   &:disabled {
-    color: rgba(0,0,0,0.35);
-    border-color: rgba(0,0,0,0.35);
+    color: rgba(0,0,0,0.25);
+    border-color: rgba(0,0,0,0.25);
   }
 }
 
@@ -157,10 +158,14 @@ button, .button {
   flex-wrap: wrap;
   &:nth-of-type(odd) { background-color: $od-cream-dark; }
   &__Contents {
+    position: relative;
     max-width: 1100px;
     width: calc(100% - 100px);
     padding: 50px;
     margin: 0 auto;
+    @media (max-width: $phone) {
+      padding: 50px 25px;
+    }
   }
 }
 
@@ -170,6 +175,18 @@ button, .button {
 
 .Background--Standard {
   background-color: $od-cream;
+}
+
+.CTA {
+  &--Highlight {}
+  background-color: $od-medium-purple !important;
+  min-height: 100px;
+  padding: 25px 50px 0px;
+  .Block__Contents {
+    width: auto;
+    max-width: 480px;
+    h3 { color: white; }
+  }
 }
 
 .PageHeader {

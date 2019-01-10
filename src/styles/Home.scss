@@ -2,12 +2,10 @@
 
 .CryptoAccepted {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(12deg);
-  margin-top: 60px;
-  margin-left: 30px;
-  width: 120px;
+  top: 125px;
+  right: 150px;
+  transform: rotate(-12deg);
+  width: 150px;
   z-index: 99;
 }
 

@@ -7,6 +7,8 @@ import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
+import Contact from '../components/forms/Contact';
+
 import '../styles/Home.scss';
 // Icons
 import IconDecentralized from '../img/icons/icon__decentralized.png';
@@ -39,12 +41,12 @@ export default class IndexPage extends React.Component {
           />
         </section>
         <section className="Block Intro">
+          <div className="CryptoAccepted">
+            <Fade>
+              <img src={IconCrypto} />
+            </Fade>
+          </div>
           <div className="Block__Contents">
-            <div className="CryptoAccepted">
-              <Fade>
-                <img src={IconCrypto} />
-              </Fade>
-            </div>
             <Fade up>
               <h4>The agency has evolved.</h4>
               <p className="Huge">
@@ -93,6 +95,14 @@ export default class IndexPage extends React.Component {
               <img className="Icon--Medium" src={IconDevfund} />
             </div>
             <Link to="/network">Learn more about our network</Link>
+          </div>
+          <OdBackground />
+        </section>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <Contact formName="contact" />
           </div>
           <OdBackground />
         </section>

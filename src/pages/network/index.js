@@ -14,6 +14,7 @@ import IconDecentralized from '../../img/icons/icon__decentralized.png';
 import IconDevfund from '../../img/icons/icon__devfund.png';
 import IconEthereum from '../../img/icons/icon__ethereum.png';
 import IconGovernance from '../../img/icons/icon__governance.png';
+import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -32,6 +33,13 @@ export default class NetworkPage extends Component {
           </Fade>
           <OdBackground />
         </section>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <Contact formName="contact" />
+          </div>
+        </section>
         <div className="Block">
           <div className="Block__Contents Columns">
             <div className="Columns__Column--100">
@@ -48,13 +56,6 @@ export default class NetworkPage extends Component {
             </div>
             <div className="Columns__Column--50">
               <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
-            </div>
-            <div className="Columns__Column--50">
-              <h3>Contact <span className="Weight--500">Odyssy</span></h3>
-              <p>Let us know about your idea, project, or collaborative potential.</p>
-            </div>
-            <div className="Columns__Column--50">
-              <Contact formName="contact" />
             </div>
           </div>
         </div>
@@ -77,7 +78,7 @@ export default class NetworkPage extends Component {
                 <img src={IconGovernance}/>
                 <h4>Trustless</h4>
                 <p>Autonomous value creation over managerial perception</p>
-                <img src={IconGovernance}/>
+                <img src={IconBlockchain}/>
                 <h4>Transparent</h4>
                 <p>Information open to all stakeholders and members</p>
               </div>
@@ -142,8 +143,7 @@ export default class NetworkPage extends Component {
               <div>
                 <p>
                   Ven Gist started as a visual designer for global brands such
-                  as Adobe, Nike, and Uniqlo. Following an introduction to
-                  cryptocurrency in 2014, he now creates within a broad spectrum
+                  as Adobe, Nike, and Uniqlo. He now creates within a broad spectrum
                   of design and technology focused on accelerating the utility
                   and adoption of blockchain technologies and decentralized
                   systems.
@@ -165,24 +165,21 @@ export default class NetworkPage extends Component {
                   production, a detour as a magazine publisher/editor and years
                   in software management roles for global brands including Audi
                   of America and The North Face have lead the way to full stack
-                  web and blockchain development. He blends a passion for
-                  technology with a diverse and extensive history in the
-                  business of software on the web. Excitement about blockchain’s
-                  potential to advance social good and serve the underserved
-                  attracted him to the crypto space.
+                  web and blockchain development.
                 </p>
               </div>
             </div>
-            <div className="Columns__Column--50">
-              <h3>Join the Network</h3>
-              <p>Reach out if you're interested in joining our network of
-              designers, developers, and thinkers.</p>
-            </div>
-            <div className="Columns__Column--50">
-              <Contact formName="network" />
-            </div>
           </div>
         </div>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Join the Network</h3>
+            <p>Reach out if you're interested in joining our network of
+            designers, developers, and thinkers.</p>
+            <Contact formName="network" />
+          </div>
+          <OdBackground />
+        </section>
       </Layout>
     );
   }

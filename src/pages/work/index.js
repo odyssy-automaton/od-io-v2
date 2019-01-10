@@ -18,19 +18,11 @@ export default class WorkPage extends Component {
           <div className="PageHeader__Contents">
             <h4>Proof of Work</h4>
             <h1>
-              We build experiences in the form of Apps, Websites, Protocols &
-              Prototyping for Enterprise, Open Source, and ourselves.
+              We design & build at the forefront of human experience innovation.
             </h1>
           </div>
           </Fade>
           <OdBackground />
-        </section>
-        <section className="Filter">
-          <div className="Filter__Contents">
-            <p>
-              Filter <span>All</span>
-            </p>
-          </div>
         </section>
         <div className="Work">
           {posts.map(({ node: post }) => (
