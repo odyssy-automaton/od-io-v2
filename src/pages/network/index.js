@@ -25,7 +25,7 @@ export default class NetworkPage extends Component {
         <section className="PageHeader">
           <Fade>
             <div className="PageHeader__Contents">
-              <h4>The Digital Agency, Evolved.</h4>
+              <h4>The agency has evolved.</h4>
               <h1>
                 Odyssy is more like a super organism, a network of autonomous
                 cells incentivized to distribute value across its network and
@@ -38,7 +38,7 @@ export default class NetworkPage extends Component {
         <section className="Block CTA">
           <div className="Block__Contents">
             <h3>Contact <span className="Weight--500">Odyssy</span></h3>
-            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <p>Shoot us a quick message to let us know about your project or idea for collaboration.</p>
             <Contact formName="contact" />
           </div>
         </section>
@@ -47,11 +47,10 @@ export default class NetworkPage extends Component {
             <div className="Columns__Column--100">
               <h4>Decentralized Autonomous Organism</h4>
               <p className="Huge">
-                Distributed Skills and Knowledge are better than the huge
-                overhead of the traditional agency.
+                The traditional agency has too much overhead. Odyssy rapidly distributes skills and knowledge as needed.
               </p>
             </div>
-            <div className="Columns__Column--50">
+            <div className="Columns__Column--50 Padding--Right">
               <p>
                 For the cost of an internal hire, a project gets a distributed
                 team called a cell, fully autonomous and optimized to each
@@ -61,7 +60,7 @@ export default class NetworkPage extends Component {
               </p>
               <p>
                 An example cell could be comprised of Product, Design,
-                Engineering, and Blockchain skillsets.
+                Engineering, and Blockchain skillsets. Cells are highly adaptable to their environment, and remain consistently aligned with each project's current goals.
               </p>
             </div>
             <div className="Columns__Column--50">
@@ -79,8 +78,8 @@ export default class NetworkPage extends Component {
               <div className="Columns__Column--100">
                 <h4>Manifesto</h4>
                 <p className="Huge">
-                  Our Core Belief structure is built on autonomy, efficiency,
-                  and humanity, always with an eye to the future.
+                  Our core belief structure is built on autonomy, production,
+                  and humanity – always with an eye to the future.
                 </p>
               </div>
               <div className="Columns__Column--33">
@@ -113,7 +112,7 @@ export default class NetworkPage extends Component {
             </div>
           </div>
         </div>
-        <div className="Block">
+        <div className="Block Network">
           <div className="Block__Contents">
             <h4>The Network is Incentivized</h4>
             <p className="Huge">
@@ -121,7 +120,7 @@ export default class NetworkPage extends Component {
               now.
             </p>
             <div className="Columns">
-              <div className="Columns__Column--50">
+              <div className="Columns__Column--50 Padding--Right">
                 <h4>The Network is Tokenized</h4>
                 <p>
                   The Odyssy token (ODY) captures value added to the Odyssy
@@ -188,8 +187,7 @@ export default class NetworkPage extends Component {
                   Ven Gist started as a visual designer for global brands such
                   as Adobe, Nike, and Uniqlo. He now creates within a broad spectrum
                   of design and technology focused on accelerating the utility
-                  and adoption of blockchain technologies and decentralized
-                  systems.
+                  and adoption of decentralized systems and blockchain technologies.
                 </p>
               </div>
             </div>

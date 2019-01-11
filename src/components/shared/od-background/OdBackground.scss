@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .OdBackground {
   position: absolute;
   width: 100%;
@@ -10,6 +12,9 @@
     position: absolute;
     top: 0;
     height: 28px;
+    @media (max-width: $phone) {
+      height: auto;
+    }
     right: 0;
     left: 0;
     margin-left: auto;
@@ -26,6 +31,9 @@
     position: absolute;
     bottom: 0;
     height: 28px;
+    @media (max-width: $phone) {
+      height: auto;
+    }
     right: 0;
     left: 0;
     margin-left: auto;

@@ -25,6 +25,9 @@
     &--Logo {
       img { height: 100%; }
     }
+    p {
+      margin-top: 10px;
+    }
   }
   &__Nav {
     display: flex;
@@ -42,6 +45,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      font-size: 0.85em;
       &:not(last-child) {
         margin-right: 25px;
       }
@@ -55,7 +59,7 @@
     @media (max-width: $tablet){
       flex-basis: 100%;
       text-align: center;
-      margin: 25px auto;
+      margin: 50px auto 25px;
       order: 2;
     }
     margin-right: 0px;

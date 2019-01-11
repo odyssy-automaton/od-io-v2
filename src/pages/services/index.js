@@ -8,6 +8,7 @@ import IconDesign from '../../img/icons/icon__design--multicolor.png';
 import IconCode from '../../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
 import GraphicProcess from '../../img/Graphic__Od--Process.png';
+import GraphicProcessCircle from '../../img/Graphic__Od--Process--Circle.png';
 
 import '../../styles/Services.scss';
 
@@ -30,7 +31,9 @@ export default class ServicesPage extends Component {
             <p className="Huge">
               Our process is fluid, efficient, and participatory. Odyssy delivers maximum output with minimum input.
             </p>
-            <img src={GraphicProcess} alt="Odyssy Process Graphic" />
+            <p className="Text--Center">
+              <img src={GraphicProcessCircle} alt="Odyssy Process Graphic" width="420px"/>
+            </p>
           </div>
         </div>
         <div className="Block ServicesList">
@@ -84,10 +87,10 @@ export default class ServicesPage extends Component {
         <div className="Block">
           <div className="Block__Contents">
             <h4>We don’t care about the technology.</h4>
-            <h2>We care about its applications and impact
+            <h2>We care about its real-world applications and impact
               on the human experience.
             </h2>
-            <p className="Weight--500">We’re technology-agnostic and cross-protocol but like to work with</p>
+            <p className="Weight--500">We’re technology-agnostic and across protocols but like to work with:</p>
             <p>Python, Ruby, Javascript/Node, Django, Rails, React, Angular, Vue, AWS,
 Heroku, IPFS, Ethereum, Solidity.
             </p>

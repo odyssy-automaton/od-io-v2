@@ -47,7 +47,7 @@ export default class Contact extends React.Component {
     const { formName } = this.props;
 
     return (
-      <div>
+      <div className="Form">
         {submitted ? (
           <div>
             <h3>Thanks for making contact</h3>

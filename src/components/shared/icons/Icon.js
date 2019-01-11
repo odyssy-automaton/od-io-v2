@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+import ArrowBack from "./ArrowBack";
 import ArrowForward from "./ArrowForward";
 import Medium from "./Medium";
 import Github from "./Github";
@@ -11,6 +12,8 @@ class Icon extends Component {
     switch (this.props.name) {
         case "arrow-forward":
           return <ArrowForward {...this.props} />;
+        case "arrow-back":
+          return <ArrowBack {...this.props} />;
         case "medium":
           return <Medium {...this.props} />;
         case "github":

@@ -8,9 +8,9 @@ import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import Contact from '../components/forms/Contact';
-
 import '../styles/Home.scss';
 // Icons
+import Icon from '../components/shared/icons/Icon';
 import IconDecentralized from '../img/icons/icon__decentralized--multicolor.png';
 import IconCollaboration from '../img/icons/icon__collaboration--multicolor.png';
 import IconIterative from '../img/icons/icon__iterative--multicolor.png';
@@ -78,7 +78,7 @@ export default class IndexPage extends React.Component {
               <img className="Icon--Medium" src={IconCode} />
               <img className="Icon--Medium" src={IconBlockchain} />
             </div>
-            <Link to="/services">View our capabilities</Link>
+            <Link to="/services">View our capabilities <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
           </div>
           <OdBackground />
         </section>
@@ -95,7 +95,7 @@ export default class IndexPage extends React.Component {
               <img className="Icon--Medium" src={IconIterative} />
               <img className="Icon--Medium" src={IconBalance} />
             </div>
-            <Link to="/network">Learn more about our network</Link>
+            <Link to="/network">Learn more about our network <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
           </div>
           <OdBackground />
         </section>
@@ -105,7 +105,6 @@ export default class IndexPage extends React.Component {
             <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
             <Contact formName="contact" />
           </div>
-          <OdBackground />
         </section>
       </Layout>
     );

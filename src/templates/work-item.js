@@ -9,6 +9,7 @@ import OdBackground from '../components/shared/od-background/OdBackground';
 import WorkSection from '../components/work/WorkSection';
 import WorkServices from '../components/work/WorkServices';
 import { HTMLContent } from '../components/shared/Content';
+import Icon from '../components/shared/icons/Icon';
 
 import '../styles/WorkItem.scss';
 
@@ -21,7 +22,7 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
       <section className="PageHeader">
         <div className="PageHeader__Contents">
           <h4>
-            <Link to="/work">Proof of Work</Link> / {workItem.title}
+            <Link to="/work"><span className="Hover--Back"><Icon name="arrow-back" /></span> Proof of Work</Link> / {workItem.title}
           </h4>
           <h1>
             <span className="Weight--400">{workItem.title}</span>{' '}
@@ -64,7 +65,7 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
           ) : null}
           <div className="BackToWork">
             <p className="Extra-Large">
-              <Link to="/work">Back to Proof of Work</Link>
+              <Link to="/work"><Icon name="arrow-back" /> Back to Proof of Work</Link>
             </p>
           </div>
         </div>

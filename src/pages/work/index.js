@@ -33,7 +33,7 @@ export default class WorkPage extends Component {
                   src={
                     post.frontmatter.featuredImage.childImageSharp.original.src
                   }
-                  alt="featured"
+                  alt="Featured Image"
                 />
               </div>
               <p className="Weight--100">
