@@ -7,7 +7,7 @@ import Contact from '../../components/forms/Contact';
 import IconDesign from '../../img/icons/icon__design--multicolor.png';
 import IconCode from '../../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
-import GraphicProcess from '../../img/Graphic__OD--Process.png';
+import GraphicProcess from '../../img/Graphic__Od--Process.png';
 
 import '../../styles/Services.scss';
 
