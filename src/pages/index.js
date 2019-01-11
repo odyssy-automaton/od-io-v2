@@ -92,6 +92,7 @@ export default class IndexPage extends React.Component {
               <img className="Icon--Medium" src={IconDecentralized} />
               <img className="Icon--Medium" src={IconBlockchain} />
               <img className="Icon--Medium" src={IconCollaboration} />
+              <img className="Icon--Medium" src={IconCrypto} />
               <img className="Icon--Medium" src={IconIterative} />
               <img className="Icon--Medium" src={IconBalance} />
             </div>

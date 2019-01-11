@@ -17,6 +17,7 @@ import IconCollaboration from '../../img/icons/icon__collaboration--multicolor.p
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
 import IconIterative from '../../img/icons/icon__iterative--multicolor.png';
 import IconBalance from '../../img/icons/icon__balance--multicolor.png';
+import IconCrypto from '../../img/icons/icon__crypto--multicolor.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -91,9 +92,9 @@ export default class NetworkPage extends Component {
                 <p>Anti-rivalrous network structure and incentive mechanisms</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconCollaboration}/>
-                <h4>Trustless</h4>
-                <p>Autonomous value creation over managerial perception</p>
+                <img src={IconCrypto}/>
+                <h4>Crypto-Powered</h4>
+                <p>Cryptocurrencies power our value capture and distribution</p>
                 <img src={IconBlockchain}/>
                 <h4>Transparent</h4>
                 <p>Information open to all stakeholders and members</p>
