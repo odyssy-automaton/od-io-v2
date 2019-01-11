@@ -7,12 +7,14 @@ import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
+import Contact from '../components/forms/Contact';
+
 import '../styles/Home.scss';
 // Icons
-import IconDecentralized from '../img/icons/icon__decentralized.png';
-import IconDevfund from '../img/icons/icon__devfund.png';
-import IconEthereum from '../img/icons/icon__ethereum.png';
-import IconGovernance from '../img/icons/icon__governance.png';
+import IconDecentralized from '../img/icons/icon__decentralized--multicolor.png';
+import IconCollaboration from '../img/icons/icon__collaboration--multicolor.png';
+import IconIterative from '../img/icons/icon__iterative--multicolor.png';
+import IconBalance from '../img/icons/icon__balance--multicolor.png';
 import IconDesign from '../img/icons/icon__design--multicolor.png';
 import IconCode from '../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../img/icons/icon__blockchain--multicolor.png';
@@ -39,12 +41,12 @@ export default class IndexPage extends React.Component {
           />
         </section>
         <section className="Block Intro">
+          <div className="CryptoAccepted">
+            <Fade>
+              <img src={IconCrypto} />
+            </Fade>
+          </div>
           <div className="Block__Contents">
-            <div className="CryptoAccepted">
-              <Fade>
-                <img src={IconCrypto} />
-              </Fade>
-            </div>
             <Fade up>
               <h4>The agency has evolved.</h4>
               <p className="Huge">
@@ -88,11 +90,20 @@ export default class IndexPage extends React.Component {
             </p>
             <div className="IconsBar">
               <img className="Icon--Medium" src={IconDecentralized} />
-              <img className="Icon--Medium" src={IconEthereum} />
-              <img className="Icon--Medium" src={IconGovernance} />
-              <img className="Icon--Medium" src={IconDevfund} />
+              <img className="Icon--Medium" src={IconBlockchain} />
+              <img className="Icon--Medium" src={IconCollaboration} />
+              <img className="Icon--Medium" src={IconIterative} />
+              <img className="Icon--Medium" src={IconBalance} />
             </div>
             <Link to="/network">Learn more about our network</Link>
+          </div>
+          <OdBackground />
+        </section>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <Contact formName="contact" />
           </div>
           <OdBackground />
         </section>

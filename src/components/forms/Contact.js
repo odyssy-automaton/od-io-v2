@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
                   name="message"
                   onChange={this.handleChange}
                   placeholder="Message (including any relevant links)"
-                  rows="5"
+                  rows="3"
                 />
               </label>
             </p>

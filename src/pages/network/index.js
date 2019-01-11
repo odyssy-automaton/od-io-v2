@@ -10,10 +10,13 @@ import OdMesh from '../../img/Graphic__Od--Mesh.png';
 import DekePic from '../../img/deke.png';
 import SamPic from '../../img/sam.png';
 import VenPic from '../../img/ven.png';
-import IconDecentralized from '../../img/icons/icon__decentralized.png';
 import IconDevfund from '../../img/icons/icon__devfund.png';
 import IconEthereum from '../../img/icons/icon__ethereum.png';
-import IconGovernance from '../../img/icons/icon__governance.png';
+import IconDecentralized from '../../img/icons/icon__decentralized--multicolor.png';
+import IconCollaboration from '../../img/icons/icon__collaboration--multicolor.png';
+import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
+import IconIterative from '../../img/icons/icon__iterative--multicolor.png';
+import IconBalance from '../../img/icons/icon__balance--multicolor.png';
 
 export default class NetworkPage extends Component {
   render() {
@@ -31,6 +34,13 @@ export default class NetworkPage extends Component {
             </div>
           </Fade>
           <OdBackground />
+        </section>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <Contact formName="contact" />
+          </div>
         </section>
         <div className="Block">
           <div className="Block__Contents Columns">
@@ -61,18 +71,6 @@ export default class NetworkPage extends Component {
                 alt="mesh network graphic"
               />
             </div>
-            <div className="Columns__Column--50">
-              <h3>
-                Contact <span className="Weight--500">Odyssy</span>
-              </h3>
-              <p>
-                Let us know about your idea, project, or collaborative
-                potential.
-              </p>
-            </div>
-            <div className="Columns__Column--50">
-              <Contact formName="contact" />
-            </div>
           </div>
         </div>
         <div className="Block Manifesto">
@@ -88,26 +86,24 @@ export default class NetworkPage extends Component {
               <div className="Columns__Column--33">
                 <img src={IconDecentralized} />
                 <h4>Decentralized</h4>
-                <p>
-                  Local autonomy for optimal efficiency and value distribution
-                </p>
-                <img src={IconDevfund} />
+                <p>Local autonomy for optimal efficiency and value distribution</p>
+                <img src={IconCollaboration}/>
                 <h4>Collaborative</h4>
                 <p>Anti-rivalrous network structure and incentive mechanisms</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconGovernance} />
+                <img src={IconCollaboration}/>
                 <h4>Trustless</h4>
                 <p>Autonomous value creation over managerial perception</p>
-                <img src={IconGovernance} />
+                <img src={IconBlockchain}/>
                 <h4>Transparent</h4>
                 <p>Information open to all stakeholders and members</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconEthereum} />
+                <img src={IconBalance}/>
                 <h4>Balance</h4>
                 <p>Balance between centralized and decentralized systems</p>
-                <img src={IconGovernance} />
+                <img src={IconIterative}/>
                 <h4>Iterative</h4>
                 <p>
                   Understand, Diverge, Converge, Test, Prototype, Deploy,
@@ -190,8 +186,7 @@ export default class NetworkPage extends Component {
               <div>
                 <p>
                   Ven Gist started as a visual designer for global brands such
-                  as Adobe, Nike, and Uniqlo. Following an introduction to
-                  cryptocurrency in 2014, he now creates within a broad spectrum
+                  as Adobe, Nike, and Uniqlo. He now creates within a broad spectrum
                   of design and technology focused on accelerating the utility
                   and adoption of blockchain technologies and decentralized
                   systems.
@@ -208,24 +203,26 @@ export default class NetworkPage extends Component {
               </div>
               <div>
                 <p>
-                  Sam Kuhlmann builds web products. He's a full stack developer
-                  with years of experience managing and developing apps and
-                  dapps.
+                  Sam Kuhlmann has taken a circuitous route to co-founding
+                  Odyssy.io. An art degree in film, a stint in cartoon
+                  production, a detour as a magazine publisher/editor and years
+                  in software management roles for global brands including Audi
+                  of America and The North Face have lead the way to full stack
+                  web and blockchain development.
                 </p>
               </div>
             </div>
-            <div className="Columns__Column--50">
-              <h3>Join the Network</h3>
-              <p>
-                Reach out if you're interested in joining our network of
-                designers, developers, and thinkers.
-              </p>
-            </div>
-            <div className="Columns__Column--50">
-              <Contact formName="network" />
-            </div>
           </div>
         </div>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Join the Network</h3>
+            <p>Reach out if you're interested in joining our network of
+            designers, developers, and thinkers.</p>
+            <Contact formName="network" />
+          </div>
+          <OdBackground />
+        </section>
       </Layout>
     );
   }

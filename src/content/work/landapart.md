@@ -33,4 +33,8 @@ tags:
   - ui
 ---
 
+#### Summary
+
 LandApart was created to address the growing demand for uncrowded, accessible outdoor spaces. With increasingly crowded cities, more folks are looking to get away - from the city and from the crowds. Campgrounds are often busy, and the backcountry isn’t always an option. They work with landowners to provide access to their unique and wild lands.
+
+Odyssy helped with the naming and continued through an full branding process alongside defining, designing, and building the entire product. We also helped strategize the Camp MileHigh exhibition at TEDx, turning downtown Denver into an engaging camp-like escape for the day.

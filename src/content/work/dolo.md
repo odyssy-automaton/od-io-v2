@@ -30,5 +30,6 @@ tags:
 className: Native__work
 ---
 
-Until now, organizing and operating digital communities has been limited to centralized platforms, resulting in limited capacity to incentivize long-term and meaningful member engagement. Through these major social media networks, digital communities can expand globally but have no universally recognized economic system to realize the value of their efforts.
-Imagine using blockchain technology to deploy digital community infrastructure at scale, and keeping the value inside the communities. Native enables digital communities to organize members, facilitate growth and simplify operational processes all in one application. Through unique community tokens, a functional set of governance tools and flexible incentive structures for member engagement, Native provides the system for the next wave of community sovereignty.
+DOLO is a decentralized open learning organization, built and run by its members, iterating towards a smarter education system for all. DOLO is a brainchild of Odyssy and we are working alongside a community of educators to research and develop the tools needed.
+
+Our first initiatives are to build a platform for educators to collaborate on their curriculum, course content, and pedagogies. The next step is to tie that into a decentralized learning platform where educators can deploy courses to students who earn blockchain-verified certificates and/or badges upon completion of a course or track.

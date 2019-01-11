@@ -39,7 +39,7 @@ const Navbar = class extends React.Component {
             className="Navbar__Desktop--Item"
             to="/work"
           >
-            Work
+            Proof of Work
           </Link>
           <Link
             activeClassName="Navbar__Desktop--Item--Active"

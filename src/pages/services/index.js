@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import Fade from 'react-reveal/Fade';
+import Contact from '../../components/forms/Contact';
 
 import IconDesign from '../../img/icons/icon__design--multicolor.png';
 import IconCode from '../../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
+import GraphicProcess from '../../img/Graphic__OD--Process.png';
 
 import '../../styles/Services.scss';
 
@@ -17,19 +19,18 @@ export default class ServicesPage extends Component {
           <Fade>
           <div className="PageHeader__Contents">
             <h4>Research, Design, Develop, Test, Deploy, Maintain, Improve.</h4>
-            <h1>Research, Design, Develop, Test, Deploy, Maintain, Improve.</h1>
+            <h1>Odyssy is a decentralized collective delivering full stack design and development to the blockchain and beyond.</h1>
           </div>
           </Fade>
           <OdBackground />
         </section>
-        <div className="Block">
+        <div className="Block Process">
           <div className="Block__Contents">
-            <h4>Introduction</h4>
-            <p className="Huge">Odyssy is a decentralized collective
-              delivering full stack design and
-              development to the blockchain and
-              beyond.
+            <h4>Better. Faster. Cheaper.</h4>
+            <p className="Huge">
+              Our process is fluid, efficient, and participatory. Odyssy delivers maximum output with minimum input.
             </p>
+            <img src={GraphicProcess} alt="Odyssy Process Graphic" />
           </div>
         </div>
         <div className="Block ServicesList">
@@ -55,24 +56,27 @@ export default class ServicesPage extends Component {
               <img src={IconCode} alt="engineering icon" width="120px" />
               <h3>Engineering</h3>
               <ul>
+                <li>Product Management</li>
                 <li>Front End Development</li>
                 <li>Back End Development</li>
-                <li>Dev Ops</li>
-                <li>R&D</li>
-                <li>Product Management</li>
-                <li>QA & User Testing</li>
                 <li>Web Apps</li>
+                <li>Prototyping</li>
+                <li>Research & Development</li>
+                <li>QA & User Testing</li>
+                <li>Dev Ops</li>
               </ul>
             </div>
             <div className="Columns__Column--33">
               <img src={IconBlockchain} alt="blockchain icon" width="120px" />
               <h3>Blockchain</h3>
               <ul>
-                <li>Smart Contract Development and Consulting</li>
+                <li>Consulting</li>
+                <li>Smart Contracts</li>
                 <li>Decentralized Apps (DApps)</li>
                 <li>Blockchain APIs</li>
                 <li>Web3 Interfaces and Toolsets</li>
-                <li>Tokenomics</li>
+                <li>Cryptoeconomics</li>
+                <li>Game Theory</li>
               </ul>
             </div>
           </div>
@@ -89,6 +93,14 @@ Heroku, IPFS, Ethereum, Solidity.
             </p>
           </div>
         </div>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Let us know about your idea, project, or collaborative potential.</p>
+            <Contact formName="contact" />
+          </div>
+          <OdBackground />
+        </section>
       </Layout>
     );
   }
