@@ -28,7 +28,7 @@ export default class ServicesPage extends Component {
           <div className="Block__Contents">
             <h4>Better. Faster. Cheaper.</h4>
             <p className="Huge">
-              Our process is fluid. It is fast. It is efficient. It delivers maximum output with minimum input.
+              Our process is fluid, efficient, and participatory. Odyssy delivers maximum output with minimum input.
             </p>
             <img src={GraphicProcess} alt="Odyssy Process Graphic" />
           </div>

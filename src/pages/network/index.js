@@ -46,18 +46,30 @@ export default class NetworkPage extends Component {
           <div className="Block__Contents Columns">
             <div className="Columns__Column--100">
               <h4>Decentralized Autonomous Organism</h4>
-              <p className="Huge">Distributed Skills and Knowledge are better than the huge overhead of the traditional agency.</p>
-            </div>
-            <div className="Columns__Column--50">
-              <p>
-                For the cost of an internal hire, a project gets a distributed team called a cell, fully autonomous and optimized to each project’s needs. Cells are loosely coupled, but tightly aligned to maintain agility and continuous iteration. Cells learn from each other and share what works with the network.
-              </p>
-              <p>
-                An example cell could be comprised of Product, Design, Engineering, and Blockchain skillsets.
+              <p className="Huge">
+                Distributed Skills and Knowledge are better than the huge
+                overhead of the traditional agency.
               </p>
             </div>
             <div className="Columns__Column--50">
-              <img className="Page__Graphic" src={OdMesh} alt="mesh network graphic"/>
+              <p>
+                For the cost of an internal hire, a project gets a distributed
+                team called a cell, fully autonomous and optimized to each
+                project’s needs. Cells are loosely coupled, but tightly aligned
+                to maintain agility and continuous iteration. Cells learn from
+                each other and share what works with the network.
+              </p>
+              <p>
+                An example cell could be comprised of Product, Design,
+                Engineering, and Blockchain skillsets.
+              </p>
+            </div>
+            <div className="Columns__Column--50">
+              <img
+                className="Page__Graphic"
+                src={OdMesh}
+                alt="mesh network graphic"
+              />
             </div>
           </div>
         </div>
@@ -66,10 +78,13 @@ export default class NetworkPage extends Component {
             <div className="Columns">
               <div className="Columns__Column--100">
                 <h4>Manifesto</h4>
-                <p className="Huge">Our Core Belief structure is built on autonomy, efficiency, and humanity, always with an eye to the future.</p>
+                <p className="Huge">
+                  Our Core Belief structure is built on autonomy, efficiency,
+                  and humanity, always with an eye to the future.
+                </p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconDecentralized}/>
+                <img src={IconDecentralized} />
                 <h4>Decentralized</h4>
                 <p>Local autonomy for optimal efficiency and value distribution</p>
                 <img src={IconCollaboration}/>
@@ -90,7 +105,10 @@ export default class NetworkPage extends Component {
                 <p>Balance between centralized and decentralized systems</p>
                 <img src={IconIterative}/>
                 <h4>Iterative</h4>
-                <p>Understand, Diverge, Converge, Test, Prototype, Deploy, Iterate</p>
+                <p>
+                  Understand, Diverge, Converge, Test, Prototype, Deploy,
+                  Iterate
+                </p>
               </div>
             </div>
           </div>
@@ -98,19 +116,39 @@ export default class NetworkPage extends Component {
         <div className="Block">
           <div className="Block__Contents">
             <h4>The Network is Incentivized</h4>
-            <p className="Huge">We’re iterating on the future of work and value creation right now.</p>
+            <p className="Huge">
+              We’re iterating on the future of work and value creation right
+              now.
+            </p>
             <div className="Columns">
               <div className="Columns__Column--50">
                 <h4>The Network is Tokenized</h4>
-                <p>The Odyssy token (ODY) captures value added to the Odyssy network as a whole. All token functions (i.e. minting, burning, updates) are controlled by an array of members attached to a multi-sig proxy wallet.</p>
+                <p>
+                  The Odyssy token (ODY) captures value added to the Odyssy
+                  network as a whole. All token functions (i.e. minting,
+                  burning, updates) are controlled by an array of members
+                  attached to a multi-sig proxy wallet.
+                </p>
                 <h4>Projects are Smart Contracts</h4>
-                <p>Every project, and subsequent milestone, is written as a smart contract. Value created by a Project is instantly distributed across the network in trustless fashion.</p>
+                <p>
+                  Every project, and subsequent milestone, is written as a smart
+                  contract. Value created by a Project is instantly distributed
+                  across the network in trustless fashion.
+                </p>
               </div>
               <div className="Columns__Column--50">
                 <h4>Shared Value Incentives</h4>
-                <p>If a project has its own token, a portion gets distributed to the Dev Fund as well as the workers on the project. The future value of these tokens incentivizes good work to fuel success of the project and its token.</p>
+                <p>
+                  If a project has its own token, a portion gets distributed to
+                  the Dev Fund as well as the workers on the project. The future
+                  value of these tokens incentivizes good work to fuel success
+                  of the project and its token.
+                </p>
                 <h4>Portable Benefits</h4>
-                <p>We’re deploying benefit packages to our members as distributed services that they own, decentralized from their employment.</p>
+                <p>
+                  We’re deploying benefit packages to our members as distributed
+                  services that they own, decentralized from their employment.
+                </p>
               </div>
             </div>
           </div>
@@ -122,7 +160,7 @@ export default class NetworkPage extends Component {
             </div>
             <div className="Columns__Column--33">
               <div className="Row">
-                <img className="Bios__Pic" src={DekePic} alt="bio pic"/>
+                <img className="Bios__Pic" src={DekePic} alt="bio pic" />
                 <div className="Title">
                   <h3>Dekan Brown</h3>
                   <h4>Full Stack Developer</h4>
@@ -130,7 +168,10 @@ export default class NetworkPage extends Component {
               </div>
               <div>
                 <p>
-                  Dekan Brown is a Colorado native, adventurer and technophile. Dekan has been working as a developer for over 15 years with five years in the crypto space, developing products, dapp front ends and smart contracts.
+                  Dekan Brown is a Colorado native, adventurer and technophile.
+                  Dekan has been working as a developer for over 15 years with
+                  five years in the crypto space, developing products, dapp
+                  front ends and smart contracts.
                 </p>
               </div>
             </div>
@@ -157,7 +198,7 @@ export default class NetworkPage extends Component {
                 <img className="Bios__Pic" src={SamPic} alt="bio pic" />
                 <div className="Title">
                   <h3>Sam Kuhlmann</h3>
-                  <h4>Full Stack Developer</h4>
+                  <h4>Product Developer</h4>
                 </div>
               </div>
               <div>
