@@ -25,6 +25,16 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-132344680-1',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        alwaysSendReferrer: true,
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
