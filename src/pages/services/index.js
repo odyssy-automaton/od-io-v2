@@ -19,7 +19,7 @@ export default class ServicesPage extends Component {
           <Fade>
           <div className="PageHeader__Contents">
             <h4>Research, Design, Develop, Test, Deploy, Maintain, Improve.</h4>
-            <h1>Odyssy is a decentralized collective delivering full stack design and development to the blockchain and beyond.</h1>
+            <h1>Odyssy is a decentralized collective delivering full stack design and development to the blockchain and beyond. </h1>
           </div>
           </Fade>
           <OdBackground />
