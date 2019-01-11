@@ -1,5 +1,23 @@
 @import 'variables';
 
+.CryptoAccepted {
+  position: absolute;
+  width: 150px;
+  z-index: 99;
+  @media (min-width: 481px){
+    top: 125px;
+    right: 150px;
+    transform: rotate(12deg);
+  }
+  @media (max-width: $phone) {
+    width: 80px;
+    bottom: 50%;
+    left: 25%;
+    transform: translateY(-50%) translateX(-50%) rotate(12deg);
+    margin-bottom: -200px;
+  }
+}
+
 .Hero {
   position: relative;
   width: 100%;
@@ -9,7 +27,13 @@
   align-items: center;
   overflow: hidden;
   &__Contents {
-    p {color: $od-medium-purple; margin: 0; text-transform: uppercase; text-align: center; line-height: 1.25em;}
+    p {
+      color: $od-medium-purple;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.25em;
+    }
   }
   .LottieControl {
     position: absolute;
@@ -18,11 +42,48 @@
   }
 }
 
-.ProofOfWork {
-  background-image: url('/img/work/Work__BG.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: $od-primary;
-  color: white;
+.Block {
+  &.Intro {
+    background-color: $od-primary;
+    color: white;
+    h4 { color: white; }
+  }
+  &.ProofOfWork {
+    background-image: url('/img/work/Work--Background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @media (max-width: $phone) {
+      background-image: url('/img/work/Work--Background.png');
+    }
+    background-color: $od-medium-purple;
+    color: white;
+    text-align: center;
+    .button {
+      font-size: 1.35em;
+      padding: 10px 30px;
+      border-radius: 50px;
+      border-color: white;
+      color: white;
+      &:hover { color: $od-primary; border-color: $od-primary; }
+    }
+  }
+  &.Capabilities {
+    background-color: $od-cream-dark;
+  }
+  &.Network {
+    background-color: $od-cream;
+  }
+}
+
+.POWLink {
+  cursor: pointer;
+  &:hover .button {
+    color: white; background-color: $od-primary; border-color: $od-primary;
+    &:hover { color: white; }
+  }
+}
+
+.IconsBar {
+  margin-bottom: 35px;
 }

@@ -9,6 +9,7 @@ import OdBackground from '../components/shared/od-background/OdBackground';
 import WorkSection from '../components/work/WorkSection';
 import WorkServices from '../components/work/WorkServices';
 import { HTMLContent } from '../components/shared/Content';
+import Icon from '../components/shared/icons/Icon';
 
 import '../styles/WorkItem.scss';
 
@@ -16,13 +17,13 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
 
   return (
-    <div className={workItem.className}>
+    <div className="WorkItem">
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
-          <p>
-            <Link to="/work">Proof of Work</Link> / {workItem.title}
-          </p>
+          <h4>
+            <Link to="/work"><span className="Hover--Back"><Icon name="arrow-back" /></span> Proof of Work</Link> / {workItem.title}
+          </h4>
           <h1>
             <span className="Weight--400">{workItem.title}</span>{' '}
             {workItem.shortDescription}
@@ -53,11 +54,20 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
               })}
             </div>
           ) : null}
+        </div>
+      </section>
+      <section className="Block Background--Dark">
+        <div className="Block__Contents">
           {hasServices ? (
             <div className="Services">
               <WorkServices workItem={workItem} />
             </div>
           ) : null}
+          <div className="BackToWork">
+            <p className="Extra-Large">
+              <Link to="/work"><Icon name="arrow-back" /> Back to Proof of Work</Link>
+            </p>
+          </div>
         </div>
       </section>
     </div>

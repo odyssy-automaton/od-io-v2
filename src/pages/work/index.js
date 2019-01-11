@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Icon from '../../components/shared/icons/Icon'
+import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout/Layout';
 import OdBackground from '../../components/shared/od-background/OdBackground';
 import '../../styles/Work.scss';
@@ -13,18 +15,15 @@ export default class WorkPage extends Component {
     return (
       <Layout>
         <section className="PageHeader">
+          <Fade>
           <div className="PageHeader__Contents">
-            <p>Proof of Work</p>
-            <h1>Ideation. Design. Development. Product. Iteration.</h1>
+            <h4>Proof of Work</h4>
+            <h1>
+              We design & build at the forefront of human experience innovation.
+            </h1>
           </div>
+          </Fade>
           <OdBackground />
-        </section>
-        <section className="Filter">
-          <div className="Filter__Contents">
-            <p>
-              Filter <span>All</span>
-            </p>
-          </div>
         </section>
         <div className="Work">
           {posts.map(({ node: post }) => (
@@ -34,14 +33,14 @@ export default class WorkPage extends Component {
                   src={
                     post.frontmatter.featuredImage.childImageSharp.original.src
                   }
-                  alt="featured"
+                  alt="Featured Image"
                 />
               </div>
               <p className="Weight--100">
                 <span className="Weight--500">{post.frontmatter.title}</span>{' '}
                 {post.frontmatter.shortDescription}
               </p>
-              <p>Keep Reading →</p>
+              <p>Keep Reading <Icon name="arrow-forward" /></p>
             </Link>
           ))}
         </div>
@@ -61,6 +60,7 @@ WorkPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___sortOrder] }
       filter: { frontmatter: { templateKey: { eq: "work-item" } } }
     ) {
       edges {

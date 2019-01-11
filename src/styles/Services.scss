@@ -1,5 +1,21 @@
-.Services .Block{
-    ul {
-        margin: 10%;
+@import './variables';
+
+.ServicesList {
+  img {
+    margin-bottom: 25px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    li {
+      line-height: 1.5em;
+      color: rgba(0,0,0,0.65);
+      font-weight: 100;
     }
+  }
+  @media (max-width: $tablet) {
+    text-align: center;
+  }
 }
+
+.Process img { margin: 0 auto; }

@@ -7,32 +7,48 @@ body {
   letter-spacing: .05em;
 }
 
-a {
-  text-decoration: none;
-  transition: all .15s linear;
-  color: $od-medium-purple;
-  &:hover {
-    color: $od-primary;
-  }
-}
-
 // Typography
 h1, h2, h3, h4, h5, h6 {
   color: $od-primary;
   font-weight: 100;
   font-family: $base-font;
+  margin-bottom: 1em;
+  line-height: 1.2em;
 }
 
-h1 { font-size: 3.25em; }
+h1 {
+  font-size: 3.25em;
+  @media (max-width: $phone) {
+    font-size: 1.75em;
+  }
+}
+h2 {
+  font-size: 2.75em;
+  @media (max-width: $phone) {
+    font-size: 1.5em;
+  }
+}
 
 p {
   font-size: 1em;
   line-height: 1.25em;
   letter-spacing: 0;
+
   &.Huge {
     font-size: 2.5em;
     line-height: 1.35em;
     font-weight: 100;
+    @media (max-width: $phone) {
+      font-size: 1.5em;
+    }
+  }
+  &.Extra-Large {
+    font-size: 1.75em;
+    line-height: 1.35em;
+    font-weight: 100;
+    @media (max-width: $phone) {
+      font-size: 1.25em;
+    }
   }
   &.Large {
     font-size: 1.15em;
@@ -40,6 +56,81 @@ p {
     font-weight: 100;
   }
 }
+
+// Forms, Inputs, Links, and Buttons
+
+a {
+  position: relative;
+  text-decoration: none;
+  transition: all .15s linear;
+  color: $od-medium-purple;
+  &:hover {
+    color: $od-primary;
+  }
+  svg { vertical-align: middle; }
+  svg path { fill: $od-medium-purple; transition: all .15s linear; }
+  &:hover svg path { fill: $od-primary; }
+  .Hover {
+    &--Forward {
+      transition: all .15s linear;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      right: -20px;
+    }
+    &--Back {
+      transition: all .15s linear;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      left: -15px;
+    }
+  }
+  &:hover .Hover {
+    &--Forward {
+      opacity: 1;
+      right: -25px;
+    }
+    &--Back {
+      opacity: 1;
+      left: -25px;
+    }
+  }
+}
+
+button, .button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid $od-primary;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background: none;
+  color: $od-primary;
+  &:disabled {
+    color: rgba(0,0,0,0.25);
+    border-color: rgba(0,0,0,0.25);
+  }
+}
+
+label {
+  font-size: 0.85em;
+}
+
+input, textarea {
+  outline: none;
+  width: 100%;
+  font-size: 1.15em;
+  font-weight: 100;
+  padding: 15px;
+  border: none;
+  background: rgba(0,0,0,0.15);
+  resize: none;
+  color: rgba(255,255,255,0.85);
+}
+
+// Utils
 
 .Weight {
   &--100 { font-weight: 100 }
@@ -56,6 +147,21 @@ p {
   &--50 { padding: 50px; }
   &--75 { padding: 75px; }
   &--100 { padding: 100px; }
+  &--Right { padding-right: 50px; }
+}
+
+.Text{
+  &--Center {
+    text-align: center;
+  }
+}
+
+.Float {
+  &--Left {
+    float: left;
+    width: 80px;
+    margin-right: 25px;
+  }
 }
 
 .Flex {
@@ -63,6 +169,15 @@ p {
   &--Center {
     align-items: center;
     justify-content: center;
+  }
+}
+
+.Icon {
+  &--Medium {
+    width: 80px;
+    &:not(last-child) {
+        margin-right: 25px;
+    }
   }
 }
 
@@ -74,11 +189,43 @@ p {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  &:nth-of-type(even) { background-color: $od-cream-dark; }
+  flex-wrap: wrap;
+  &:nth-of-type(odd) { background-color: $od-cream-dark; }
   &__Contents {
-    max-width: 1140px;
+    position: relative;
+    max-width: 1100px;
+    width: calc(100%);
+    padding: 50px;
     margin: 0 auto;
-    padding: 30px;
+    @media (max-width: $phone) {
+      padding: 50px 25px;
+      width: calc(100%);
+    }
+  }
+}
+
+.Background--Dark {
+  background-color: $od-cream-dark;
+}
+
+.Background--Standard {
+  background-color: $od-cream;
+}
+
+.CTA {
+  &--Highlight {}
+  background-color: $od-medium-purple !important;
+  min-height: 100px;
+  padding: 25px 50px 0px;
+  .Block__Contents {
+    width: auto;
+    max-width: 480px;
+    h3 { color: white; }
+    button { transition: all .15s linear;}
+    button:not(:disabled):hover {
+      color: white;
+      background-color: $od-primary;
+    }
   }
 }
 
@@ -89,10 +236,22 @@ p {
   align-items: center;
   justify-content: flex-start;
   min-height: 75vh;
+  background-color: $od-primary;
+  color: white !important;
   &__Contents {
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 50px;
+    h4 { color: white; font-weight: 500; }
+    a {
+      color: $od-medium-purple;
+      &:hover {
+        color: white;
+      }
+      svg { width: 18px; margin-top: -4px; }
+      &:hover svg path { fill: white; }
+    }
+    h1 { color: white }
   }
 }
 
@@ -110,19 +269,36 @@ p {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   &__Column {
+    flex-direction: column;
     &--25 {
       flex-basis: 25%;
+      flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+      }
     }
     &--33 {
       flex-basis: 33%;
+      flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+        padding-bottom: 25px;
+      }
     }
     &--50 {
       flex-basis: 50%;
+      flex-direction: column;
+      @media (max-width:$tablet) {
+        flex-basis: 100%;
+        padding-bottom: 25px;
+      }
     }
     &--100 {
       flex-basis: 100%;
+      flex-direction: column;
     }
   }
 }
@@ -136,4 +312,8 @@ p {
 // Gatsby Overrides
 .gatsby-resp-image-image {
   box-shadow: none !important;
+}
+
+.gatsby-resp-image-link {
+  pointer-events: none;
 }

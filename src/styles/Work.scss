@@ -21,6 +21,9 @@
     p {
       color: #aaa;
     }
+    svg { vertical-align: middle; width: 18px; }
+    svg path { fill: #aaa; }
+    &:hover svg path { fill: #333; }
     &:hover p { color: #333; }
     &:hover { transform: scale(1.05); background-color: $od-cream-dark; }
     &--Image {

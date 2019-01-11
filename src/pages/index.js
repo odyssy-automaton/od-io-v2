@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
-import '../styles/Home.scss';
 import LottieControl from '../components/shared/lottie/LottieControl';
 import OdyssyLogoTypeStandard from '../img/odyssy__logo--type--standard.svg';
 import heroAnimation from '../img/Intro__Animation--1.json';
 import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
+import Contact from '../components/forms/Contact';
+import '../styles/Home.scss';
+// Icons
+import Icon from '../components/shared/icons/Icon';
+import IconDecentralized from '../img/icons/icon__decentralized--multicolor.png';
+import IconCollaboration from '../img/icons/icon__collaboration--multicolor.png';
+import IconIterative from '../img/icons/icon__iterative--multicolor.png';
+import IconBalance from '../img/icons/icon__balance--multicolor.png';
+import IconDesign from '../img/icons/icon__design--multicolor.png';
+import IconCode from '../img/icons/icon__code--multicolor.png';
+import IconBlockchain from '../img/icons/icon__blockchain--multicolor.png';
+import IconCrypto from '../img/icons/icon__crypto--multicolor--invert.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -29,39 +40,70 @@ export default class IndexPage extends React.Component {
             swapLoop={true}
           />
         </section>
-        <section className="Block">
+        <section className="Block Intro">
+          <div className="CryptoAccepted">
+            <Fade>
+              <img src={IconCrypto} />
+            </Fade>
+          </div>
           <div className="Block__Contents">
             <Fade up>
+              <h4>The agency has evolved.</h4>
               <p className="Huge">
                 We design & build at the forefront of human experience
                 innovation.
               </p>
             </Fade>
           </div>
+          <OdBackground />
         </section>
+        <Link to="/work" className="POWLink">
         <section className="Block ProofOfWork">
           <div className="Block__Contents">
             <p className="Huge">Proof of Work</p>
-            <Link to="/work">View</Link>
+            <a className="button" href="/work">View</a>
           </div>
         </section>
-        <section className="Block">
+        </Link>
+        <section className="Block Capabilities">
           <div className="Block__Contents">
+          <h4>Research, Strategy, Design, Develop, Test, Deploy, Improve.</h4>
             <p className="Huge">
               <span className="Weight--500">Odyssy</span> is a decentralized
               collective delivering full stack Design & Development to the
               blockchain and beyond.
             </p>
-            <Link to="/services">View our capabilities</Link>
+            <div className="IconsBar">
+              <img className="Icon--Medium" src={IconDesign} />
+              <img className="Icon--Medium" src={IconCode} />
+              <img className="Icon--Medium" src={IconBlockchain} />
+            </div>
+            <Link to="/services">View our capabilities <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
           </div>
           <OdBackground />
         </section>
-        <section className="Block">
+        <section className="Block Network">
           <div className="Block__Contents">
+            <h4>The Agency has Evolved.</h4>
             <p className="Huge">
-              We are iterating on the future of work right now
+              We are iterating on the future of work right now.
             </p>
-            <Link to="/network">Learn more about our network</Link>
+            <div className="IconsBar">
+              <img className="Icon--Medium" src={IconDecentralized} />
+              <img className="Icon--Medium" src={IconBlockchain} />
+              <img className="Icon--Medium" src={IconCollaboration} />
+              <img className="Icon--Medium" src={IconIterative} />
+              <img className="Icon--Medium" src={IconBalance} />
+            </div>
+            <Link to="/network">Learn more about our network <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
+          </div>
+          <OdBackground />
+        </section>
+        <section className="Block CTA">
+          <div className="Block__Contents">
+            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <Contact formName="contact" />
           </div>
         </section>
       </Layout>

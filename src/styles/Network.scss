@@ -1,17 +1,71 @@
-.Network .Page__Contents {
-    img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-    }
-    .Block > div {
-        width: 50%;
-        padding: 5%;
-    }
+@import '../styles/variables';
+
+$hexagon: '../img/hexagon.svg';
+
+form { max-width: 480px; }
+
+.Page__Graphic {
+  width: 100%;
 }
 
-.Network .Page__Graphic {
-    width: 180px;
-    height: 180px;
-    margin: 5%;
+.Network {
+
+}
+
+.Block.Manifesto {
+  > h2 { text-align: center; width: 100%; }
+  .Columns__Column--33 {
+    text-align: center;
+    h4 { margin: 15px 0px 10px 0px; }
+    p {
+      margin-bottom: 75px;
+    }
+  }
+  img {
+    width: 100px;
+  }
+}
+
+.Bios {
+  .Row {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  > h2 {text-align: center; }
+  .Columns {
+  }
+  .Columns__Column--33:nth-of-type(2) {
+    padding-right: 50px;
+    @media (max-width: $tablet) {
+      padding-right: 0px;
+    }
+  }
+  .Columns__Column--33:nth-of-type(3) {
+    padding-right: 50px;
+    @media (max-width: $tablet) {
+      padding-right: 0px;
+    }
+  }
+  &__Pic {
+    flex-basis: 25%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    mask-image: url($hexagon);
+    -webkit-mask-image: url($hexagon);
+    -moz-mask-image: url($hexagon);
+  }
+  .Title {
+    flex-basis: 75%;
+    margin-top: -25px;
+    > h3 { margin: 0; }
+    > h4 { margin: 0; }
+  }
+  p {
+    font-size: 0.85em;
+  }
 }

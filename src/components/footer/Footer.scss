@@ -3,45 +3,79 @@
 .Footer {
   display: flex;
   align-items: center;
-  height: 80px;
-  padding: 0px 50px;
-  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px 50px;
+  width: calc(100%);
   border-top: 2px solid $od-cream-dark;
-  background-color: $od-cream-dark;
+  background-color: $od-cream;
+  @media (max-width: $tablet){
+    flex-direction: column;
+  }
+  p { font-size: 0.75em; }
   &__Brand {
     height: 40px; width: auto;
+    flex-basis: 33%;
+    @media (max-width: $tablet){
+      flex-basis: 100%;
+      text-align: center;
+      margin: 25px auto;
+      order: 1;
+    }
     &--Logo {
       img { height: 100%; }
     }
+    p {
+      margin-top: 10px;
+    }
   }
   &__Nav {
-    margin-left: auto;
-    display: none;
-    @media (min-width: 890px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33%;
+    @media (max-width: $tablet){
+      flex-basis: 100%;
+      text-align: center;
+      margin: 25px auto;
+      order: 3;
     }
     &--Item {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      &:not(first-child) {
-        margin-left: 25px;
+      font-size: 0.85em;
+      &:not(last-child) {
+        margin-right: 25px;
       }
       &--Active {
         color: $od-primary;
-        &:after {
-          content: '';
-          background-color: $od-primary;
-          height: 3px;
-          width: 100%;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          transition: all .15s linear;
-        }
+      }
+    }
+  }
+  &__Socials {
+    flex-basis: 34%;
+    @media (max-width: $tablet){
+      flex-basis: 100%;
+      text-align: center;
+      margin: 50px auto 25px;
+      order: 2;
+    }
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &--Item {
+      &:not(last-child) {
+        margin-right: 25px;
+      }
+      path, polygon {
+        fill: #333;
+        transition: all .15s linear;
+      }
+      :hover path, :hover polygon {
+        fill: $od-medium-purple;
       }
     }
   }
