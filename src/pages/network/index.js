@@ -38,8 +38,13 @@ export default class NetworkPage extends Component {
         </section>
         <section className="Block CTA">
           <div className="Block__Contents">
-            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
-            <p>Shoot us a quick message to let us know about your project or idea for collaboration.</p>
+            <h3>
+              Contact <span className="Weight--500">Odyssy</span>
+            </h3>
+            <p>
+              Shoot us a quick message to let us know about your project or idea
+              for collaboration.
+            </p>
             <Contact formName="contact" />
           </div>
         </section>
@@ -48,7 +53,8 @@ export default class NetworkPage extends Component {
             <div className="Columns__Column--100">
               <h4>Decentralized Autonomous Organism</h4>
               <p className="Huge">
-                The traditional agency has too much overhead. Odyssy rapidly distributes skills and knowledge as needed.
+                The traditional agency has too much overhead. Odyssy rapidly
+                distributes skills and knowledge as needed.
               </p>
             </div>
             <div className="Columns__Column--50 Padding--Right">
@@ -61,7 +67,9 @@ export default class NetworkPage extends Component {
               </p>
               <p>
                 An example cell could be comprised of Product, Design,
-                Engineering, and Blockchain skillsets. Cells are highly adaptable to their environment, and remain consistently aligned with each project's current goals.
+                Engineering, and Blockchain skillsets. Cells are highly
+                adaptable to their environment, and remain consistently aligned
+                with each project's current goals.
               </p>
             </div>
             <div className="Columns__Column--50">
@@ -86,24 +94,26 @@ export default class NetworkPage extends Component {
               <div className="Columns__Column--33">
                 <img src={IconDecentralized} />
                 <h4>Decentralized</h4>
-                <p>Local autonomy for optimal efficiency and value distribution</p>
-                <img src={IconCollaboration}/>
+                <p>
+                  Local autonomy for optimal efficiency and value distribution
+                </p>
+                <img src={IconCollaboration} />
                 <h4>Collaborative</h4>
                 <p>Anti-rivalrous network structure and incentive mechanisms</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconCrypto}/>
+                <img src={IconCrypto} />
                 <h4>Crypto-Powered</h4>
                 <p>Cryptocurrencies power our value capture and distribution</p>
-                <img src={IconBlockchain}/>
+                <img src={IconBlockchain} />
                 <h4>Transparent</h4>
                 <p>Information open to all stakeholders and members</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconBalance}/>
+                <img src={IconBalance} />
                 <h4>Balance</h4>
                 <p>Balance between centralized and decentralized systems</p>
-                <img src={IconIterative}/>
+                <img src={IconIterative} />
                 <h4>Iterative</h4>
                 <p>
                   Understand, Diverge, Converge, Test, Prototype, Deploy,
@@ -186,9 +196,10 @@ export default class NetworkPage extends Component {
               <div>
                 <p>
                   Ven Gist started as a visual designer for global brands such
-                  as Adobe, Nike, and Uniqlo. He now creates within a broad spectrum
-                  of design and technology focused on accelerating the utility
-                  and adoption of decentralized systems and blockchain technologies.
+                  as Adobe, Nike, and Uniqlo. He now creates within a broad
+                  spectrum of design and technology focused on accelerating the
+                  utility and adoption of decentralized systems and blockchain
+                  technologies.
                 </p>
               </div>
             </div>
@@ -202,12 +213,11 @@ export default class NetworkPage extends Component {
               </div>
               <div>
                 <p>
-                  Sam Kuhlmann has taken a circuitous route to co-founding
-                  Odyssy.io. An art degree in film, a stint in cartoon
-                  production, a detour as a magazine publisher/editor and years
-                  in software management roles for global brands including Audi
-                  of America and The North Face have lead the way to full stack
-                  web and blockchain development.
+                  Sam Kuhlmann took the long way around to Odyssy. An art degree
+                  in film, a stint in cartoon production, a detour as a magazine
+                  publisher and years in software management roles building for
+                  companies including Audi of America and The North Face have
+                  lead the way to full stack web and blockchain development.
                 </p>
               </div>
             </div>
@@ -216,8 +226,10 @@ export default class NetworkPage extends Component {
         <section className="Block CTA">
           <div className="Block__Contents">
             <h3>Join the Network</h3>
-            <p>Reach out if you're interested in joining our network of
-            designers, developers, and thinkers.</p>
+            <p>
+              Reach out if you're interested in joining our network of
+              designers, developers, and thinkers.
+            </p>
             <Contact formName="network" />
           </div>
           <OdBackground />
