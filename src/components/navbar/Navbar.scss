@@ -5,6 +5,9 @@
   align-items: center;
   height: 80px;
   padding: 0px 50px;
+  @media (max-width:$tablet) {
+    padding: 0px 25px;
+  }
   width: 100%;
   border-bottom: 2px solid $od-cream-dark;
   &__Brand {

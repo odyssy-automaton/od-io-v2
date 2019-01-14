@@ -10,6 +10,7 @@ tags:
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
+  - Web Development
   - User Testing
 servicesList2Title: Design
 servicesList2:
@@ -17,10 +18,12 @@ servicesList2:
   - Product Design
   - UX Research
   - UI Design
-  - Brand Guide
+  - Style Guide
+  - Visual Design
+  - Print Design
 servicesList3Title: Strategy
 servicesList3:
-  - Brand Guide
+  - Ideation
   - Engineering Plan
 ---
 

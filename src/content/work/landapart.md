@@ -9,6 +9,8 @@ className: LandApart__work
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
+  - Web Development
+  - App Development
   - DevOps
   - User Testing
 servicesList2Title: Design
@@ -16,13 +18,14 @@ servicesList2:
   - Branding
   - Visual Design
   - Product Design
+  - Exhibition Design
   - UX Research
   - UI Design
+  - Print Design
 servicesList3Title: Strategy
 servicesList3:
-  - Ideation
-  - Naming
-  - Branding
+  - Ideation & Naming
+  - Brand Strategy
   - Marketing Research
   - Marketing Strategy
   - Exhibition Strategy

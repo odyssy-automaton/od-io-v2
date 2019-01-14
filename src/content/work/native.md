@@ -8,20 +8,27 @@ projectImage: /img/work/Native--Brand.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
-  - Smart Contract
-  - DApp Development
+  - Prototyping
+  - Research & Development
+  - Web Development
   - DevOps
+  - Quality Assurance
   - User Testing
 servicesList2Title: Design
 servicesList2:
   - Product Design
   - UX Research
   - UI Design
+  - Visual Design
+  - Web Design
+  - Motion Graphics
 servicesList3Title: Blockchain
 servicesList3:
-  - Smart Contracts
+  - Smart Contract Mapping
   - DApp Development
-  - Security Auditing
+  - Blockchain Receipts
+  - Consulting
+  - DAO Creation
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:

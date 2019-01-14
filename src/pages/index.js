@@ -18,7 +18,8 @@ import IconBalance from '../img/icons/icon__balance--multicolor.png';
 import IconDesign from '../img/icons/icon__design--multicolor.png';
 import IconCode from '../img/icons/icon__code--multicolor.png';
 import IconBlockchain from '../img/icons/icon__blockchain--multicolor.png';
-import IconCrypto from '../img/icons/icon__crypto--multicolor--invert.png';
+import IconCryptoInvert from '../img/icons/icon__crypto--multicolor--invert.png';
+import IconCrypto from '../img/icons/icon__crypto--multicolor.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -43,7 +44,7 @@ export default class IndexPage extends React.Component {
         <section className="Block Intro">
           <div className="CryptoAccepted">
             <Fade>
-              <img src={IconCrypto} />
+              <img src={IconCryptoInvert} />
             </Fade>
           </div>
           <div className="Block__Contents">
@@ -103,7 +104,7 @@ export default class IndexPage extends React.Component {
         <section className="Block CTA">
           <div className="Block__Contents">
             <h3>Contact <span className="Weight--500">Odyssy</span></h3>
-            <p>Shoot us a quick message to let us know about your project, or idea for collaboration.</p>
+            <p>Shoot us a quick message to let us know about your project or idea for collaboration.</p>
             <Contact formName="contact" />
           </div>
         </section>

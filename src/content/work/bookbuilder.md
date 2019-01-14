@@ -8,8 +8,7 @@ projectImage: /img/work/BookBuilder__App--Cover.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
-  - Smart Contract
-  - DApp Development
+  - App Development
   - DevOps
   - User Testing
 servicesList2Title: Design
@@ -17,11 +16,10 @@ servicesList2:
   - Product Design
   - UX Research
   - UI Design
-servicesList3Title: Blockchain
+servicesList3Title: Strategy
 servicesList3:
-  - Smart Contracts
-  - DApp Development
-  - Security Auditing
+  - Marketing Strategy
+  - Enterprise Scaling
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:
