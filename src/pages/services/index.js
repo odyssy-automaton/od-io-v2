@@ -98,8 +98,8 @@ Heroku, IPFS, Ethereum, Solidity.
         </div>
         <section className="Block CTA">
           <div className="Block__Contents">
-            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
-            <p>Let us know about your idea, project, or collaborative potential.</p>
+            <h3>Make <span className="Weight--500">Contact</span></h3>
+            <p>Let us know about your project or idea for collaboration.</p>
             <Contact formName="contact" />
           </div>
           <OdBackground />

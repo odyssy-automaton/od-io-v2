@@ -103,10 +103,11 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="Block CTA">
           <div className="Block__Contents">
-            <h3>Contact <span className="Weight--500">Odyssy</span></h3>
+            <h3>Make <span className="Weight--500">Contact</span></h3>
             <p>Shoot us a quick message to let us know about your project or idea for collaboration.</p>
             <Contact formName="contact" />
           </div>
+          <OdBackground />
         </section>
       </Layout>
     );
