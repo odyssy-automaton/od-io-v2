@@ -8,18 +8,21 @@ projectImage: /img/work/Wander--Icon.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
-  - DApp Development
+  - App Development
   - DevOps
   - User Testing
 servicesList2Title: Design
 servicesList2:
+  - Branding
   - Product Design
   - UX Research
   - UI Design
+  - Visual Design
 servicesList3Title: Blockchain
 servicesList3:
   - Smart Contracts
   - DApp Development
+  - Security Auditing
 linkText: visit site
 linkUrl: 'https://nativeproject.one/'
 tags:

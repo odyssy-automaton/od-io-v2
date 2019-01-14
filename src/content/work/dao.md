@@ -8,8 +8,7 @@ projectImage: /img/work/DAO--Featured.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
-  - Smart Contract
-  - DApp Development
+  - Web App Development
   - DevOps
   - User Testing
 servicesList2Title: Design
@@ -17,6 +16,7 @@ servicesList2:
   - Product Design
   - UX Research
   - UI Design
+  - Visual Design
 servicesList3Title: Blockchain
 servicesList3:
   - Smart Contracts

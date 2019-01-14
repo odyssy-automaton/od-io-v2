@@ -8,13 +8,15 @@ projectImage: /img/work/DOLO--Featured.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
-  - Smart Contract
-  - DApp Development
+  - Web Development
+  - Prototyping
   - DevOps
   - User Testing
 servicesList2Title: Design
 servicesList2:
+  - Branding
   - Product Design
+  - Visual Design
   - UX Research
   - UI Design
 servicesList3Title: Blockchain
