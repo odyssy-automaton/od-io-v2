@@ -312,12 +312,3 @@ input, textarea {
   background-color: $od-primary;
   color: white;
 }
-
-// Gatsby Overrides
-.gatsby-resp-image-image {
-  box-shadow: none !important;
-}
-
-.gatsby-resp-image-link {
-  pointer-events: none;
-}
