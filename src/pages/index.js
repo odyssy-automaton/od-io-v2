@@ -44,7 +44,7 @@ export default class IndexPage extends React.Component {
         <section className="Block Intro">
           <div className="CryptoAccepted">
             <Fade>
-              <img src={IconCryptoInvert} />
+              <img src={IconCryptoInvert} alt="crypto accepted" />
             </Fade>
           </div>
           <div className="Block__Contents">
@@ -75,9 +75,9 @@ export default class IndexPage extends React.Component {
               blockchain and beyond.
             </p>
             <div className="IconsBar">
-              <img className="Icon--Medium" src={IconDesign} />
-              <img className="Icon--Medium" src={IconCode} />
-              <img className="Icon--Medium" src={IconBlockchain} />
+              <img className="Icon--Medium" src={IconDesign} alt="design"/>
+              <img className="Icon--Medium" src={IconCode} alt="engineering"/>
+              <img className="Icon--Medium" src={IconBlockchain} alt="blockchain"/>
             </div>
             <Link to="/services">View our capabilities <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
           </div>
@@ -90,12 +90,12 @@ export default class IndexPage extends React.Component {
               We are iterating on the future of work right now.
             </p>
             <div className="IconsBar">
-              <img className="Icon--Medium" src={IconDecentralized} />
-              <img className="Icon--Medium" src={IconBlockchain} />
-              <img className="Icon--Medium" src={IconCollaboration} />
-              <img className="Icon--Medium" src={IconCrypto} />
-              <img className="Icon--Medium" src={IconIterative} />
-              <img className="Icon--Medium" src={IconBalance} />
+              <img className="Icon--Medium" src={IconDecentralized} alt="blockchain" />
+              <img className="Icon--Medium" src={IconBlockchain} alt="blockchain" />
+              <img className="Icon--Medium" src={IconCollaboration} alt="collaborative" />
+              <img className="Icon--Medium" src={IconCrypto} alt="crypto accepted" />
+              <img className="Icon--Medium" src={IconIterative} alt="iterative" />
+              <img className="Icon--Medium" src={IconBalance} alt="balanced" />
             </div>
             <Link to="/network">Learn more about our network <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
           </div>
