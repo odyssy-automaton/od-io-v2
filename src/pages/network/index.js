@@ -10,8 +10,6 @@ import OdMesh from '../../img/Graphic__Od--Mesh.png';
 import DekePic from '../../img/deke.png';
 import SamPic from '../../img/sam.png';
 import VenPic from '../../img/ven.png';
-import IconDevfund from '../../img/icons/icon__devfund.png';
-import IconEthereum from '../../img/icons/icon__ethereum.png';
 import IconDecentralized from '../../img/icons/icon__decentralized--multicolor.png';
 import IconCollaboration from '../../img/icons/icon__collaboration--multicolor.png';
 import IconBlockchain from '../../img/icons/icon__blockchain--multicolor.png';
@@ -92,28 +90,28 @@ export default class NetworkPage extends Component {
                 </p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconDecentralized} />
+                <img src={IconDecentralized} alt="decentralized" />
                 <h4>Decentralized</h4>
                 <p>
                   Local autonomy for optimal efficiency and value distribution
                 </p>
-                <img src={IconCollaboration} />
+                <img src={IconCollaboration} alt="collaborative" />
                 <h4>Collaborative</h4>
                 <p>Anti-rivalrous network structure and incentive mechanisms</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconCrypto} />
+                <img src={IconCrypto} alt="crytpo accepted" />
                 <h4>Crypto-Powered</h4>
                 <p>Cryptocurrencies power our value capture and distribution</p>
-                <img src={IconBlockchain} />
+                <img src={IconBlockchain} alt="blockchain" />
                 <h4>Transparent</h4>
                 <p>Information open to all stakeholders and members</p>
               </div>
               <div className="Columns__Column--33">
-                <img src={IconBalance} />
+                <img src={IconBalance} alt="balanced" />
                 <h4>Balance</h4>
                 <p>Balance between centralized and decentralized systems</p>
-                <img src={IconIterative} />
+                <img src={IconIterative}  alt="iterative" />
                 <h4>Iterative</h4>
                 <p>
                   Understand, Diverge, Converge, Test, Prototype, Deploy,
