@@ -156,6 +156,10 @@ input, textarea {
   }
 }
 
+.Color {
+  &--White { color: white; }
+}
+
 .Float {
   &--Left {
     float: left;

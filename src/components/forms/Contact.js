@@ -50,7 +50,8 @@ export default class Contact extends React.Component {
       <div className="Form">
         {submitted ? (
           <div>
-            <h3>Thanks for making contact</h3>
+            <h5>Your message was sent.</h5>
+            <p className="Large Color--White">Odyssy will get back to you shortly.</p>
           </div>
         ) : (
           <form name={formName} onSubmit={this.handleSubmit}>
