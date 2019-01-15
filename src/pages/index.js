@@ -8,6 +8,7 @@ import heroAnimation2 from '../img/Intro__Animation--2.json';
 import Fade from 'react-reveal/Fade';
 import OdBackground from '../components/shared/od-background/OdBackground';
 import Contact from '../components/forms/Contact';
+// Styles
 import '../styles/Home.scss';
 // Icons
 import Icon from '../components/shared/icons/Icon';
