@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: BookBuilder
-sortOrder: 2
+sortOrder: 4
 shortDescription: is an enterprise-level self-publishing platform.
 featuredImage: /img/work/BookBuilder__App--Cover.png
 projectImage: /img/work/BookBuilder__App--Cover.png
