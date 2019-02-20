@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Wander Coin
-sortOrder: 4
+sortOrder: 7
 shortDescription: is an experimental dApp and token model built to test various game theories.
 featuredImage: /img/work/Wandercoin--Featured.png
 projectImage: /img/work/Wander--Icon.png
