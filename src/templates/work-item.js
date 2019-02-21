@@ -94,7 +94,7 @@ const WorkItem = ({ data }) => {
             <title>{`${workItem.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${workItem.frontmatter.description}`}
+              content={`${workItem.frontmatter.shortDescription}`}
             />
           </Helmet>
         }
