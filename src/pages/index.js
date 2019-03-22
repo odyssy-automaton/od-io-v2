@@ -63,7 +63,7 @@ export default class IndexPage extends React.Component {
         <section className="Block ProofOfWork">
           <div className="Block__Contents">
             <p className="Huge">Proof of Work</p>
-            <a className="button" href="/work">View</a>
+            <div className="button" href="/work">View</div>
           </div>
         </section>
         </Link>
