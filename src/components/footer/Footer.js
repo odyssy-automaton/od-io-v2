@@ -31,10 +31,11 @@ const Footer = class extends React.Component {
           </Link>
         </nav>
         <div className="Row Footer__Socials">
-          <a href="https://medium.com/odyssy" className="Footer__Socials--Item" title="Medium"><Icon name="medium" fill="#333" /></a>
-          <a href="https://github.com/odyssy-automaton" className="Footer__Socials--Item" title="Github"><Icon name="github" fill="#333"/></a>
-          <a href="https://peepeth.com/odyssy" title="Peepeth" className="Footer__Socials--Item"><Icon name="peepeth" fill="#333"/></a>
-          <a href="https://www.linkedin.com/company/odyssy/about/" className="Footer__Socials--Item" title="LinkedIn"><Icon name="linkedin" fill="#333"/></a>
+        <a href="https://twitter.com/odyssyautomaton" className="Footer__Socials--Item" title="Twitter" target="_blank" rel="noopener noreferrer"><Icon name="twitter" fill="#333"/></a>
+          <a href="https://medium.com/odyssy" className="Footer__Socials--Item" title="Medium" target="_blank" rel="noopener noreferrer"><Icon name="medium" fill="#333" /></a>
+          <a href="https://github.com/odyssy-automaton" className="Footer__Socials--Item" title="Github" target="_blank" rel="noopener noreferrer"><Icon name="github" fill="#333"/></a>
+          <a href="https://peepeth.com/odyssy" title="Peepeth" className="Footer__Socials--Item" target="_blank" rel="noopener noreferrer"><Icon name="peepeth" fill="#333"/></a>
+          <a href="https://www.linkedin.com/company/odyssy/about/" className="Footer__Socials--Item" title="LinkedIn" target="_blank" rel="noopener noreferrer"><Icon name="linkedin" fill="#333"/></a>
         </div>
       </div>
     );
