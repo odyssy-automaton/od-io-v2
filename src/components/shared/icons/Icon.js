@@ -6,6 +6,7 @@ import Medium from "./Medium";
 import Github from "./Github";
 import LinkedIn from "./LinkedIn";
 import Peepeth from "./Peepeth";
+import Twitter from "./Twitter";
 
 class Icon extends Component {
   render() {
@@ -22,6 +23,8 @@ class Icon extends Component {
           return <LinkedIn {...this.props} />;
         case "peepeth":
           return <Peepeth {...this.props} />;
+        case "twitter":
+          return <Twitter {...this.props} />;
         default:
           return;
       }
