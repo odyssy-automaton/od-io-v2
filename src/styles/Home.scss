@@ -54,7 +54,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     @media (max-width: $phone) {
-      background-image: url('/img/work/Work--Background.png');
+      background-image: url('/img/work/Work--Background.jpg');
     }
     background-color: $od-medium-purple;
     color: white;
@@ -80,6 +80,7 @@
   cursor: pointer;
   &:hover .button {
     color: white; background-color: $od-primary; border-color: $od-primary;
+    transition: all .15s ease-in-out;
     &:hover { color: white; }
   }
 }
