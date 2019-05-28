@@ -99,7 +99,7 @@ Heroku, IPFS, Ethereum, Solidity.
           <div className="Block__Contents">
             <h3>Make <span className="Weight--500">Contact</span></h3>
             <p>Let us know about your project or idea for collaboration.</p>
-            <Contact formName="contact" />
+            <Contact formName="customer" />
           </div>
           <OdBackground />
         </section>
