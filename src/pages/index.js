@@ -60,27 +60,38 @@ export default class IndexPage extends React.Component {
           <OdBackground />
         </section>
         <Link to="/work" className="POWLink">
-        <section className="Block ProofOfWork">
-          <div className="Block__Contents">
-            <p className="Huge">Proof of Work</p>
-            <div className="button" href="/work">View</div>
-          </div>
-        </section>
+          <section className="Block ProofOfWork">
+            <div className="Block__Contents">
+              <p className="Huge">Proof of Work</p>
+              <div className="button" href="/work">
+                View
+              </div>
+            </div>
+          </section>
         </Link>
         <section className="Block Capabilities">
           <div className="Block__Contents">
-          <h4>Research, Strategy, Design, Develop, Test, Deploy, Improve.</h4>
+            <h4>Research, Strategy, Design, Develop, Test, Deploy, Improve.</h4>
             <p className="Huge">
               <span className="Weight--500">Odyssy</span> is a decentralized
               collective delivering full stack Design & Development to the
               blockchain and beyond.
             </p>
             <div className="IconsBar">
-              <img className="Icon--Medium" src={IconDesign} alt="design"/>
-              <img className="Icon--Medium" src={IconCode} alt="engineering"/>
-              <img className="Icon--Medium" src={IconBlockchain} alt="blockchain"/>
+              <img className="Icon--Medium" src={IconDesign} alt="design" />
+              <img className="Icon--Medium" src={IconCode} alt="engineering" />
+              <img
+                className="Icon--Medium"
+                src={IconBlockchain}
+                alt="blockchain"
+              />
             </div>
-            <Link to="/services">View our capabilities <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
+            <Link to="/services">
+              View our capabilities{' '}
+              <span className="Hover--Forward">
+                <Icon name="arrow-forward" />
+              </span>
+            </Link>
           </div>
           <OdBackground />
         </section>
@@ -91,22 +102,52 @@ export default class IndexPage extends React.Component {
               We are iterating on the future of work right now.
             </p>
             <div className="IconsBar">
-              <img className="Icon--Medium" src={IconDecentralized} alt="blockchain" />
-              <img className="Icon--Medium" src={IconBlockchain} alt="blockchain" />
-              <img className="Icon--Medium" src={IconCollaboration} alt="collaborative" />
-              <img className="Icon--Medium" src={IconCrypto} alt="crypto accepted" />
-              <img className="Icon--Medium" src={IconIterative} alt="iterative" />
+              <img
+                className="Icon--Medium"
+                src={IconDecentralized}
+                alt="blockchain"
+              />
+              <img
+                className="Icon--Medium"
+                src={IconBlockchain}
+                alt="blockchain"
+              />
+              <img
+                className="Icon--Medium"
+                src={IconCollaboration}
+                alt="collaborative"
+              />
+              <img
+                className="Icon--Medium"
+                src={IconCrypto}
+                alt="crypto accepted"
+              />
+              <img
+                className="Icon--Medium"
+                src={IconIterative}
+                alt="iterative"
+              />
               <img className="Icon--Medium" src={IconBalance} alt="balanced" />
             </div>
-            <Link to="/network">Learn more about our network <span className="Hover--Forward"><Icon name="arrow-forward" /></span></Link>
+            <Link to="/network">
+              Learn more about our network{' '}
+              <span className="Hover--Forward">
+                <Icon name="arrow-forward" />
+              </span>
+            </Link>
           </div>
           <OdBackground />
         </section>
         <section className="Block CTA">
           <div className="Block__Contents">
-            <h3>Make <span className="Weight--500">Contact</span></h3>
-            <p>Shoot us a quick message to let us know about your project or idea for collaboration.</p>
-            <Contact formName="contact" />
+            <h3>
+              Make <span className="Weight--500">Contact</span>
+            </h3>
+            <p>
+              Shoot us a quick message to let us know about your project or idea
+              for collaboration.
+            </p>
+            <Contact formName="customer" />
           </div>
           <OdBackground />
         </section>

@@ -43,7 +43,7 @@ export default class NetworkPage extends Component {
               Shoot us a quick message to let us know about your project or idea
               for collaboration.
             </p>
-            <Contact formName="contact" />
+            <Contact formName="customer" />
           </div>
         </section>
         <div className="Block">
@@ -111,7 +111,7 @@ export default class NetworkPage extends Component {
                 <img src={IconBalance} alt="balanced" />
                 <h4>Balance</h4>
                 <p>Balance between centralized and decentralized systems</p>
-                <img src={IconIterative}  alt="iterative" />
+                <img src={IconIterative} alt="iterative" />
                 <h4>Iterative</h4>
                 <p>
                   Understand, Diverge, Converge, Test, Prototype, Deploy,
