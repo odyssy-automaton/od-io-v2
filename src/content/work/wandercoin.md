@@ -24,7 +24,7 @@ servicesList3:
   - DApp Development
   - Security Auditing
 linkText: visit site
-linkUrl: 'https://nativeproject.one/'
+linkUrl: ''
 tags:
   - ux
   - ui

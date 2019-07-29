@@ -36,6 +36,11 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
           <div className="Columns">
             <div className="Columns__Column--50">
               <HTMLContent content={workItem.longDescription} />
+              { workItem.linkUrl !== '' && (
+                <div className="WorkLink">
+                  <a href={workItem.linkUrl} target="_blank" rel="noopener noreferrer">{workItem.linkText}</a>
+                </div>
+              )}
             </div>
             <div className="Columns__Column--50">
               <img src={workItem.projectImage.childImageSharp.original.src} />

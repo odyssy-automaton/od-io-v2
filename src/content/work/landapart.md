@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: LandApart
-sortOrder: 5
+sortOrder: 8
 shortDescription: is like the Airbnb of nature. Keep private land wild. Enjoy quality time in nature.
 featuredImage: /img/work/LandApart--Flag.png
 projectImage: /img/work/LandApart--Brand.png
@@ -30,7 +30,7 @@ servicesList3:
   - Marketing Strategy
   - Exhibition Strategy
 linkText: visit site
-linkUrl: 'https://landapart.com'
+linkUrl: ''
 tags:
   - ux
   - ui

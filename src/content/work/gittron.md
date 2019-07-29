@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Gittron
-sortOrder: 0
+sortOrder: 2
 shortDescription: deploys autonomous fundraising bots to support Open Source projects in the form of ERC-721 NFTs.
 featuredImage: /img/work/Gittron__Featured.png
 projectImage: /img/work/Gittron__ProjectImage.png
