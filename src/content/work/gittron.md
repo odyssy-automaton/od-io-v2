@@ -29,7 +29,7 @@ servicesList3:
   - DApp Development
   - Cryptoeconomics
   - ERC-721
-linkText: visit site
+linkText: Launch DApp
 linkUrl: 'https://gittron.me/'
 tags:
   - ux

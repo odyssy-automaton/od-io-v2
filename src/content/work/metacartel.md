@@ -31,7 +31,7 @@ linkUrl: 'https://dao.metacartel.org'
 tags:
   - ux
   - ui
-className: MC__work
+className: WorkCenter
 ---
 
 Similar to the Moloch DAO rallying around the narrative to spur on a successful delivery of ETH 2.0, the MetaCartel DAO formed to spur on the growth and development of human-facing applications. We decided to fork the Moloch contracts and game theory, but iterate forward on the product and user experience design of the DAO’s interface. We wanted to experiment with open access and extend usability to enhance member participation and engagement, as well as sending a clear signal to the community about what we expect out of DApp usability going forward.

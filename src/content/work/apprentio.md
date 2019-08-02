@@ -19,7 +19,7 @@ servicesList2:
 servicesList3Title: Blockchain
 servicesList3:
   - Blockchain Consulting
-linkText: visit site
+linkText: Visit Site
 linkUrl: 'https://apprent.io/'
 tags:
   - ux

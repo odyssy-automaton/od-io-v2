@@ -17,6 +17,9 @@ h4 {
 .WorkItem .Block {
   &:nth-of-type(2) {
     background-color: $od-cream-dark;
+    .Columns__Column--50:nth-of-type(1) {
+      align-items: flex-start;
+    }
   }
 }
 .WorkSections {
@@ -41,4 +44,14 @@ h4 {
 .BackToWork {
   padding: 50px 0px;
   text-align: center;
+}
+
+.WorkCenter {
+  img { 
+    max-width: 100%; 
+    margin-bottom: 75px;
+    margin-left: 50%;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
 }

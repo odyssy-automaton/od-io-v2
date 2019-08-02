@@ -24,7 +24,7 @@ servicesList3:
   - Smart Contracts
   - DApp Development
   - Security Auditing
-linkText: visit site
+linkText: Visit Site
 linkUrl: 'https://dolo.org'
 tags:
   - ux

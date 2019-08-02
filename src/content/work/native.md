@@ -29,7 +29,7 @@ servicesList3:
   - Blockchain Receipts
   - Consulting
   - DAO Creation
-linkText: visit site
+linkText: Visit Site
 linkUrl: 'https://nativeproject.one/'
 tags:
   - ux
