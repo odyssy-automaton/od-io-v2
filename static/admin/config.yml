@@ -60,13 +60,13 @@ collections:
           required: false,
         }
       - {
-          lable: 'Link Text',
+          label: 'Link Text',
           name: 'linkText',
           widget: 'string',
           required: false,
         }
       - {
-          lable: 'Link URL',
+          label: 'Link URL',
           name: 'linkUrl',
           widget: 'string',
           required: false,

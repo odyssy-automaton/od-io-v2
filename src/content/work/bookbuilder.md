@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: BookBuilder
-sortOrder: 4
+sortOrder: 6
 shortDescription: is an enterprise-level self-publishing platform.
 featuredImage: /img/work/BookBuilder__App--Cover.png
 projectImage: /img/work/BookBuilder__App--Cover.png
@@ -21,7 +21,7 @@ servicesList3:
   - Marketing Strategy
   - Enterprise Scaling
 linkText: visit site
-linkUrl: 'https://nativeproject.one/'
+linkUrl: ''
 tags:
   - ux
   - ui

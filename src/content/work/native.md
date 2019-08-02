@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Native
-sortOrder: 2
+sortOrder: 4
 shortDescription: helps digital communities organize, incentivize their members and generate revenue in new ways.
 featuredImage: /img/work/Native--Featured.png
 projectImage: /img/work/Native--Brand.png
@@ -29,7 +29,7 @@ servicesList3:
   - Blockchain Receipts
   - Consulting
   - DAO Creation
-linkText: visit site
+linkText: Visit Site
 linkUrl: 'https://nativeproject.one/'
 tags:
   - ux
