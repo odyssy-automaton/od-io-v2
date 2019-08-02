@@ -52,12 +52,15 @@ form { max-width: 480px; }
   &__Pic {
     flex-basis: 25%;
     width: 100px;
-    height: 100px;
+    height: 110px;
     margin-bottom: 25px;
     margin-right: 15px;
     mask-image: url($hexagon);
     -webkit-mask-image: url($hexagon);
     -moz-mask-image: url($hexagon);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    -moz-mask-repeat: no-repeat;
   }
   .Title {
     flex-basis: 75%;
