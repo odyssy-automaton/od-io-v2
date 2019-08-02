@@ -74,6 +74,7 @@ export const pageQuery = graphql`
             title
             shortDescription
             templateKey
+            className
             featuredImage {
               id
               childImageSharp {
