@@ -312,14 +312,3 @@ input, textarea {
   background-color: $od-primary;
   color: white;
 }
-
-// Center Work Item Images (gifs need special assistance)
-.WorkCenter {
-  img { 
-    max-width: 100%; 
-    margin-bottom: 75px;
-    margin-left: 50%;
-    left: 50% !important;
-    transform: translateX(-50%);
-  }
-}
