@@ -20,9 +20,7 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   console.log(workItem);
 
   return (
-    <div className="WorkItem"
-     className={workItem.className}
-    >
+    <div className={'WorkItem ' + workItem.className}>
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
