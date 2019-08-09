@@ -7,7 +7,11 @@ sortOrder: 0
 
 The website to receive all community members and learners.
 
-![](/img/work/DOLO--Featured--1.png)
+![](/img/work/DOLO--Home.png)
+
+![](/img/work/DOLO--2.png)
+
+![](/img/work/DOLO--3.png)
 
 #### The Prototype
 

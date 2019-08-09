@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Apprentio
-sortOrder: 1
+sortOrder: 3
 shortDescription: is a blockchain youth apprenticeship where education and gaming collide.
 featuredImage: /img/work/Apprentio__Brand.png
 projectImage: /img/work/Apprentio__Brand.png
@@ -19,7 +19,7 @@ servicesList2:
 servicesList3Title: Blockchain
 servicesList3:
   - Blockchain Consulting
-linkText: visit site
+linkText: Visit Site
 linkUrl: 'https://apprent.io/'
 tags:
   - ux

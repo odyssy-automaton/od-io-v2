@@ -16,13 +16,24 @@ import '../styles/WorkItem.scss';
 export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
   const hasServices = workItem.servicesList1 && workItem.servicesList1.length;
 
+  console.log('work-item.js');
+  console.log(workItem);
+
   return (
-    <div className="WorkItem">
+    <div className="WorkItem"
+     className={workItem.className}
+    >
       {helmet || ''}
       <section className="PageHeader">
         <div className="PageHeader__Contents">
           <h4>
-            <Link to="/work"><span className="Hover--Back"><Icon name="arrow-back" /></span> Proof of Work</Link> / {workItem.title}
+            <Link to="/work">
+              <span className="Hover--Back">
+                <Icon name="arrow-back" />
+              </span>{' '}
+              Proof of Work
+            </Link>{' '}
+            / {workItem.title}
           </h4>
           <h1>
             <span className="Weight--400">{workItem.title}</span>{' '}
@@ -36,6 +47,17 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
           <div className="Columns">
             <div className="Columns__Column--50">
               <HTMLContent content={workItem.longDescription} />
+              {workItem.linkUrl !== '' && (
+                <div className="WorkLink">
+                  <a
+                    href={workItem.linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {workItem.linkText}
+                  </a>
+                </div>
+              )}
             </div>
             <div className="Columns__Column--50">
               <img src={workItem.projectImage.childImageSharp.original.src} />
@@ -65,7 +87,9 @@ export const WorkItemTemplate = ({ workItem, sections, helmet }) => {
           ) : null}
           <div className="BackToWork">
             <p className="Extra-Large">
-              <Link to="/work"><Icon name="arrow-back" /> Back to Proof of Work</Link>
+              <Link to="/work">
+                <Icon name="arrow-back" /> Back to Proof of Work
+              </Link>
             </p>
           </div>
         </div>
@@ -120,6 +144,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         shortDescription
+        linkUrl
+        linkText
         featuredImage {
           id
           childImageSharp {
