@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: DOLO
-sortOrder: 1
+sortOrder: 5
 shortDescription: is a decentralized, open learning organism iterating on a smarter education system for all.
 featuredImage: /img/work/DOLO--Featured.png
 projectImage: /img/work/DOLO--Featured.png

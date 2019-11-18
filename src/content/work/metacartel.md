@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: MetaCartel
-sortOrder: 0
+sortOrder: 2
 shortDescription: DAO is a grant-giving organization to fuel the Ethereum application layer.
 featuredImage: /img/work/MC--Featured.png
 projectImage: /img/work/MC--Brand.png

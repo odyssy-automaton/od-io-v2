@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Apprentio
-sortOrder: 3
+sortOrder: 5
 shortDescription: is a blockchain youth apprenticeship where education and gaming collide.
 featuredImage: /img/work/Apprentio__Brand.png
 projectImage: /img/work/Apprentio__Brand.png
