@@ -1,8 +1,8 @@
 ---
 templateKey: work-item
-title: DAOHaus
+title: Daohaus
 sortOrder: 0
-shortDescription: turns Moloch into a DAO framework.
+shortDescription: turns Moloch into a fully functioning DAO framework.
 featuredImage: /img/work/Daohaus__Brand.png
 projectImage: /img/work/Daohaus__Brand.png
 servicesList1Title: Engineering
@@ -25,7 +25,7 @@ servicesList3:
   - Subgraph Deployment
   - DApp Development
   - DAO Creation
-linkText: Launch DApp
+linkText: Launch App
 linkUrl: 'https://daohaus.club'
 tags:
   - ux
@@ -33,4 +33,4 @@ tags:
 className: WorkCenter
 ---
 
-In DAOHaus, you can discover and join existing Moloch DAOs, or summon your own. 
+In DAOHaus, you can discover and join existing Moloch DAOs, or summon your own.

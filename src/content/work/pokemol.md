@@ -1,6 +1,6 @@
 ---
 templateKey: work-item
-title: PokéMol
+title: Pokemol 
 sortOrder: 1
 shortDescription: is a mobile-first frontend for Moloch DAOs with built-in contract wallets.
 featuredImage: /img/work/Pokemol__Brand.png
@@ -25,12 +25,12 @@ servicesList3:
   - Subgraph Deployment
   - DApp Development
   - DAO Creation
-linkText: Launch DApp
-linkUrl: 'https://daohaus.club'
+linkText: Launch App
+linkUrl: 'https://pokemol.com'
 tags:
   - ux
   - ui
 className: WorkCenter
 ---
 
-In DAOHaus, you can discover and join existing Moloch DAOs, or summon your own. 
+Pokemol is short for Pocket Moloch, as it takes the Moloch DAO contracts and wraps them up into a user-friendly, mobile-first app. Pokemol uses wallets that are Smart Contracts themselves to deliver a forward-thinking dao experience. Users can interact freely in any device and browser, without the need for special browsers or extensions. The first Pokemol was designed and built for the [MetaCartel](https://metacartel.org "MetaCartel").
