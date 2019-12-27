@@ -22,7 +22,7 @@ servicesList2:
 servicesList3Title: Blockchain
 servicesList3:
   - Contract Factory
-  - Subgraph Deployment
+  - Subgraph Factory
   - DApp Development
   - DAO Creation
 linkText: Launch App
@@ -35,4 +35,4 @@ className: WorkCenter
 
 In Daohaus, you can discover and pledge to join existing daos, or summon your own.
 
-Daos are a powerful new type of organization, where no one person is in control. Instead, the power is distributed amongst all members of the dao. In Moloch daos, Members are granted Shares in exchange for Tribute, with which they vote on proposals. Once funds are in a dao, not a single penny can be distributed without all members being able to vote on it.
+All daos summoned on Daohaus use Moloch DAO contracts as their base, with user selected options such as currency and voting period lengths, allowing for composable daos to fit a number of use-cases. Every dao also gets its own mobile-first frontend, Pokemol, to utilize for submitting proposals and voting.

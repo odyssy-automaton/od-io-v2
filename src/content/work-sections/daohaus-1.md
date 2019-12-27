@@ -5,6 +5,10 @@ className: WorkCenter
 sortOrder: 0
 ---
 
+Daohaus is on a mission to lower coordination cost to zero.
+
+Daos are a powerful new type of organization, where no one person is in control. Instead, the power is distributed amongst all members of the dao. In Moloch daos, Members are granted Shares in exchange for Tribute, with which they vote on proposals. Once funds are in a dao, not a single penny can be distributed without all members being able to vote on it.
+
 ![](/img/work/daohaus__banner.jpg)
 
 ![](/img/work/daohaus__home.png)
@@ -12,6 +16,10 @@ sortOrder: 0
 ![](/img/work/daohaus__home--daos.png)
 
 ![](/img/work/daohaus__about.png)
+
+#### Summon a Dao
+
+Users can launch their own dao in Easy or Hard mode. Through Easy mode, one can select Eth or Dai as the main currency, and launch a dao in less than 5 minutes. Hard Mode exposes all contract variables and accepts any ERC-20 token.
 
 #### Single Dao
 
