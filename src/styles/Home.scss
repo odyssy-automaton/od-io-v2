@@ -4,7 +4,7 @@
   position: absolute;
   width: 150px;
   z-index: 99;
-  @media (min-width: 481px){
+  @media (min-width: 481px) {
     top: 125px;
     right: 150px;
     transform: rotate(12deg);
@@ -46,7 +46,9 @@
   &.Intro {
     background-color: $od-primary;
     color: white;
-    h4 { color: white; }
+    h4 {
+      color: white;
+    }
   }
   &.ProofOfWork {
     background-image: url('/img/work/Work--Background.jpg');
@@ -54,7 +56,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     @media (max-width: $phone) {
-      background-image: url('/img/work/Work--Background.jpg');
+      background-image: url('/img/work/Work--Background--Mobile.jpg');
     }
     background-color: $od-medium-purple;
     color: white;
@@ -65,7 +67,10 @@
       border-radius: 50px;
       border-color: white;
       color: white;
-      &:hover { color: $od-primary; border-color: $od-primary; }
+      &:hover {
+        color: $od-primary;
+        border-color: $od-primary;
+      }
     }
   }
   &.Capabilities {
@@ -79,9 +84,13 @@
 .POWLink {
   cursor: pointer;
   &:hover .button {
-    color: white; background-color: $od-primary; border-color: $od-primary;
-    transition: all .15s ease-in-out;
-    &:hover { color: white; }
+    color: white;
+    background-color: $od-primary;
+    border-color: $od-primary;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -89,7 +98,7 @@
   margin-bottom: 35px;
 }
 
-.ProofOfWork{
+.ProofOfWork {
   div.button {
     max-width: 150px;
     width: auto;

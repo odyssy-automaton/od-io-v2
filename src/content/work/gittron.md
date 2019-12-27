@@ -1,8 +1,8 @@
 ---
 templateKey: work-item
 title: Gittron
-sortOrder: 2
-shortDescription: deploys autonomous fundraising bots to support Open Source projects in the form of ERC-721 NFTs.
+sortOrder: 1
+shortDescription: deploys autonomous fundraising bots to support Open Source projects in the form of NFTs.
 featuredImage: /img/work/Gittron__Featured.png
 projectImage: /img/work/Gittron__ProjectImage.png
 servicesList1Title: Engineering
@@ -26,9 +26,10 @@ servicesList2:
 servicesList3Title: Blockchain
 servicesList3:
   - Smart Contracts
+  - NFT Factory
   - DApp Development
   - Cryptoeconomics
-  - ERC-721
+
 linkText: Launch DApp
 linkUrl: 'https://gittron.me/'
 tags:
@@ -43,6 +44,4 @@ Any open source repo on Github can register their repo at Gittron.me for the cos
 
 Once generated, this Prime Bot is now an autonomous fundraiser for the open source project associated. Anyone in the world can go to the Prime Bot’s page and support it for a price set by the owner. Supporting a Prime Bot clones the bot’s DNA and generates a similar but different bot known as a Support Bot and distributes it to the Supporter as a thank you.
 
-Read More at our [Medium](https://medium.com/odyssy/hail-open-source-hail-gittron-ae50db8e7031 "Medium").
-
-
+Read More at our [Medium](https://medium.com/odyssy/hail-open-source-hail-gittron-ae50db8e7031 'Medium').
