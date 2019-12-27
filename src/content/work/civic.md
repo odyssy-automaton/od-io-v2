@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Civic
-sortOrder: 5
+sortOrder: 6
 shortDescription: is an open data storytelling platform, turning public information into public knowledge.
 featuredImage: /img/Civic--Featured.png
 projectImage: /img/Civic--Featured.png

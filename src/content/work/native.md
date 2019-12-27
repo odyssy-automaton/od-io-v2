@@ -1,7 +1,7 @@
 ---
 templateKey: work-item
 title: Native
-sortOrder: 4
+sortOrder: 7
 shortDescription: helps digital communities organize, incentivize their members and generate revenue in new ways.
 featuredImage: /img/work/Native--Featured.png
 projectImage: /img/work/Native--Brand.png

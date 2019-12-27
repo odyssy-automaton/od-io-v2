@@ -3,11 +3,12 @@ templateKey: work-item
 title: Daily Wallet
 sortOrder: 3
 shortDescription: is an xDAI wallet built specifically for the people of Venezuela.
-featuredImage: /img/work/iPhoneX--DailyWallet--Home.png
+featuredImage: /img/work/DailyWallet__Home.png
 projectImage: /img/work/DailyWallet__Brand.png
 servicesList1Title: Engineering
 servicesList1:
   - Product Management
+  - Native App Development
   - Web Development
   - DevOps
   - Quality Assurance
@@ -18,19 +19,16 @@ servicesList2:
   - UX Research
   - UI Design
   - Visual Design
-  - Web Design
 servicesList3Title: Blockchain
 servicesList3:
-  - Contract Factory
-  - Subgraph Deployment
   - DApp Development
-  - DAO Creation
-linkText: Launch DApp
-linkUrl: 'https://daohaus.club'
+  - Meta Transaction Relay
+linkText: Launch
+linkUrl: ''
 tags:
   - ux
   - ui
 className: WorkCenter
 ---
 
-In DAOHaus, you can discover and join existing Moloch DAOs, or summon your own. 
+Daily Wallet was built in partnership with Open Money Initiative for to showcase the utility of cryptocurrency for the people of Venezuela, where people are enduring the inability to exchange or transfer money abroad, violent crackdowns on merchants who set their own prices, and hyperinflation.
